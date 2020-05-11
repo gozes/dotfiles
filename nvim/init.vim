@@ -1,5 +1,6 @@
 syntax on
-
+" set leader key
+let g:mapleader = "\<Space>"
 set guicursor=
 set noshowmatch
 set nohlsearch
