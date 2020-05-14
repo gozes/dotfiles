@@ -22,6 +22,8 @@ set clipboard=unnamedplus
 
 imap <C-c> <Esc>
 
+nmap to :tabedit
+nmap tc :tabclose
 
 " Split window
 nmap ss :split<Return><C-w>w
