@@ -22,8 +22,8 @@ set clipboard=unnamedplus
 
 imap <C-c> <Esc>
 
-nmap to :tabedit
-nmap tc :tabclose
+nmap to :tabedit<CR>
+nmap tc :tabclose<CR>
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -79,13 +79,6 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
-
-
-
-
-
-
-
 
 
 
