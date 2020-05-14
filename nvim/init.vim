@@ -1,6 +1,6 @@
 syntax on
 " set leader key
-let g:mapleader = "\<Space>"
+let mapleader=" "
 set guicursor=
 set noshowmatch
 set nohlsearch
@@ -63,3 +63,8 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
+
+
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
