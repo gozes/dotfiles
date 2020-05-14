@@ -22,8 +22,8 @@ set clipboard=unnamedplus
 
 inoremap <C-c> <Esc>
 
-nmap to :tabedit<CR>
-nmap tc :tabclose<CR>
+nmap to :enew<CR>
+nmap tc :bp <BAR> bd #<CR>
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -34,8 +34,8 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 " Switch tab
-nnoremap <leader><S-Tab> :tabprev<CR>
-nnoremap <leader><Tab> :tabnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <Tab> :bnext<CR>
 nnoremap <C-s> :w<CR>
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
