@@ -1,6 +1,6 @@
  syntax on
 " set leader key
-let mapleader=" "
+let mapleader = "\<Space>"
 set guicursor=
 set noshowmatch
 set nohlsearch
