@@ -49,6 +49,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'morhetz/gruvbox'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -72,3 +74,4 @@ nmap <leader>gs :G<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gp :Gpush<CR>
 let g:airline#extensions#tabline#enabled = 1
+nnoremap <C-p> :GFiles<CR>
