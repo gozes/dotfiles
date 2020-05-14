@@ -84,6 +84,7 @@ let g:coc_global_extensions = [
   \ 'coc-python', 
   \ 'coc-yaml', 
   \ 'coc-json', 
+  \ 'coc-vimlsp'
   \ ]
 
 
