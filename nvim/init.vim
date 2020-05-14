@@ -1,4 +1,4 @@
- syntax on
+syntax on
 " set leader key
 let mapleader = "\<Space>"
 set guicursor=
@@ -78,6 +78,8 @@ nmap <leader>gc :Gcommit<CR>
 nmap <leader>gp :Gpush<CR>
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <C-p> :GFiles<CR>
+nmap <leader>gf :BLines<CR>
+
 
 " coc config
 let g:coc_global_extensions = [
