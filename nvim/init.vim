@@ -45,7 +45,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
+    Plug 'tpope/vim-fugitive'
     Plug 'morhetz/gruvbox'
     Plug 'jiangmiao/auto-pairs'
 
