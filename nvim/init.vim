@@ -20,7 +20,7 @@ set clipboard=unnamedplus
 
 
 
-imap <C-c> <Esc>
+inoremap <C-c> <Esc>
 
 nmap to :tabedit<CR>
 nmap tc :tabclose<CR>
@@ -34,8 +34,9 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 " Switch tab
-nmap <leader><S-Tab> :tabprev<CR>
-nmap <leader><Tab> :tabnext<CR>
+nnoremap <leader><S-Tab> :tabprev<CR>
+nnoremap <leader><Tab> :tabnext<CR>
+nnoremap <C-s> :w<CR>
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
