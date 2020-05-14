@@ -45,6 +45,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+    Plug 'vim-airline/vim-airline'
     Plug 'tpope/vim-fugitive'
     Plug 'morhetz/gruvbox'
     Plug 'jiangmiao/auto-pairs'
@@ -68,3 +69,6 @@ autocmd VimEnter *
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
 nmap <leader>gs :G<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gp :Gpush<CR>
+let g:airline#extensions#tabline#enabled = 1
