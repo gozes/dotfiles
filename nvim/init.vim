@@ -79,7 +79,7 @@ nmap <leader>gp :Gpush<CR>
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <C-p> :GFiles<CR>
 nmap <leader>gf :BLines<CR>
-
+nmap <leader>cc :NERDCommenterToggle
 
 " coc config
 let g:coc_global_extensions = [
