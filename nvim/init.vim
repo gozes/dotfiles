@@ -34,8 +34,8 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 " Switch tab
-nnoremap <leader><Tab><Tab> :bprevious<CR>
 nnoremap <leader><Tab> :bnext<CR>
+nnoremap <leader><leader><Tab> :bprevious<CR>
 nnoremap <C-s> :w<CR>
 
 
