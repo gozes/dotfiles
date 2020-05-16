@@ -90,6 +90,7 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap <silent> <C-p> :GFiles<CR>
 nmap <silent> <leader>gf :BLines<CR>
 nmap <silent> <leader>cc :NERDCommenterToggle
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 " coc config
 let g:coc_global_extensions = [
@@ -97,7 +98,8 @@ let g:coc_global_extensions = [
   \ 'coc-python', 
   \ 'coc-yaml', 
   \ 'coc-json', 
-  \ 'coc-vimlsp'
+  \ 'coc-vimlsp',
+  \ 'coc-yank'
   \ ]
 
 
