@@ -17,26 +17,36 @@ set noswapfile
 set nobackup
 set incsearch
 set clipboard=unnamedplus
+" Undo function after reopening
+set undofile
+set undodir=/tmp
+let g:netrw_home='~/.vim'
 
-
-
+inoremap <F1> <Esc>
 inoremap <C-c> <Esc>
+nnoremap <C-c> :w<CR>
 
-nmap to :enew<CR>
-nmap tc :bp <BAR> bd #<CR>
+nmap <silent> to :enew<CR>
+nmap <silent> tc :bp <BAR> bd #<CR>
 
 " Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
+nmap <silent> ss :split<Return><C-w>w
+nmap <silent> sv :vsplit<Return><C-w>w
 " Move window
 map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
+nmap sc <C-w>c
+nmap so <C-w>o
+nmap s= <C-w>=
+nmap s+ 30<C-w>+
+nmap s- 10<C-w>-
+nmap s< 10<C-w><
+nmap s> 30<C-w>>
 " Switch tab
-nnoremap <leader><Tab> :bnext<CR>
-nnoremap <leader><leader><Tab> :bprevious<CR>
-nnoremap <C-s> :w<CR>
+nnoremap <silent> <leader><Tab> :bnext<CR>
+nnoremap <silent> <leader><leader><Tab> :bprevious<CR>
 
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -71,15 +81,15 @@ autocmd VimEnter *
   \| endif
 
 
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
-nmap <leader>gc :Gcommit<CR>
-nmap <leader>gp :Gpush<CR>
+nmap <silent> <leader>gh :diffget //3<CR>
+nmap <silent> <leader>gu :diffget //2<CR>
+nmap <silent> <leader>gs :G<CR>
+nmap <silent> <leader>gc :Gcommit<CR>
+nmap <silent> <leader>gp :Gpush<CR>
 let g:airline#extensions#tabline#enabled = 1
-nnoremap <C-p> :GFiles<CR>
-nmap <leader>gf :BLines<CR>
-nmap <leader>cc :NERDCommenterToggle
+nnoremap <silent> <C-p> :GFiles<CR>
+nmap <silent> <leader>gf :BLines<CR>
+nmap <silent> <leader>cc :NERDCommenterToggle
 
 " coc config
 let g:coc_global_extensions = [
@@ -202,8 +212,8 @@ omap ac <Plug>(coc-classobj-a)
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
-"nmap <silent> <C-s> <Plug>(coc-range-select)
-"xmap <silent> <C-s> <Plug>(coc-range-select)
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -229,7 +239,7 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
