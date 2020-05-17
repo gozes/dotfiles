@@ -21,6 +21,7 @@ set clipboard=unnamedplus
 set undofile
 set undodir=/tmp
 let g:netrw_home='~/.vim'
+set relativenumber
 
 inoremap <F1> <Esc>
 inoremap <C-c> <Esc>
@@ -64,6 +65,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'preservim/nerdcommenter'
+    Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 
