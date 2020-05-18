@@ -93,6 +93,7 @@ nnoremap <silent> <C-p> :GFiles<CR>
 nmap <silent> <leader>gf :BLines<CR>
 nmap <silent> <leader>cc :NERDCommenterToggle
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <C-g> :Rg<Cr>
 
 " coc config
 let g:coc_global_extensions = [
