@@ -23,6 +23,11 @@ set undodir=/tmp
 let g:netrw_home='~/.vim'
 set relativenumber
 
+let g:netrw_browse_split = 0
+let g:netrw_banner = 0
+let g:netrw_winsize = 15
+let g:netrw_altv = 1
+
 inoremap <F1> <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-c> :w<CR>
@@ -45,6 +50,7 @@ nmap s+ 30<C-w>+
 nmap s- 10<C-w>-
 nmap s< 10<C-w><
 nmap s> 30<C-w>>
+nmap sf :Vex<CR>
 " Switch tab
 nnoremap <silent> <leader><C-n> :bnext<CR>
 nnoremap <silent> <leader><C-p> :bprevious<CR>
