@@ -46,8 +46,8 @@ nmap s- 10<C-w>-
 nmap s< 10<C-w><
 nmap s> 30<C-w>>
 " Switch tab
-nnoremap <silent> <leader><Tab> :bnext<CR>
-nnoremap <silent> <leader><leader><Tab> :bprevious<CR>
+nnoremap <silent> <leader><C-n> :bnext<CR>
+nnoremap <silent> <leader><C-p> :bprevious<CR>
 
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
