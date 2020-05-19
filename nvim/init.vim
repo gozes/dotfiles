@@ -94,12 +94,13 @@ nmap <silent> <leader>gu :diffget //2<CR>
 nmap <silent> <leader>gs :G<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>gp :Gpush<CR>
-let g:airline#extensions#tabline#enabled = 1
 nnoremap <silent> <C-p> :GFiles<CR>
 nmap <silent> <leader>gf :BLines<CR>
 nmap <silent> <leader>cc :NERDCommenterToggle
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> :Rg<Cr>
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#enabled = 1
 
 " coc config
 let g:coc_global_extensions = [
