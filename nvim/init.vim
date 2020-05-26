@@ -24,9 +24,9 @@ set undodir=/tmp
 let g:netrw_home='~/.vim'
 set relativenumber
 
-let g:netrw_browse_split = 0
+let g:netrw_browse_split = 2
 let g:netrw_banner = 0
-let g:netrw_winsize = 15
+let g:netrw_winsize = 25
 let g:netrw_altv = 1
 
 inoremap <F1> <Esc>
