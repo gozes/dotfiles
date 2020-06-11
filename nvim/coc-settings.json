@@ -9,6 +9,12 @@
             "filetypes": [
                 "go"
             ]
+        },
+        "nim": {
+            "command": "nimlsp",
+            "filetypes": [
+                "nim"
+            ]
         }
     },
     "coc.preferences.formatOnSaveFiletypes": [
