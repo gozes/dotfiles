@@ -75,6 +75,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdcommenter'
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'dag/vim-fish'
 
 call plug#end()
 
