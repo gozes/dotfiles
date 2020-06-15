@@ -100,7 +100,7 @@ nmap <silent> <leader>gs :G<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>gp :Gpush<CR>
 nnoremap <silent> <C-p> :GFiles<CR>
-nmap <silent> <leader>gf :BLines<CR>
+nmap <silent> /  :BLines<CR>
 nmap <silent> <leader>cc :NERDCommenterToggle
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> :Rg<Cr>
