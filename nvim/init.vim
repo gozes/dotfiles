@@ -52,7 +52,7 @@ nmap <leader>s+ 30<C-w>+
 nmap <leader>s- 10<C-w>-
 nmap <leader>s< 10<C-w><
 nmap <leader>s> 30<C-w>>
-"nmap <leader>sf :Vex<CR>
+nmap <leader>sf :Vex<CR>
 " Switch tab
 nnoremap <silent> <leader><C-n> :bnext<CR>
 nnoremap <silent> <leader><C-p> :bprevious<CR>
@@ -77,6 +77,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'dag/vim-fish'
     Plug 'alaviss/nim.nvim'
+    Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -106,7 +107,7 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> :Rg<Cr>
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
-
+let g:rustfmt_autosave = 
 
 
 " coc config
