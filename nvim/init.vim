@@ -117,7 +117,7 @@ let g:coc_global_extensions = [
   \ 'coc-yaml', 
   \ 'coc-json', 
   \ 'coc-vimlsp',
-  \ 'coc-yank'
+  \ 'coc-yank',
   \ 'coc-rls'
   \ ]
 
