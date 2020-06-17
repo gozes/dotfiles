@@ -1,3 +1,5 @@
+" Fish doesn't play all that well with others
+set shell=/bin/bash
 filetype plugin on
 syntax on
 " set leader key
