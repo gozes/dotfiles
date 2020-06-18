@@ -102,7 +102,7 @@ nmap <silent> <leader>gu :diffget //2<CR>
 nmap <silent> <leader>gs :G<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>gp :Gpush<CR>
-nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-p> :GFiles -c -o -m<CR>
 nmap <leader>; :Buffers<CR>
 nmap <silent> /  :BLines<CR>
 nmap <silent> <leader>cc :NERDCommenterToggle
