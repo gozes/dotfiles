@@ -80,6 +80,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'dag/vim-fish'
     Plug 'alaviss/nim.nvim'
     Plug 'rust-lang/rust.vim'
+    Plug 'airblade/vim-rooter'
 
 call plug#end()
 
@@ -124,7 +125,23 @@ let g:coc_global_extensions = [
   \ 'coc-rust-analyzer'
   \ ]
 
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
+"COC Config
 autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 
 " TextEdit might fail if hidden is not set.
