@@ -2,9 +2,9 @@
     "languageserver": {
         "golang": {
             "command": "gopls",
+            "disableWorkspaceFolders": true,
             "rootPatterns": [
-                "go.mod",
-                ".git/"
+                "go.mod"
             ],
             "filetypes": [
                 "go"
@@ -26,5 +26,6 @@
         "yaml",
         "json",
         "python"
-    ]
+    ],
+    "python.jediEnabled": false
 }
