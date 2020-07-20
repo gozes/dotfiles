@@ -120,7 +120,7 @@ nnoremap <C-g> :Rg<Cr>
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
-
+let g:indent_guides_guide_size = 1
 
 
 
