@@ -27,5 +27,6 @@
         "json",
         "python"
     ],
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "yaml.format.enable": true
 }
