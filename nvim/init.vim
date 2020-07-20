@@ -81,6 +81,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'alaviss/nim.nvim'
     Plug 'rust-lang/rust.vim'
     Plug 'airblade/vim-rooter'
+    Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -119,6 +120,8 @@ nnoremap <C-g> :Rg<Cr>
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
+
+
 
 
 " coc config
