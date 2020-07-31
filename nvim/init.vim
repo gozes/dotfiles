@@ -74,15 +74,19 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'airblade/vim-rooter'
     Plug 'preservim/nerdcommenter'
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'dag/vim-fish'
     Plug 'alaviss/nim.nvim'
     Plug 'rust-lang/rust.vim'
-    Plug 'airblade/vim-rooter'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'Olical/conjure', { 'tag': 'v3.4.0' }
+    Plug 'tpope/vim-dispatch'
+    Plug 'clojure-vim/vim-jack-in'
+    " Only in Neovim:
+    Plug 'radenling/vim-dispatch-neovim'
 
 
 call plug#end()
