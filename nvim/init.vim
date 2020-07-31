@@ -82,6 +82,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'rust-lang/rust.vim'
     Plug 'airblade/vim-rooter'
     Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'Olical/conjure', { 'tag': 'v3.4.0' }
+
 
 call plug#end()
 
@@ -132,7 +134,8 @@ let g:coc_global_extensions = [
   \ 'coc-json', 
   \ 'coc-vimlsp',
   \ 'coc-yank',
-  \ 'coc-rust-analyzer'
+  \ 'coc-rust-analyzer',
+  \ 'coc-conjure'
   \ ]
 
 " Customize fzf colors to match your color scheme
