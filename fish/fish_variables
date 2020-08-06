@@ -4,7 +4,7 @@ SETUVAR --export EDITOR:nvim
 SETUVAR --export JAVA_11_HOME:/Library/Java/JavaVirtualMachines/adoptopenjdk\x2d11\x2ejdk/Contents/Home
 SETUVAR --export JAVA_14_HOME:/Library/Java/JavaVirtualMachines/openjdk\x2d14\x2e0\x2e1\x2ejdk/Contents/Home
 SETUVAR --export JAVA_8_HOME:/Library/Java/JavaVirtualMachines/adoptopenjdk\x2d8\x2ejdk/Contents/Home
-SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/adoptopenjdk\x2d8\x2ejdk/Contents/Home
+SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/openjdk\x2d14\x2e0\x2e1\x2ejdk/Contents/Home
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr

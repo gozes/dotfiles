@@ -15,5 +15,5 @@ if test (uname) = "Darwin"
     alias java8="set -Ux JAVA_HOME (echo $JAVA_8_HOME )"
     alias java11="set -Ux JAVA_HOME (echo $JAVA_11_HOME )"
     alias java14="set -Ux JAVA_HOME (echo $JAVA_14_HOME )"
-    set -Ux JAVA_HOME $JAVA_8_HOME
+   # set -Ux JAVA_HOME $JAVA_8_HOME
 end
