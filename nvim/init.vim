@@ -82,10 +82,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'alaviss/nim.nvim'
     Plug 'rust-lang/rust.vim'
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'guns/vim-sexp',    {'for': 'clojure'}
+    Plug 'guns/vim-sexp'
     Plug 'tpope/vim-sexp-mappings-for-regular-people'
-    Plug 'liquidz/vim-iced', {'for': 'clojure'}
-    Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'}
+    Plug 'clojure-vim/vim-jack-in'
+    Plug 'radenling/vim-dispatch-neovim'
+    Plug 'Olical/conjure', {'tag': 'v4.4.0'}
 
 
 call plug#end()
@@ -139,6 +140,7 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-yank',
   \ 'coc-rust-analyzer',
+  \ 'coc-conjure'
   \ ]
 
 " Customize fzf colors to match your color scheme
