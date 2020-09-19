@@ -127,8 +127,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
 let g:indent_guides_guide_size = 1
-let g:iced_enable_default_key_mappings = v:true
-
+let g:conjure#mapping#prefix = "\<space>"
 
 
 " coc config
