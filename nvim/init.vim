@@ -40,21 +40,21 @@ nmap <silent> to :enew<CR>
 nmap <silent> tc :bp <BAR> bd #<CR>
 
 " Split window
-nmap <silent> <leader>ss :split<Return><C-w>w
-nmap <silent> <leader>sv :vsplit<Return><C-w>w
+nmap <silent> <leader>ws :split<Return><C-w>w
+nmap <silent> <leader>wv :vsplit<Return><C-w>w
 " Move window
-map <leader>sh <C-w>h
-map <leader>sk <C-w>k
-map <leader>sj <C-w>j
-map <leader>sl <C-w>l
-nmap <leader>sc <C-w>c
-nmap <leader>so <C-w>o
-nmap <leader>s= <C-w>=
-nmap <leader>s+ 30<C-w>+
-nmap <leader>s- 10<C-w>-
-nmap <leader>s< 10<C-w><
-nmap <leader>s> 30<C-w>>
-nmap <leader>sf :Vex<CR>
+map <leader>wh <C-w>h
+map <leader>wk <C-w>k
+map <leader>wj <C-w>j
+map <leader>wl <C-w>l
+nmap <leader>wc <C-w>c
+nmap <leader>wo <C-w>o
+nmap <leader>w= <C-w>=
+nmap <leader>w+ 30<C-w>+
+nmap <leader>w- 10<C-w>-
+nmap <leader>w< 10<C-w><
+nmap <leader>w> 30<C-w>>
+nmap <leader>wf :Vex<CR>
 " Switch tab
 nnoremap <silent> <leader><C-n> :bnext<CR>
 nnoremap <silent> <leader><C-p> :bprevious<CR>
