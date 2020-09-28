@@ -6,6 +6,7 @@ set -gx fish_user_paths $fish_user_paths $HOME/go/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.vim/plugged/vim-iced/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.emacs.d/bin
 set -Ux EDITOR nvim
+set -Ux PIPENV_VENV_IN_PROJECT 1
 alias vim=nvim
 
 if test (uname) = "Darwin"
