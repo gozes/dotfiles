@@ -4,6 +4,7 @@ filetype plugin on
 syntax on
 " set leader key
 let mapleader = "\<Space>"
+let maplocalleader = ","
 set guicursor=
 set noshowmatch
 set nohlsearch
@@ -36,25 +37,25 @@ inoremap <F1> <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-c> :w<CR>
 
-nmap <silent> to :enew<CR>
-nmap <silent> tc :bp <BAR> bd #<CR>
+nnoremap <silent> to :enew<CR>
+nnoremap <silent> tc :bp <BAR> bd #<CR>
 
 " Split window
-nmap <silent> <leader>ws :split<Return><C-w>w
-nmap <silent> <leader>wv :vsplit<Return><C-w>w
+nnoremap <silent> <leader>ws :split<Return><C-w>w
+nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
 " Move window
-map <leader>wh <C-w>h
-map <leader>wk <C-w>k
-map <leader>wj <C-w>j
-map <leader>wl <C-w>l
-nmap <leader>wc <C-w>c
-nmap <leader>wo <C-w>o
-nmap <leader>w= <C-w>=
-nmap <leader>w+ 30<C-w>+
-nmap <leader>w- 10<C-w>-
-nmap <leader>w< 10<C-w><
-nmap <leader>w> 30<C-w>>
-nmap <leader>wf :Vex<CR>
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wl <C-w>l
+nnoremap <leader>wc <C-w>c
+nnoremap <leader>wo <C-w>o
+nnoremap <leader>w= <C-w>=
+nnoremap <leader>w+ 30<C-w>+
+nnoremap <leader>w- 10<C-w>-
+nnoremap <leader>w< 10<C-w><
+nnoremap <leader>w> 30<C-w>>
+nnoremap <leader>wf :Vex<CR>
 " Switch tab
 nnoremap <silent> <leader><C-n> :bnext<CR>
 nnoremap <silent> <leader><C-p> :bprevious<CR>
@@ -112,22 +113,21 @@ autocmd VimEnter *
   \| endif
 
 
-nmap <silent> <leader>gh :diffget //3<CR>
-nmap <silent> <leader>gu :diffget //2<CR>
-nmap <silent> <leader>gs :G<CR>
-nmap <silent> <leader>gc :Gcommit<CR>
-nmap <silent> <leader>gp :Gpush<CR>
+nnoremap <silent> <leader>gh :diffget //3<CR>
+nnoremap <silent> <leader>gu :diffget //2<CR>
+nnoremap <silent> <leader>gs :G<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gp :Gpush<CR>
 nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
-nmap <leader>; :Buffers<CR>
-nmap <silent> /  :BLines<CR>
-nmap <silent> <leader>cc :NERDCommenterToggle
+nnoremap <leader>; :Buffers<CR>
+nnoremap <silent> /  :BLines<CR>
+nnoremap <silent> <leader>cc :NERDCommenterToggle
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> :Rg<Cr>
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
 let g:indent_guides_guide_size = 1
-let g:conjure#mapping#prefix = "\<space>"
 
 
 " coc config
