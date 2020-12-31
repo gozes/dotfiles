@@ -59,7 +59,7 @@ nnoremap <leader>wf :Vex<CR>
 " Switch tab
 nnoremap <silent> <leader><C-n> :bnext<CR>
 nnoremap <silent> <leader><C-p> :bprevious<CR>
-
+tnoremap <C-\> <C-\><C-n>
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -130,7 +130,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
 let g:indent_guides_guide_size = 1
-
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " coc config
 let g:coc_global_extensions = [
