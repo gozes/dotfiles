@@ -88,6 +88,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'clojure-vim/vim-jack-in'
     Plug 'radenling/vim-dispatch-neovim'
     Plug 'Olical/conjure', {'tag': 'v4.4.0'}
+    Plug 'cespare/vim-toml'
+    Plug 'Yggdroot/indentLine'
 
 
 call plug#end()
