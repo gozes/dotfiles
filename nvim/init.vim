@@ -107,9 +107,6 @@ colorscheme gruvbox
 set background=dark
 
 
-
-
-
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
@@ -124,14 +121,26 @@ nnoremap <silent> <leader>gp :Gpush<CR>
 nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
 nnoremap <leader>; :Buffers<CR>
 nnoremap <silent> /  :BLines<CR>
-nnoremap <silent> <leader>cc :NERDCommenterToggle
+nnoremap <silent> <leader>cc :NERDCommenterToggle<CR>
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> :Rg<Cr>
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
 let g:indent_guides_guide_size = 1
+let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_fileType = ['yaml']
+
+
+augroup filetype_rust
+    autocmd!
+    autocmd FileType rust nnoremap <buffer> <localleader>b :Cbuild<CR>
+    autocmd FileType rust nnoremap <buffer> <localleader>r :Crun<CR>
+    autocmd FileType rust nnoremap <buffer> <localleader>t :Ctest<CR>
+    autocmd FileType rust nnoremap <buffer> <localleader>c :Cargo check<CR>
+augroup END
+
 
 " coc config
 let g:coc_global_extensions = [
