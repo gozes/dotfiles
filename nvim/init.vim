@@ -5,7 +5,6 @@ syntax on
 " set leader key
 let mapleader = "\<Space>"
 let maplocalleader = ","
-set guicursor=
 set noshowmatch
 set nohlsearch
 set hidden
