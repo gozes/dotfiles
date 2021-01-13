@@ -1,15 +1,5 @@
 {
     "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "disableWorkspaceFolders": true,
-            "rootPatterns": [
-                "go.mod"
-            ],
-            "filetypes": [
-                "go"
-            ]
-        },
         "nim": {
             "command": "nimlsp",
             "filetypes": [
@@ -24,7 +14,8 @@
         "graphql",
         "html",
         "json",
-        "python"
+        "python",
+        "go"
     ],
     "python.jediEnabled": false,
     "yaml.format.enable": true,
@@ -46,6 +37,5 @@
         "!Select sequence",
         "!Split",
         "!Join sequence"
-    ],
-    "coc.source.iced.enable": true
+    ]
 }

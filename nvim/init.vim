@@ -148,7 +148,8 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-yank',
   \ 'coc-rust-analyzer',
-  \ 'coc-conjure'
+  \ 'coc-conjure',
+  \ 'coc-go'
   \ ]
 
 " Customize fzf colors to match your color scheme
