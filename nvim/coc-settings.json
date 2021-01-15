@@ -17,7 +17,10 @@
         "go"
     ],
     "python.jediEnabled": false,
-    "yaml.format.enable": true,
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json": "/*"
+    },
+    "yaml.schemaStore.enable": true,
     "yaml.customTags": [
         "!And",
         "!If",
