@@ -18,6 +18,13 @@ let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 let g:go_def_mapping_enabled = 0
 
-nmap <leader>t  <Plug>(go-test)
-nmap <leader>b  <Plug>(go-build)
-nmap <Leader>i <Plug>(go-info)
+augroup filetype_go
+    autocmd!
+    autocmd FileType go nnoremap <buffer> <localleader>R  <Plug>(go-rename)
+    autocmd FileType go nnoremap <buffer> <localleader>t  <Plug>(go-test)
+    autocmd FileType go nnoremap <buffer> <localleader>T  <Plug>(go-test-func)
+    autocmd FileType go nnoremap <buffer> <localleader>b  <Plug>(go-build)
+    autocmd FileType go nnoremap <buffer> <localleader>i <Plug>(go-info)
+    autocmd FileType go nnoremap <buffer> <localleader>d <Plug>(go-doc-vertical)
+    autocmd FileType go nnoremap <buffer> <localleader>D <Plug>(go-doc-browser)
+augroup END
