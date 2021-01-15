@@ -168,6 +168,11 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+
+
+vnoremap <leader>F  <Plug>(coc-format-selected)
+nnoremap <leader>F  <Plug>(coc-format-selected)
+
 "COC Config
 autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 
