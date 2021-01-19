@@ -12,9 +12,7 @@
         "javascript",
         "graphql",
         "html",
-        "json",
-        "python",
-        "go"
+        "python"
     ],
     "python.jediEnabled": false,
     "yaml.schemas": {
