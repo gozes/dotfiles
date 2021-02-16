@@ -293,9 +293,8 @@
       "verbose": "Left Control"
     },
     {
-      "keyCode": 51514,
-      "label": "ENTER",
-      "extraLabel": "L#1/"
+      "keyCode": 44,
+      "label": "SPACE"
     },
     {
       "keyCode": 0,
@@ -308,8 +307,9 @@
       "verbose": "Left Cmd"
     },
     {
-      "keyCode": 44,
-      "label": "SPACE"
+      "keyCode": 51514,
+      "label": "ENTER",
+      "extraLabel": "L#1/"
     },
     {
       "keyCode": 49162,
@@ -322,8 +322,8 @@
       "verbose": "Backspace"
     },
     {
-      "keyCode": 44,
-      "label": "SPACE"
+      "keyCode": 40,
+      "label": "ENTER"
     },
     {
       "keyCode": 44,
@@ -382,9 +382,9 @@
     4,
     4,
     1,
-    6,
-    5,
     1,
+    5,
+    6,
     5,
     4,
     4,
