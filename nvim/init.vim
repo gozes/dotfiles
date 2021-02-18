@@ -143,7 +143,7 @@ augroup END
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-pairs',
-  \ 'coc-python', 
+  \ 'coc-pyright', 
   \ 'coc-yaml', 
   \ 'coc-json', 
   \ 'coc-vimlsp',
