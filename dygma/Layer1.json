@@ -96,9 +96,9 @@
       "verbose": "Disabled"
     },
     {
-      "keyCode": 2091,
-      "label": "TAB",
-      "extraLabel": "S+"
+      "keyCode": 0,
+      "label": "NO KEY",
+      "verbose": "Disabled"
     },
     {
       "keyCode": 65535,
@@ -161,9 +161,9 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 305,
-      "label": "\\",
-      "extraLabel": "C+"
+      "keyCode": 0,
+      "label": "NO KEY",
+      "verbose": "Disabled"
     },
     {
       "keyCode": 0,
@@ -182,8 +182,9 @@
       "verbose": "Disabled"
     },
     {
-      "keyCode": 43,
-      "label": "TAB"
+      "keyCode": 0,
+      "label": "NO KEY",
+      "verbose": "Disabled"
     },
     {
       "keyCode": 0,
@@ -378,9 +379,9 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 305,
-      "label": "\\",
-      "extraLabel": "C+"
+      "keyCode": 42,
+      "label": "BACKSPACE",
+      "verbose": "Backspace"
     },
     {
       "keyCode": 65535,
@@ -436,13 +437,13 @@
     6,
     6,
     15,
-    6,
+    15,
     14,
-    9,
     15,
     15,
     15,
-    6,
+    15,
+    15,
     15,
     14,
     14,

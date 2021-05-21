@@ -9,12 +9,12 @@
       "label": "+"
     },
     {
-      "keyCode": 47,
-      "label": "["
-    },
-    {
       "keyCode": 2095,
       "label": "{"
+    },
+    {
+      "keyCode": 47,
+      "label": "["
     },
     {
       "keyCode": 2086,
@@ -39,24 +39,24 @@
       "verbose": "Disabled"
     },
     {
-      "keyCode": 2087,
-      "label": ")"
-    },
-    {
-      "keyCode": 2096,
-      "label": "}"
-    },
-    {
-      "keyCode": 48,
-      "label": "]"
-    },
-    {
       "keyCode": 2085,
       "label": "*"
     },
     {
       "keyCode": 2078,
       "label": "!"
+    },
+    {
+      "keyCode": 2087,
+      "label": ")"
+    },
+    {
+      "keyCode": 48,
+      "label": "]"
+    },
+    {
+      "keyCode": 2096,
+      "label": "}"
     },
     {
       "keyCode": 2082,
@@ -313,9 +313,8 @@
       "extraLabel": "GUI/"
     },
     {
-      "keyCode": 49162,
-      "label": "1",
-      "extraLabel": "OSL"
+      "keyCode": 43,
+      "label": "TAB"
     },
     {
       "keyCode": 305,
@@ -423,7 +422,7 @@
     1,
     1,
     9,
-    3,
+    8,
     2,
     2,
     2,
