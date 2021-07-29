@@ -89,8 +89,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'Olical/conjure', {'tag': 'v4.19.0'}
     Plug 'cespare/vim-toml'
     Plug 'Yggdroot/indentLine'
-
-
+    Plug 'tpope/vim-dispatch'
+    Plug 'clojure-vim/vim-jack-in'
+    " Only in Neovim:
+    Plug 'radenling/vim-dispatch-neovim'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
