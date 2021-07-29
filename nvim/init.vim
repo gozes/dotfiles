@@ -86,7 +86,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sexp-mappings-for-regular-people'
     Plug 'clojure-vim/vim-jack-in'
     Plug 'radenling/vim-dispatch-neovim'
-    Plug 'Olical/conjure', {'tag': 'v4.19.0'}
+    Plug 'Olical/conjure', {'tag': 'v4.22.1'}
     Plug 'cespare/vim-toml'
     Plug 'Yggdroot/indentLine'
     Plug 'tpope/vim-dispatch'
