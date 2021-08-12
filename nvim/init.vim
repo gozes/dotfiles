@@ -47,7 +47,7 @@ nnoremap <leader>wh <C-w>h
 nnoremap <leader>wk <C-w>k
 nnoremap <leader>wj <C-w>j
 nnoremap <leader>wl <C-w>l
-nnoremap <leader>wc <C-w>c
+nnoremap <leader>wc :bd<CR>
 nnoremap <leader>wo <C-w>o
 nnoremap <leader>w= <C-w>=
 nnoremap <leader>w+ 30<C-w>+
