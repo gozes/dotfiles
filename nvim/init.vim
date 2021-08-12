@@ -58,7 +58,6 @@ nnoremap <leader>wf :Vex<CR>
 " Switch tab
 nnoremap <silent> <leader><C-n> :bnext<CR>
 nnoremap <silent> <leader><C-p> :bprevious<CR>
-tnoremap <C-\> <C-\><C-n>
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -93,6 +92,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'clojure-vim/vim-jack-in'
     " Only in Neovim:
     Plug 'radenling/vim-dispatch-neovim'
+    Plug 'vim-test/vim-test'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -132,6 +132,16 @@ let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_fileType = ['yaml']
 
+nnoremap <silent> t<C-n> :TestNearest<CR>
+nnoremap <silent> t<C-f> :TestFile<CR>
+nnoremap <silent> t<C-s> :TestSuite<CR>
+nnoremap <silent> t<C-l> :TestLast<CR>
+nnoremap <silent> t<C-g> :TestVisit<CR>
+let test#strategy = "dispatch"
+
+if has('nvim')
+  tnoremap <C-o> <C-\><C-n>
+endif
 
 augroup filetype_rust
     autocmd!
