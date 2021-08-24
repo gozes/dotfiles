@@ -1,6 +1,5 @@
 
 " go
-let g:go_fmt_command = "goimports"
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_chan_whitespace_error = 0
 let g:go_highlight_extra_types = 0
@@ -16,7 +15,6 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
-let g:go_def_mapping_enabled = 0
 
 augroup filetype_go
     autocmd!
