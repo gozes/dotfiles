@@ -124,6 +124,11 @@ nnoremap <silent> /  :BLines<CR>
 nnoremap <silent> <leader>cc :NERDCommenterToggle<CR>
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> :Rg<Cr>
+nnoremap <leader>sf z=
+nnoremap <leader>sn ]S
+nnoremap <leader>sp [S
+inoremap <C-s> <C-x>s
+
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:rustfmt_autosave = 1 
@@ -142,6 +147,12 @@ let test#strategy = "dispatch"
 if has('nvim')
   tnoremap <C-o> <C-\><C-n>
 endif
+
+augroup filetype_spell
+    autocmd!
+    autocmd FileType markdown setlocal spell spelllang=en_us
+    autocmd FileType gitcommit setlocal spell spelllang=en_us
+augroup END
 
 augroup filetype_rust
     autocmd!
