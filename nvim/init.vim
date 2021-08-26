@@ -151,7 +151,9 @@ endif
 augroup filetype_spell
     autocmd!
     autocmd FileType markdown setlocal spell spelllang=en_us
+    autocmd FileType markdown setlocal complete+=kspell
     autocmd FileType gitcommit setlocal spell spelllang=en_us
+    autocmd FileType gitcommit setlocal complete+=kspell
 augroup END
 
 augroup filetype_rust
