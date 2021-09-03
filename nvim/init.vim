@@ -116,8 +116,8 @@ autocmd VimEnter *
 nnoremap <silent> <leader>gh :diffget //3<CR>
 nnoremap <silent> <leader>gu :diffget //2<CR>
 nnoremap <silent> <leader>gs :G<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gp :Gpush<CR>
+nnoremap <silent> <leader>gc :G commit<CR>
+nnoremap <silent> <leader>gp :G push<CR>
 nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
 nnoremap <leader>; :Buffers<CR>
 nnoremap <silent> /  :BLines<CR>
