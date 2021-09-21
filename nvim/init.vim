@@ -93,6 +93,7 @@ call plug#begin('~/.vim/plugged')
     " Only in Neovim:
     Plug 'radenling/vim-dispatch-neovim'
     Plug 'vim-test/vim-test'
+    Plug 'tpope/vim-cucumber'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -147,6 +148,11 @@ let test#strategy = "dispatch"
 if has('nvim')
   tnoremap <C-o> <C-\><C-n>
 endif
+
+augroup filetype_cucumber
+    autocmd!
+    autocmd BufReadPre,BufReadPost,BufRead,BufNewFile *.feature setfiletype cucumber
+augroup END
 
 augroup filetype_spell
     autocmd!
