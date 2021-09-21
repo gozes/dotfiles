@@ -94,6 +94,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'radenling/vim-dispatch-neovim'
     Plug 'vim-test/vim-test'
     Plug 'tpope/vim-cucumber'
+    Plug 'avanzzzi/behave.vim'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
