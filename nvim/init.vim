@@ -95,6 +95,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-test/vim-test'
     Plug 'tpope/vim-cucumber'
     Plug 'avanzzzi/behave.vim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'fannheyward/telescope-coc.nvim'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -120,12 +124,19 @@ nnoremap <silent> <leader>gu :diffget //2<CR>
 nnoremap <silent> <leader>gs :G<CR>
 nnoremap <silent> <leader>gc :G commit<CR>
 nnoremap <silent> <leader>gp :G push<CR>
-nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
-nnoremap <leader>; :Buffers<CR>
-nnoremap <silent> /  :BLines<CR>
+"nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
+nnoremap <silent> <C-p> <cmd>Telescope git_files<CR>
+nnoremap <leader>; <cmd>Telescope buffers<CR>
+nnoremap <silent> /  <cmd>Telescope treesitter<CR>
 nnoremap <silent> <leader>cc :NERDCommenterToggle<CR>
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
-nnoremap <C-g> :Rg<Cr>
+nnoremap <C-g> <cmd>Telescope live_grep<Cr>
+nnoremap <leader><C-t>f <cmd>Telescope file_browser<Cr>
+nnoremap <leader><C-t>h <cmd>Telescope help_tags<Cr>
+nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
+nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
+nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
+nnoremap <leader><C-t>r <cmd>Telescope coc references<Cr>
 nnoremap <leader>sf z=
 nnoremap <leader>sn ]S
 nnoremap <leader>sp [S
@@ -205,6 +216,26 @@ let g:fzf_colors =
 
 vnoremap <leader>F  <Plug>(coc-format-selected)
 nnoremap <leader>F  <Plug>(coc-format-selected)
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ignore_install = { "javascript" }, -- List of parsers to ignore installing
+  highlight = {
+  enable = {"python", "vim","yaml","go","json","java","fish","comment","clojure","lua"},              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+lua <<EOF
+    require('telescope').load_extension('coc')
+EOF
 
 "COC Config
 autocmd FileType markdown let b:coc_pairs_disabled = ['`']
