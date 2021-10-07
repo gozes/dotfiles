@@ -127,7 +127,7 @@ nnoremap <silent> <leader>gp :G push<CR>
 "nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
 nnoremap <silent> <C-p> <cmd>Telescope git_files<CR>
 nnoremap <leader>; <cmd>Telescope buffers<CR>
-nnoremap <silent> /  <cmd>Telescope treesitter<CR>
+nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
 nnoremap <silent> <leader>cc :NERDCommenterToggle<CR>
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> <cmd>Telescope live_grep<Cr>
