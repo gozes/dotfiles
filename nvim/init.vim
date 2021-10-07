@@ -137,6 +137,8 @@ nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
 nnoremap <leader><C-t>r <cmd>Telescope coc references<Cr>
+nnoremap <leader><C-t>c <cmd>Telescope coc commands<Cr>
+
 nnoremap <leader>sf z=
 nnoremap <leader>sn ]S
 nnoremap <leader>sp [S
