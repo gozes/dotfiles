@@ -134,6 +134,7 @@ nnoremap <C-g> <cmd>Telescope live_grep<Cr>
 nnoremap <leader><C-t>f <cmd>Telescope file_browser<Cr>
 nnoremap <leader><C-t>h <cmd>Telescope help_tags<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
+nnoremap <leader><C-t>s <cmd>Telescope spell_suggest<Cr>
 nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
 nnoremap <leader><C-t>r <cmd>Telescope coc references<Cr>
