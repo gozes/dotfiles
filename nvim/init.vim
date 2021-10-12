@@ -74,7 +74,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'airblade/vim-rooter'
-    Plug 'preservim/nerdcommenter'
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'dag/vim-fish'
@@ -99,6 +98,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'fannheyward/telescope-coc.nvim'
+    Plug 'numToStr/Comment.nvim'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -239,6 +239,11 @@ EOF
 lua <<EOF
     require('telescope').load_extension('coc')
 EOF
+
+lua << EOF
+require('Comment').setup()
+EOF
+
 
 "COC Config
 autocmd FileType markdown let b:coc_pairs_disabled = ['`']
