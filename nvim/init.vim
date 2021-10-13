@@ -38,7 +38,6 @@ nnoremap <C-c> :w<CR>
 
 nnoremap <silent> to :enew<CR>
 nnoremap <silent> tc :bp <BAR> bd #<CR>
-
 " Split window
 nnoremap <silent> <leader>ws :split<Return><C-w>w
 nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
