@@ -36,8 +36,11 @@ inoremap <F1> <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-c> :w<CR>
 
-nnoremap <silent> to :enew<CR>
-nnoremap <silent> tc :bp <BAR> bd #<CR>
+nnoremap <M-t> :tabnew <bar> term<cr>
+nnoremap <M-c> :tabclose<cr>
+nnoremap <M-p> :tabprevious<cr>
+nnoremap <M-n> :tabnext<cr>
+nnoremap <M-o> :tabnew<cr>
 " Split window
 nnoremap <silent> <leader>ws :split<Return><C-w>w
 nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
