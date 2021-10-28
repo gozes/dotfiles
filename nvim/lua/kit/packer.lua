@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'vim-airline/vim-airline'
     use 'tpope/vim-fugitive'
-    use 'gruvbox-community/gruvbox'
+    --use 'gruvbox-community/gruvbox'
     use 'airblade/vim-rooter'
     use 'dag/vim-fish'
     use {'fatih/vim-go', run = ':GoUpdateBinaries' }
@@ -26,8 +26,12 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'numToStr/Comment.nvim', config = function() require('Comment').setup() end} 
+    --use {'numToStr/Comment.nvim', config = function() require('Comment').setup() end} 
     use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{{ map_cr = true }} end} 
+    use 'folke/lsp-colors.nvim'
+    use 'neovim/nvim-lspconfig'
+    use 'preservim/nerdcommenter'
+    use 'sainnhe/gruvbox-material'
     if packer_bootstrap then
         require('packer').sync()
     end
