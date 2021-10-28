@@ -1,65 +1,10 @@
-filetype plugin on
-syntax on
-" set leader key
-let mapleader = "\<Space>"
-let maplocalleader = ","
-set guicursor=
-set noshowmatch
-set nohlsearch
-set hidden
-set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=4
-set expandtab
-set smartindent
-set nu
-set nowrap
-set smartcase
-set noswapfile
-set nobackup
-set incsearch
-set clipboard=unnamedplus
-" Undo function after reopening
-set undofile
-set undodir=/tmp
-let g:netrw_home='~/.vim'
-set relativenumber
-set scrolloff=10
-set noshowmode
+lua <<EOF
+    require('settings')
+EOF
 
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
-let g:netrw_altv = 1
-
-inoremap <F1> <Esc>
-inoremap <C-c> <Esc>
-nnoremap <C-c> :w<CR>
-
-nnoremap <M-t> :tabnew <bar> term<cr>
-nnoremap <M-c> :tabclose<cr>
-nnoremap <M-p> :tabprevious<cr>
-nnoremap <M-n> :tabnext<cr>
-nnoremap <M-o> :tabnew<cr>
-" Split window
-nnoremap <silent> <leader>ws :split<Return><C-w>w
-nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
-" Move window
-nnoremap <leader>wh <C-w>h
-nnoremap <leader>wk <C-w>k
-nnoremap <leader>wj <C-w>j
-nnoremap <leader>wl <C-w>l
-nnoremap <leader>wc :bd<CR>
-nnoremap <leader>wo <C-w>o
-nnoremap <leader>w= <C-w>=
-nnoremap <leader>w+ 30<C-w>+
-nnoremap <leader>w- 10<C-w>-
-nnoremap <leader>w< 10<C-w><
-nnoremap <leader>w> 30<C-w>>
-nnoremap <leader>wf :Vex<CR>
-" Switch tab
-nnoremap <silent> <leader><C-n> :bnext<CR>
-nnoremap <silent> <leader><C-p> :bprevious<CR>
+lua <<EOF
+    require('keymaps')
+EOF
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo  ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
