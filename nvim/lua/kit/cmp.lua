@@ -1,4 +1,7 @@
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
+
 local lspkind = require "lspkind"
 lspkind.init()
 
@@ -52,14 +55,12 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[api]",
         path = "[path]",
+        name = '[spell]',
       },
     },
   },
   experimental = {
-    -- I like the new menu better! Nice work hrsh7th
     native_menu = false,
-
-    -- Let's play with this for a day or two
     ghost_text = true,
   },
 })
