@@ -9,3 +9,7 @@ require('kit.gruvbox')
 require('kit.keymaps')
 
 require('kit.treesitter')
+
+require('kit.lsp')
+
+require('kit.cmp')

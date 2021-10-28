@@ -32,6 +32,11 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'preservim/nerdcommenter'
     use 'sainnhe/gruvbox-material'
+    use 'onsails/lspkind-nvim'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/nvim-cmp'
     if packer_bootstrap then
         require('packer').sync()
     end

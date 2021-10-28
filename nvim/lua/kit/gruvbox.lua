@@ -13,6 +13,7 @@ vim.cmd([[
 if has('termguicolors')
     set termguicolors
 endif
+let g:gruvbox_material_palette = 'original'
 set background=dark
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_enable_italic = 1
