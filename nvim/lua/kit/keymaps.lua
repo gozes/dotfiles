@@ -21,10 +21,6 @@ nnoremap <leader><C-t>r <cmd>Telescope coc references<Cr>
 nnoremap <leader><C-t>c <cmd>Telescope coc commands<Cr>
 nnoremap <leader><C-t>e <cmd>Telescope coc diagnostics<Cr>
 
-nnoremap <leader>sf z=
-nnoremap <leader>sn ]S
-nnoremap <leader>sp [S
-inoremap <C-s> <C-x>s
 
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1

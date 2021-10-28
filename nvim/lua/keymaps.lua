@@ -37,4 +37,10 @@ nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
 nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
 nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
+
+nnoremap <leader>sf z=
+nnoremap <leader>sn ]S
+nnoremap <leader>sp [S
+inoremap <C-s> <C-x>s
+
 ]])
