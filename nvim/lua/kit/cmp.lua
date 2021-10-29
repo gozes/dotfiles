@@ -13,7 +13,7 @@ cmp.setup({
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-e>"] = cmp.mapping.close(),
-    ["<c-y>"] = cmp.mapping.confirm {
+    ["<cr>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Insert,
       select = true,
     },
@@ -23,20 +23,20 @@ cmp.setup({
     },
 
     ["<c-space>"] = cmp.mapping.complete(),
-    --["<Tab>"] = function(fallback)
-        --if cmp.visible() then
-            --cmp.select_next_item()
-        --else
-            --fallback()
-        --end
-    --end,
-    --["<S-Tab>"] = function(fallback)
-        --if cmp.visible() then
-            --cmp.select_prev_item()
-        --else
-            --fallback()
-        --end
-    --end,
+    ["<Tab>"] = function(fallback)
+        if cmp.visible() then
+            cmp.select_next_item()
+        else
+            fallback()
+        end
+    end,
+    ["<S-Tab>"] = function(fallback)
+        if cmp.visible() then
+            cmp.select_prev_item()
+        else
+            fallback()
+        end
+    end,
 
     },
     sources = {
