@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     --use {'numToStr/Comment.nvim', config = function() require('Comment').setup() end} 
-    use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{{ map_cr = true }} end} 
+    use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end} 
     use 'folke/lsp-colors.nvim'
     use 'neovim/nvim-lspconfig'
     use 'preservim/nerdcommenter'
