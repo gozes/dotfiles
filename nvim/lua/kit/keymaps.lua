@@ -18,7 +18,7 @@ nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
 nnoremap <leader><C-t>s <cmd>Telescope lsp_document_symbols<Cr>
 nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
-nnoremap <leader><C-t>r <cmd>Telescope lsp_references<Cr>
+nnoremap <leader>vrr <cmd>Telescope lsp_references<Cr>
 nnoremap <leader><C-t>e <cmd>Telescope lsp_document_diagnostics<Cr>
 nnoremap <leader><C-t>E <cmd>Telescope lsp_workspace_diagnostics<Cr>
 
