@@ -22,9 +22,18 @@ nnoremap <leader><C-t>r <cmd>Telescope lsp_references<Cr>
 nnoremap <leader><C-t>e <cmd>Telescope lsp_document_diagnostics<Cr>
 nnoremap <leader><C-t>E <cmd>Telescope lsp_workspace_diagnostics<Cr>
 
+nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
+nnoremap <C-e> :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <leader>tc :lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>
 
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#enabled = 1
+nnoremap <C-h> :lua require("harpoon.ui").nav_file(1)<CR>
+nnoremap <C-t> :lua require("harpoon.ui").nav_file(2)<CR>
+nnoremap <C-n> :lua require("harpoon.ui").nav_file(3)<CR>
+nnoremap <C-s> :lua require("harpoon.ui").nav_file(4)<CR>
+
+
+" let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox_material'
 " let g:rustfmt_autosave = 1 
 let g:indent_guides_guide_size = 1
