@@ -1,6 +1,4 @@
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
-vim.opt.spell = true
-vim.opt.spelllang = { 'en_us' }
 
 local lspkind = require "lspkind"
 lspkind.init()
@@ -55,7 +53,6 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[api]",
         path = "[path]",
-        name = '[spell]',
       },
     },
   },
