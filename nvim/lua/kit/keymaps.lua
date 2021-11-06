@@ -15,10 +15,10 @@ nnoremap <leader><C-t>f <cmd>Telescope file_browser<Cr>
 nnoremap <leader><C-t>h <cmd>Telescope help_tags<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
-nnoremap <leader><C-t>s <cmd>Telescope lsp_document_symbols<Cr>
+nnoremap gds <cmd>Telescope lsp_document_symbols<Cr>
 nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
-nnoremap <leader>vrr <cmd>Telescope lsp_references<Cr>
+nnoremap grr <cmd>Telescope lsp_references<Cr>
 nnoremap <leader><C-t>e <cmd>Telescope lsp_document_diagnostics<Cr>
 nnoremap <leader><C-t>E <cmd>Telescope lsp_workspace_diagnostics<Cr>
 
