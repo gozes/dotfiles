@@ -16,6 +16,7 @@ nnoremap <leader><C-t>h <cmd>Telescope help_tags<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
 nnoremap gds <cmd>Telescope lsp_document_symbols<Cr>
+nnoremap gca <cmd>Telescope lsp_code_actions<Cr>
 nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
 nnoremap grr <cmd>Telescope lsp_references<Cr>
