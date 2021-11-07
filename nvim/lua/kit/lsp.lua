@@ -11,5 +11,5 @@ require('lspconfig').yamlls.setup {
         },
     },
 }
-
+vim.cmd [[ runtime plugin/astronauta.vim ]]
 vim.lsp.handlers["textDocument/codeAction"] = require'lspactions'.codeaction
