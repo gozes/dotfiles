@@ -11,3 +11,5 @@ require('lspconfig').yamlls.setup {
         },
     },
 }
+
+vim.lsp.handlers["textDocument/codeAction"] = require'lspactions'.codeaction

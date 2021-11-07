@@ -39,6 +39,9 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'}
     use 'ThePrimeagen/harpoon'
+    use 'nvim-lua/popup.nvim'
+    use 'tjdevries/astronauta.nvim'
+    use 'RishabhRD/lspactions'
     if packer_bootstrap then
         require('packer').sync()
     end

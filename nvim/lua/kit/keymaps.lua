@@ -17,6 +17,7 @@ nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
 nnoremap gds <cmd>Telescope lsp_document_symbols<Cr>
 nnoremap gca <cmd>Telescope lsp_code_actions<Cr>
+nnoremap grca <cmd>Telescope lsp_range_code_actions<Cr>
 nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
 nnoremap grr <cmd>Telescope lsp_references<Cr>
@@ -36,6 +37,8 @@ nnoremap <M-h> :lua require("harpoon.ui").nav_file(5)<CR>
 nnoremap <M-t> :lua require("harpoon.ui").nav_file(6)<CR>
 nnoremap <M-n> :lua require("harpoon.ui").nav_file(7)<CR>
 nnoremap <M-s> :lua require("harpoon.ui").nav_file(8)<CR>
+
+nnoremap grn :lua require'lspactions'.rename()<CR>
 
 " let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline#extensions#tabline#enabled = 1
@@ -89,4 +92,3 @@ vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>",
 vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>",
   {silent = true, noremap = true}
 )
-
