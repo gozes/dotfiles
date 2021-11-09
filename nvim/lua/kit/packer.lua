@@ -6,7 +6,8 @@ end
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'vim-airline/vim-airline'
+    --use 'vim-airline/vim-airline'
+    use 'nvim-lualine/lualine.nvim'
     use 'tpope/vim-fugitive'
     --use 'gruvbox-community/gruvbox'
     use 'airblade/vim-rooter'

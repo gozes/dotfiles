@@ -42,7 +42,7 @@ nnoremap grn :lua require'lspactions'.rename()<CR>
 
 " let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'gruvbox_material'
+" let g:airline_theme = 'gruvbox_material'
 " let g:rustfmt_autosave = 1 
 let g:indent_guides_guide_size = 1
 let g:indentLine_enabled = 0
