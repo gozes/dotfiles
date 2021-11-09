@@ -1,6 +1,6 @@
 vim.cmd([[
 inoremap <F1> <Esc>
-inoremap <C-c> <Esc>
+"inoremap <C-c> <Esc>
 nnoremap <C-c> :w<CR>
 
 nnoremap <M-t> :tabnew <bar> term<cr>
@@ -41,5 +41,7 @@ nnoremap <leader>sf z=
 nnoremap <leader>sn ]S
 nnoremap <leader>sp [S
 inoremap <C-s> <C-x>s
+nnoremap <leader>^ <C-^>
+nnoremap <leader>| <C-^>
 
 ]])
