@@ -11,7 +11,7 @@ nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
 nnoremap <silent> <leader>cc :NERDCommenterToggle<CR>
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <C-g> <cmd>Telescope live_grep<Cr>
-nnoremap <leader><C-t>f <cmd>Telescope file_browser<Cr>
+nnoremap <leader><C-t>f <cmd>lua require('telescope.builtin').file_browser({depth = 5})<Cr>
 nnoremap <leader><C-t>h <cmd>Telescope help_tags<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
