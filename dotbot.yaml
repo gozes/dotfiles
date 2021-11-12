@@ -5,6 +5,8 @@
 
 - clean: ['~', '~/.config']
 
+- create:
+    - ~/Code
 
 - link:
     ~/.config/nvim: nvim
