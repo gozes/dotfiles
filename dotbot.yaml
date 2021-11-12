@@ -13,3 +13,6 @@
     ~/.config/fish: fish
     ~/.config/kitty: kitty
     ~/.tmux.conf: tmux.conf
+
+- shell:
+  - chsh -s $(which fish)
