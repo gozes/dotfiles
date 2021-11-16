@@ -48,6 +48,7 @@ nnoremap grn :lua require'lspactions'.rename()<CR>
 " let g:indentLine_enabled = 0
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " let g:indentLine_fileType = ['yaml']
+let g:indent_blankline_enabled = v:false
 
 nnoremap <silent> t<C-n> :TestNearest<CR>
 nnoremap <silent> t<C-f> :TestFile<CR>
