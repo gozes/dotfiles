@@ -12,5 +12,7 @@ require('kit.lsp')
 
 require('kit.cmp')
 
+require('kit.indent')
+
 require('kit.keymaps')
 

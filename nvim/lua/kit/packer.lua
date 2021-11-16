@@ -13,12 +13,12 @@ return require('packer').startup(function(use)
     use 'airblade/vim-rooter'
     use 'dag/vim-fish'
     use {'fatih/vim-go', run = ':GoUpdateBinaries' }
-    use 'nathanaelkane/vim-indent-guides'
+    --use 'nathanaelkane/vim-indent-guides'
     use 'guns/vim-sexp'
     use 'tpope/vim-sexp-mappings-for-regular-people'
     use 'Olical/conjure'
     use 'cespare/vim-toml'
-    use 'Yggdroot/indentLine'
+    --use 'Yggdroot/indentLine'
     use 'tpope/vim-dispatch'
     use 'radenling/vim-dispatch-neovim'
     use 'clojure-vim/vim-jack-in'
@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/popup.nvim'
     use 'tjdevries/astronauta.nvim'
     use 'RishabhRD/lspactions'
+    use 'lukas-reineke/indent-blankline.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
