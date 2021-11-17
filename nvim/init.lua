@@ -14,5 +14,7 @@ require('kit.cmp')
 
 require('kit.indent')
 
+require('kit.telescope')
+
 require('kit.keymaps')
 

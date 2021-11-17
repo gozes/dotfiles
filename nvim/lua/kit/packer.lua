@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
     use 'tjdevries/astronauta.nvim'
     use 'RishabhRD/lspactions'
     use 'lukas-reineke/indent-blankline.nvim'
+    use 'nvim-telescope/telescope-file-browser.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
