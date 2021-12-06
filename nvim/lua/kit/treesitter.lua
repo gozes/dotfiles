@@ -1,3 +1,6 @@
+local parsers = require("nvim-treesitter.parsers")
+
+local enabled_list = {"clojure", "fennel","racket"}
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
@@ -9,4 +12,18 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+  rainbow = {
+      enable = true,
+      extended_mode = true,
+      max_file_lines = nil,
+      disable = vim.tbl_filter(
+      function(p) 
+           local disable = true
+           for _, lang in pairs(enabled_list) do
+               if p==lang then disable = false end
+            end
+            return disable
+      end, parsers.available_parsers()
+      )
+  }
 }

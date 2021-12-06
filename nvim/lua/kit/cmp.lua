@@ -42,6 +42,7 @@ cmp.setup({
     { name = "nvim_lua" },
 
     { name = "nvim_lsp" },
+    { name = "conjure" },
     { name = "path" },
     { name = "buffer", keyword_length = 3 },
   },
@@ -50,6 +51,7 @@ cmp.setup({
       with_text = true,
       menu = {
         buffer = "[buf]",
+        conjure = "[Conjure]",
         nvim_lsp = "[LSP]",
         nvim_lua = "[api]",
         path = "[path]",
