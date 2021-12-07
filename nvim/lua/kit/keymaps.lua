@@ -94,12 +94,14 @@ vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>",
   {silent = true, noremap = true}
 )
 vim.api.nvim_set_keymap("n", "<leader>|", "<C-^>",{noremap = true})
-vim.api.nvim_set_keymap("n", "|", "^",{noremap = true})
+vim.api.nvim_set_keymap("n", "&", "^",{noremap = true})
 vim.api.nvim_set_keymap("n", "@", "g_",{noremap = true})
+vim.api.nvim_set_keymap("n", "!", "g_",{noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>^", "<C-^>",{noremap = true})
 
 vim.api.nvim_set_keymap("v", "<leader>|", "<C-^>",{noremap = true})
-vim.api.nvim_set_keymap("v", "|", "^",{noremap = true})
+vim.api.nvim_set_keymap("v", "&", "^",{noremap = true})
 vim.api.nvim_set_keymap("v", "@", "g_",{noremap = true})
+vim.api.nvim_set_keymap("v", "!", "g_",{noremap = true})
 vim.api.nvim_set_keymap("v", "<leader>^", "<C-^>",{noremap = true})
 
