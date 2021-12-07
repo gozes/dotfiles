@@ -104,4 +104,3 @@ vim.api.nvim_set_keymap("v", "&", "^",{noremap = true})
 vim.api.nvim_set_keymap("v", "@", "g_",{noremap = true})
 vim.api.nvim_set_keymap("v", "!", "g_",{noremap = true})
 vim.api.nvim_set_keymap("v", "<leader>^", "<C-^>",{noremap = true})
-
