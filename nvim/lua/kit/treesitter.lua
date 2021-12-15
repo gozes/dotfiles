@@ -14,6 +14,15 @@ require'nvim-treesitter.configs'.setup {
   },
   rainbow = {
       enable = true,
+      colors = {
+          "#E06C75",
+          "#E5C07B",
+          "#98C379",
+          "#56B6C2",
+          "#61AFEF",
+          "#C678DD",
+          "#E06C75"
+        },
       extended_mode = true,
       max_file_lines = nil,
       disable = vim.tbl_filter(
