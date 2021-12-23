@@ -8,7 +8,6 @@ nnoremap <silent> <leader>gp :G push<CR>
 nnoremap <silent> <C-p> <cmd>Telescope git_files<CR>
 nnoremap <leader>; <cmd>Telescope buffers<CR>
 nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
-nnoremap <leader>CC <cmd>NERDCommenterToggle<CR>
 nnoremap <C-g> <cmd>Telescope live_grep<Cr>
 nnoremap <leader>f <cmd>lua require 'telescope'.extensions.file_browser.file_browser({files = false})<Cr>
 nnoremap <leader>F <cmd>Telescope file_browser<Cr>
