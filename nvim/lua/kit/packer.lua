@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
     use 'p00f/nvim-ts-rainbow'
     use 'PaterJason/cmp-conjure'
     use 'jose-elias-alvarez/null-ls.nvim'
+    use 'karb94/neoscroll.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end

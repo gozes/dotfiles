@@ -25,3 +25,4 @@ require('lualine').setup {
     options = { theme  = 'gruvbox-material' },
 }
 
+require('neoscroll').setup()
