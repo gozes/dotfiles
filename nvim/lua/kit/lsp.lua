@@ -33,4 +33,5 @@ end)
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
-
+-- null-ls setup example
+-- https://github.com/ChristianChiarulli/nvim/blob/master/lua/user/lsp/null-ls.lua
