@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
     use 'williamboman/nvim-lsp-installer'
     use 'p00f/nvim-ts-rainbow'
     use 'PaterJason/cmp-conjure'
+    use 'jose-elias-alvarez/null-ls.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
