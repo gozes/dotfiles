@@ -8,21 +8,22 @@ nnoremap <silent> <leader>gp :G push<CR>
 nnoremap <silent> <C-p> <cmd>Telescope git_files<CR>
 nnoremap <leader>; <cmd>Telescope buffers<CR>
 nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
-nnoremap <silent> <leader>cc :NERDCommenterToggle<CR>
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <leader>CC <cmd>NERDCommenterToggle<CR>
 nnoremap <C-g> <cmd>Telescope live_grep<Cr>
-nnoremap <leader><C-t>f <cmd>lua require 'telescope'.extensions.file_browser.file_browser({files = false})<Cr>
-nnoremap <leader><C-t>h <cmd>Telescope help_tags<Cr>
+nnoremap <leader>f <cmd>lua require 'telescope'.extensions.file_browser.file_browser({files = false})<Cr>
+nnoremap <leader>F <cmd>Telescope file_browser<Cr>
+nnoremap <leader>h <cmd>Telescope help_tags<Cr>
+nnoremap <leader>c <cmd>Telescope commands<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
 nnoremap gds <cmd>Telescope lsp_document_symbols<Cr>
 nnoremap gca <cmd>Telescope lsp_code_actions<Cr>
 nnoremap grca <cmd>Telescope lsp_range_code_actions<Cr>
-nnoremap <leader><C-t>o <cmd>Telescope vim_options<Cr>
-nnoremap <leader><C-t>g <cmd>Telescope git_bcommits<Cr>
+nnoremap <leader>o <cmd>Telescope vim_options<Cr>
+nnoremap <leader>g <cmd>Telescope git_bcommits<Cr>
 nnoremap grr <cmd>Telescope lsp_references<Cr>
-nnoremap <leader><C-t>e <cmd>Telescope lsp_document_diagnostics<Cr>
-nnoremap <leader><C-t>E <cmd>Telescope lsp_workspace_diagnostics<Cr>
+nnoremap <leader>e <cmd>Telescope lsp_document_diagnostics<Cr>
+nnoremap <leader>E <cmd>Telescope lsp_workspace_diagnostics<Cr>
 
 nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
 nnoremap <C-e> :lua require("harpoon.ui").toggle_quick_menu()<CR>
