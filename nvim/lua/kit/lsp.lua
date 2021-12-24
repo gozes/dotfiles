@@ -6,6 +6,11 @@ require'lspconfig'.clojure_lsp.setup{}
 
 require('lspconfig').yamlls.setup {
     settings = {
+        yaml = {
+            schemas = {
+                ["https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json"] = "/cloudformation/*",
+            },
+        },
         format = {
             enabled = false
         },
