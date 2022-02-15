@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'karb94/neoscroll.nvim'
     use "b0o/schemastore.nvim"
+    use 'neo4j-contrib/cypher-vim-syntax'
     if packer_bootstrap then
         require('packer').sync()
     end
