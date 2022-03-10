@@ -19,6 +19,7 @@ nnoremap gds <cmd>Telescope lsp_document_symbols<Cr>
 nnoremap gca <cmd>Telescope lsp_code_actions<Cr>
 nnoremap grca <cmd>Telescope lsp_range_code_actions<Cr>
 nnoremap <leader>o <cmd>Telescope vim_options<Cr>
+nnoremap <leader>q <cmd>Telescope lsp_workspace_symbols<Cr>
 nnoremap <leader>g <cmd>Telescope git_bcommits<Cr>
 nnoremap grr <cmd>Telescope lsp_references<Cr>
 nnoremap <leader>e <cmd>Telescope lsp_document_diagnostics<Cr>
