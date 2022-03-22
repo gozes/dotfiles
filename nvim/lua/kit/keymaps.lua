@@ -34,10 +34,10 @@ nnoremap <C-t> :lua require("harpoon.ui").nav_file(2)<CR>
 nnoremap <C-n> :lua require("harpoon.ui").nav_file(3)<CR>
 nnoremap <C-s> :lua require("harpoon.ui").nav_file(4)<CR>
 
-nnoremap <M-h> :lua require("harpoon.ui").nav_file(5)<CR>
-nnoremap <M-t> :lua require("harpoon.ui").nav_file(6)<CR>
-nnoremap <M-n> :lua require("harpoon.ui").nav_file(7)<CR>
-nnoremap <M-s> :lua require("harpoon.ui").nav_file(8)<CR>
+nnoremap <M-a> :lua require("harpoon.ui").nav_file(5)<CR>
+nnoremap <M-o> :lua require("harpoon.ui").nav_file(6)<CR>
+nnoremap <M-e> :lua require("harpoon.ui").nav_file(7)<CR>
+nnoremap <M-u> :lua require("harpoon.ui").nav_file(8)<CR>
 
 nnoremap grn :lua vim.lsp.buf.rename()<CR>
 

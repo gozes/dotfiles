@@ -2,11 +2,11 @@ vim.cmd([[
 inoremap <F1> <Esc>
 nnoremap <C-c> :w<CR>
 
-nnoremap <M-t> :tabnew <bar> term<cr>
-nnoremap <M-c> :tabclose<cr>
-nnoremap <M-p> :tabprevious<cr>
-nnoremap <M-n> :tabnext<cr>
-nnoremap <M-o> :tabnew<cr>
+"nnoremap <M-t> :tabnew <bar> term<cr>
+"nnoremap <M-c> :tabclose<cr>
+"nnoremap <M-p> :tabprevious<cr>
+"nnoremap <M-n> :tabnext<cr>
+"nnoremap <M-o> :tabnew<cr>
 nnoremap <M-j> :cnext<cr>
 nnoremap <M-k> :cprev<cr>
 " Split window
