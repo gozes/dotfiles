@@ -91,20 +91,18 @@
       "extraLabel": "G+"
     },
     {
-      "keyCode": 0,
-      "label": "NO KEY",
-      "verbose": "Disabled"
+      "keyCode": 2080,
+      "label": "#"
     },
     {
-      "keyCode": 0,
-      "label": "NO KEY",
-      "verbose": "Disabled"
+      "keyCode": 24579,
+      "label": "3",
+      "extraLabel": "MACRO"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "extraLabel": "TRANS",
-      "verbose": "Transparent"
+      "keyCode": 24580,
+      "label": "4",
+      "extraLabel": "MACRO"
     },
     {
       "keyCode": 65535,
@@ -149,10 +147,8 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "extraLabel": "TRANS",
-      "verbose": "Transparent"
+      "keyCode": 49,
+      "label": "\\"
     },
     {
       "keyCode": 65535,
@@ -166,9 +162,9 @@
       "verbose": "Disabled"
     },
     {
-      "keyCode": 0,
-      "label": "NO KEY",
-      "verbose": "Disabled"
+      "keyCode": 24578,
+      "label": "2",
+      "extraLabel": "MACRO"
     },
     {
       "keyCode": 65535,
@@ -177,9 +173,8 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 0,
-      "label": "NO KEY",
-      "verbose": "Disabled"
+      "keyCode": 2084,
+      "label": "&"
     },
     {
       "keyCode": 0,
@@ -244,10 +239,9 @@
       "label": "|"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "extraLabel": "TRANS",
-      "verbose": "Transparent"
+      "keyCode": 225,
+      "label": "LEFT SHIFT",
+      "verbose": "Left Shift"
     },
     {
       "keyCode": 65535,
@@ -395,10 +389,9 @@
       "verbose": "Left Shift"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "extraLabel": "TRANS",
-      "verbose": "Transparent"
+      "keyCode": 554,
+      "label": "BACKSPACE",
+      "extraLabel": "A+"
     },
     {
       "keyCode": 65535,
@@ -436,16 +429,16 @@
     14,
     6,
     6,
+    6,
+    1,
+    1,
+    15,
+    1,
+    15,
+    6,
     15,
     15,
-    14,
-    15,
-    15,
-    15,
-    15,
-    15,
-    15,
-    14,
+    1,
     14,
     14,
     14,
@@ -467,7 +460,7 @@
     6,
     6,
     14,
-    14,
+    10,
     14,
     14,
     3,
@@ -491,7 +484,7 @@
     14,
     14,
     15,
-    15,
+    12,
     11,
     14,
     9,

@@ -5,7 +5,7 @@ nnoremap <silent> <leader>gs :G<CR>
 nnoremap <silent> <leader>gc :G commit<CR>
 nnoremap <silent> <leader>gp :G push<CR>
 "nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
-nnoremap <silent> <C-p> <cmd>Telescope git_files<CR>
+nnoremap <silent> <C-p> <cmd>Telescope git_files theme=dropdown<CR>
 nnoremap <leader>; <cmd>Telescope buffers<CR>
 nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
 nnoremap <C-g> <cmd>Telescope live_grep<Cr>

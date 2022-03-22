@@ -125,8 +125,8 @@
       "label": "/"
     },
     {
-      "keyCode": 46,
-      "label": "="
+      "keyCode": 2079,
+      "label": "@"
     },
     {
       "keyCode": 4140,
@@ -134,9 +134,9 @@
       "extraLabel": "G+"
     },
     {
-      "keyCode": 224,
-      "label": "LEFT CTRL",
-      "verbose": "Left Control"
+      "keyCode": 49210,
+      "label": "ESC",
+      "extraLabel": "CTRL/"
     },
     {
       "keyCode": 4,
@@ -273,9 +273,9 @@
       "verbose": "Right Shift"
     },
     {
-      "keyCode": 305,
-      "label": "\\",
-      "extraLabel": "C+"
+      "keyCode": 49163,
+      "label": "2",
+      "extraLabel": "OSL"
     },
     {
       "keyCode": 227,
@@ -283,9 +283,9 @@
       "verbose": "Left Cmd"
     },
     {
-      "keyCode": 305,
-      "label": "\\",
-      "extraLabel": "C+"
+      "keyCode": 17453,
+      "label": "3",
+      "extraLabel": "SHIFTTO"
     },
     {
       "keyCode": 4176,
@@ -303,9 +303,9 @@
       "verbose": "Disabled"
     },
     {
-      "keyCode": 49163,
-      "label": "2",
-      "extraLabel": "OSL"
+      "keyCode": 226,
+      "label": "LEFT ALT",
+      "verbose": "Left Alt"
     },
     {
       "keyCode": 49977,
@@ -313,8 +313,9 @@
       "extraLabel": "GUI/"
     },
     {
-      "keyCode": 43,
-      "label": "TAB"
+      "keyCode": 49468,
+      "label": "TAB",
+      "extraLabel": "SHIFT/"
     },
     {
       "keyCode": 305,
@@ -343,9 +344,9 @@
       "verbose": "Right Cmd"
     },
     {
-      "keyCode": 0,
-      "label": "NO KEY",
-      "verbose": "Disabled"
+      "keyCode": 17152,
+      "label": "NEXT",
+      "extraLabel": "LED"
     },
     {
       "keyCode": 228,
@@ -573,10 +574,10 @@
       "rgb": "rgb(77, 40, 167)"
     },
     {
-      "r": 192,
-      "g": 32,
-      "b": 32,
-      "rgb": "rgb(192, 32, 32)"
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "rgb": "rgb(0, 0, 0)"
     },
     {
       "r": 0,
