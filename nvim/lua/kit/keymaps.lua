@@ -105,7 +105,7 @@ augroup filetype_go
     autocmd FileType go nnoremap <buffer> ;es :GoDebugStart<cr>
     autocmd FileType go nnoremap <buffer> ;ek :GoDebugStop<cr>
     autocmd FileType go nnoremap <buffer> ;en :GoDebugNext<cr>
-    autocmd FileType go nnoremap <buffer> ;ep :GoDebugPrint<cr>
+    autocmd FileType go nnoremap <buffer> ;ep :GoDebugPrint
     autocmd FileType go nnoremap <buffer> ;eo :GoDebugStepOut<cr>
     autocmd FileType go nnoremap <buffer> ;er :GoDebugRestart<cr>
     autocmd FileType go nnoremap <buffer> ;rn :GoRename<cr>
