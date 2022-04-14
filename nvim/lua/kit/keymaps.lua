@@ -98,6 +98,9 @@ augroup filetype_go
 
     autocmd FileType go nnoremap <buffer> ;t  :GoTest<cr>
     autocmd FileType go nnoremap <buffer> ;T  :GoTestFunc<cr>
+    autocmd FileType go nnoremap <buffer> ;rn  :GoRename<cr>
+    autocmd FileType go command! -nargs=* -range -complete=customlist,go#package#Complete GoDocv call go#doc#Open('vnew', 'vsplit', <f-args>)
+    autocmd FileType go nnoremap <buffer> ;d :GoDocv<cr>
 augroup END
 
 ]])
