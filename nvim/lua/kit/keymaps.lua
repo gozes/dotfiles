@@ -98,7 +98,16 @@ augroup filetype_go
 
     autocmd FileType go nnoremap <buffer> ;t  :GoTest<cr>
     autocmd FileType go nnoremap <buffer> ;T  :GoTestFunc<cr>
-    autocmd FileType go nnoremap <buffer> ;rn  :GoRename<cr>
+    autocmd FileType go nnoremap <buffer> ;et :GoDebugTest<cr>
+    autocmd FileType go nnoremap <buffer> ;eT :GoDebugTestFunc<cr>
+    autocmd FileType go nnoremap <buffer> ;eb :GoDebugBreakpoint<cr>
+    autocmd FileType go nnoremap <buffer> ;eN :GoDebugStep<cr>
+    autocmd FileType go nnoremap <buffer> ;es :GoDebugStart<cr>
+    autocmd FileType go nnoremap <buffer> ;ek :GoDebugStop<cr>
+    autocmd FileType go nnoremap <buffer> ;en :GoDebugNext<cr>
+    autocmd FileType go nnoremap <buffer> ;eo :GoDebugStepOut<cr>
+    autocmd FileType go nnoremap <buffer> ;er :GoDebugRestart<cr>
+    autocmd FileType go nnoremap <buffer> ;rn :GoRename<cr>
     autocmd FileType go command! -nargs=* -range -complete=customlist,go#package#Complete GoDocv call go#doc#Open('vnew', 'vsplit', <f-args>)
     autocmd FileType go nnoremap <buffer> ;d :GoDocv<cr>
 augroup END
