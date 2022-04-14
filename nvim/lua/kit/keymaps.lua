@@ -98,6 +98,9 @@ augroup filetype_go
 
     autocmd FileType go nnoremap <buffer> ;t  :GoTest<cr>
     autocmd FileType go nnoremap <buffer> ;T  :GoTestFunc<cr>
+    autocmd FileType go nnoremap <buffer> ;k  :GoAlternate!<cr>
+    autocmd FileType go nnoremap <buffer> ;f  :GoIfErr<cr>
+    autocmd FileType go nnoremap <buffer> ;i  :GoImpl<cr>
     autocmd FileType go nnoremap <buffer> ;et :GoDebugTest<cr>
     autocmd FileType go nnoremap <buffer> ;eT :GoDebugTestFunc<cr>
     autocmd FileType go nnoremap <buffer> ;eb :GoDebugBreakpoint<cr>
