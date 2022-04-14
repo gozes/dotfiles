@@ -7,8 +7,8 @@ nnoremap <C-c> :w<CR>
 "nnoremap <M-p> :tabprevious<cr>
 "nnoremap <M-n> :tabnext<cr>
 "nnoremap <M-o> :tabnew<cr>
-nnoremap <M-j> :cnext<cr>
-nnoremap <M-k> :cprev<cr>
+nnoremap <M-k> :cnext<cr>
+nnoremap <M-j> :cprev<cr>
 " Split window
 nnoremap <silent> <leader>ws :split<Return><C-w>w
 nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
