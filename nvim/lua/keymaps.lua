@@ -9,6 +9,8 @@ nnoremap <C-c> :w<CR>
 "nnoremap <M-o> :tabnew<cr>
 nnoremap <M-k> :cnext<cr>
 nnoremap <M-j> :cprev<cr>
+nnoremap <M-l> :tabl<CR>
+nnoremap <M-h> :tabr<CR>
 " Split window
 nnoremap <silent> <leader>ws :split<Return><C-w>w
 nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
