@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
     use 'karb94/neoscroll.nvim'
     use "b0o/schemastore.nvim"
     use 'neo4j-contrib/cypher-vim-syntax'
-    use {'crispgm/nvim-tabline', config = function() require('tabline').setup({}) end} 
+    use "mkitt/tabline.vim"
     if packer_bootstrap then
         require('packer').sync()
     end
