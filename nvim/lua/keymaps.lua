@@ -11,6 +11,8 @@ nnoremap <M-k> :cnext<cr>
 nnoremap <M-j> :cprev<cr>
 nnoremap <M-l> :tabl<CR>
 nnoremap <M-h> :tabr<CR>
+nnoremap <C-w>gf :$tabnew<CR>
+nnoremap <C-w>gF :0tabnew<CR>
 " Split window
 nnoremap <silent> <leader>ws :split<Return><C-w>w
 nnoremap <silent> <leader>wv :vsplit<Return><C-w>w
@@ -28,8 +30,8 @@ nnoremap <leader>w< 10<C-w><
 nnoremap <leader>w> 30<C-w>>
 nnoremap <leader>wf :Vex<CR>
 " Switch tab
-nnoremap <silent> <leader><C-n> :bnext<CR>
-nnoremap <silent> <leader><C-p> :bprevious<CR>
+"nnoremap <silent> <leader><C-n> :bnext<CR>
+"nnoremap <silent> <leader><C-p> :bprevious<CR>
 "LSP
 nnoremap gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
