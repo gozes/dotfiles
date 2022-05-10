@@ -9,7 +9,7 @@ set noshowmatch
 set nohlsearch
 set hidden
 set noerrorbells
-set tabstop=2 softtabstop=2
+set tabstop=4 
 set shiftwidth=4
 set expandtab
 set smartindent
