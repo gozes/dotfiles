@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
     use "b0o/schemastore.nvim"
     use 'neo4j-contrib/cypher-vim-syntax'
     use "mkitt/tabline.vim"
+    use 'lewis6991/gitsigns.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end

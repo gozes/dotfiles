@@ -147,3 +147,14 @@ vim.api.nvim_set_keymap("v", "&", "^",{noremap = true})
 vim.api.nvim_set_keymap("v", "@", "g_",{noremap = true})
 vim.api.nvim_set_keymap("v", "!", "g_",{noremap = true})
 vim.api.nvim_set_keymap("v", "<leader>^", "<C-^>",{noremap = true})
+
+require('gitsigns').setup()
+vim.cmd([[
+nnoremap <leader>hn <cmd>Gitsigns next_hunk<Cr>
+nnoremap <leader>hp <cmd>Gitsigns prev_hunk<Cr>
+nnoremap <leader>hP <cmd>Gitsigns preview_hunk<Cr>
+nnoremap <leader>hs <cmd>Gitsigns stage_hunk<Cr>
+nnoremap <leader>hr <cmd>Gitsigns reset_hunk<Cr>
+nnoremap <leader>hS <cmd>Gitsigns stage_buffer<Cr>
+nnoremap <leader>hR <cmd>Gitsigns reset_buffer<Cr>
+]])
