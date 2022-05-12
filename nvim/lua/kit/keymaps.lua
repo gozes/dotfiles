@@ -11,7 +11,7 @@ nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
 nnoremap <C-g> <cmd>Telescope live_grep theme=ivy<Cr>
 nnoremap <leader>f <cmd>lua require 'telescope'.extensions.file_browser.file_browser({files = false})<Cr>
 nnoremap <leader>F <cmd>Telescope file_browser<Cr>
-nnoremap <leader>H <cmd>Telescope help_tags<Cr>
+nnoremap <leader>h <cmd>Telescope help_tags<Cr>
 nnoremap <leader>c <cmd>Telescope commands<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
