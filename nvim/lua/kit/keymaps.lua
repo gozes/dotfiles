@@ -7,11 +7,11 @@ nnoremap <silent> <leader>gp :G push<CR>
 "nnoremap <silent> <C-p> :GFiles -c  -o --exclude-standard<CR>
 nnoremap <silent> <C-p> <cmd>Telescope git_files theme=ivy<CR>
 nnoremap <leader>; <cmd>Telescope buffers theme=ivy<CR>
-nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find<CR>
+nnoremap <silent> /  <cmd>Telescope current_buffer_fuzzy_find theme=ivy<CR>
 nnoremap <C-g> <cmd>Telescope live_grep theme=ivy<Cr>
 nnoremap <leader>f <cmd>lua require 'telescope'.extensions.file_browser.file_browser({files = false})<Cr>
 nnoremap <leader>F <cmd>Telescope file_browser<Cr>
-nnoremap <leader>h <cmd>Telescope help_tags<Cr>
+nnoremap <leader>H <cmd>Telescope help_tags<Cr>
 nnoremap <leader>c <cmd>Telescope commands<Cr>
 nnoremap <leader><C-t>q <cmd>Telescope quickfix<Cr>
 nnoremap <leader><C-t>S <cmd>Telescope spell_suggest<Cr>
@@ -21,9 +21,9 @@ nnoremap grca <cmd>Telescope lsp_range_code_actions<Cr>
 nnoremap <leader>o <cmd>Telescope vim_options<Cr>
 nnoremap <leader>q <cmd>Telescope lsp_workspace_symbols<Cr>
 nnoremap <leader>g <cmd>Telescope git_bcommits<Cr>
-nnoremap grr <cmd>Telescope lsp_references<Cr>
-nnoremap <leader>e <cmd>Telescope lsp_document_diagnostics<Cr>
-nnoremap <leader>E <cmd>Telescope lsp_workspace_diagnostics<Cr>
+nnoremap grr <cmd>Telescope lsp_references theme=ivy<Cr>
+nnoremap <leader>e <cmd>Telescope lsp_document_diagnostics theme=ivy<Cr>
+nnoremap <leader>E <cmd>Telescope lsp_workspace_diagnostics theme=ivy<Cr>
 
 nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
 nnoremap <C-e> :lua require("harpoon.ui").toggle_quick_menu()<CR>
