@@ -99,6 +99,7 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.black.with { extra_args = { "--fast" } },
+    formatting.cljstyle,
     diagnostics.pylint.with({method = null_ls.methods.DIAGNOSTICS_ON_SAVE,})
   },
 }

@@ -1,6 +1,6 @@
 vim.cmd([[
 inoremap <F1> <Esc>
-nnoremap <C-c> :w<CR>
+nnoremap <C-c> :wa<CR>
 
 "nnoremap <M-t> :tabnew <bar> term<cr>
 "nnoremap <M-c> :tabclose<cr>

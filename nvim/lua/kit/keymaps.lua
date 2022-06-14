@@ -40,6 +40,7 @@ nnoremap <M-e> :lua require("harpoon.ui").nav_file(7)<CR>
 nnoremap <M-u> :lua require("harpoon.ui").nav_file(8)<CR>
 
 nnoremap grn :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>gf :lua vim.lsp.buf.formatting_sync()<CR>
 
 " let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline#extensions#tabline#enabled = 1
