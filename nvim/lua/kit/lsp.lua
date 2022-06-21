@@ -98,7 +98,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = false,
   sources = {
-    formatting.black.with { extra_args = { "--fast" } },
+    formatting.black,
     formatting.cljstyle,
     diagnostics.pylint.with({method = null_ls.methods.DIAGNOSTICS_ON_SAVE,})
   },
