@@ -7,6 +7,8 @@ set -Ux EDITOR code -w
 set -Ux PIPENV_VENV_IN_PROJECT 1
 alias vim=nvim
 alias v=nvim
+alias g=lazygit
+alias c=code
 
 if test (uname) = "Darwin"
     set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
