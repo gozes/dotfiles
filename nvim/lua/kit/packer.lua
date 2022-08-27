@@ -25,14 +25,14 @@ return require('packer').startup(function(use)
     use 'vim-test/vim-test'
     use 'tpope/vim-cucumber'
     use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
+    use {'nvim-telescope/telescope.nvim', tag = '0.1.0'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     --use {'numToStr/Comment.nvim', config = function() require('Comment').setup() end} 
     use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end} 
     use 'folke/lsp-colors.nvim'
     use 'neovim/nvim-lspconfig'
     use 'preservim/nerdcommenter'
-    use 'sainnhe/gruvbox-material'
+    --use 'sainnhe/gruvbox-material'
     use 'onsails/lspkind-nvim'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -52,6 +52,7 @@ return require('packer').startup(function(use)
     use 'neo4j-contrib/cypher-vim-syntax'
     use "mkitt/tabline.vim"
     use 'lewis6991/gitsigns.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
     if packer_bootstrap then
         require('packer').sync()
     end

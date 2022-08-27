@@ -9,20 +9,26 @@
 
 --set background=dark
 --]])
-vim.cmd([[
-if has('termguicolors')
-    set termguicolors
-endif
-let g:gruvbox_material_palette = 'original'
-set background=dark
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_disable_italic_comment = 1
-colorscheme gruvbox-material
-]])
+--vim.cmd([[
+--if has('termguicolors')
+    --set termguicolors
+--endif
+--let g:gruvbox_material_palette = 'original'
+--set background=dark
+--let g:gruvbox_material_background = 'hard'
+--let g:gruvbox_material_enable_italic = 1
+--let g:gruvbox_material_disable_italic_comment = 1
+--colorscheme gruvbox-material
+--]])
+
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
+require("catppuccin").setup()
+
+vim.cmd [[colorscheme catppuccin]]
 
 require('lualine').setup {
-    options = { theme  = 'gruvbox-material' },
+    options = { theme  = 'catppuccin' },
 }
 
 require('neoscroll').setup()
