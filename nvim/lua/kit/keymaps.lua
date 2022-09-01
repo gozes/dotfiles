@@ -93,6 +93,7 @@ let g:go_highlight_generate_tags = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 
+
 augroup filetype_go
     autocmd!
     autocmd FileType go unmap <buffer> <C-t>
@@ -117,6 +118,7 @@ augroup filetype_go
     autocmd FileType go command! -nargs=* -range -complete=customlist,go#package#Complete GoDocv call go#doc#Open('vnew', 'vsplit', <f-args>)
     autocmd FileType go nnoremap <buffer> ;d :GoDocv<cr>
 augroup END
+
 
 ]])
 
