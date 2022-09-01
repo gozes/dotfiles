@@ -40,7 +40,7 @@ require'nvim-treesitter.configs'.setup {
 local vim = vim
 local opt = vim.opt
 
-vim.opt.foldlevel = 20
+vim.opt.foldlevel = 40
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
