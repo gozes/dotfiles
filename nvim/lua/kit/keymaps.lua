@@ -76,10 +76,6 @@ augroup filetype_spell
     autocmd FileType gitcommit setlocal complete+=kspell
 augroup END
 
-augroup unfold_au_command
-    autocmd!
-    autocmd BufReadPost,FileReadPost * normal zR
-augroup END
 
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_chan_whitespace_error = 0
