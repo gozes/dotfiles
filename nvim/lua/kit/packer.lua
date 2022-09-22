@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/nvim-cmp'
-    use {'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+    use 'folke/trouble.nvim'
     use 'ThePrimeagen/harpoon'
     use 'nvim-lua/popup.nvim'
     use 'lukas-reineke/indent-blankline.nvim'

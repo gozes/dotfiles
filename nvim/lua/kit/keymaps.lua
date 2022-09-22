@@ -76,12 +76,8 @@ augroup filetype_spell
     autocmd FileType gitcommit setlocal complete+=kspell
 augroup END
 
-augroup fold_au_command
-    autocmd!
-    "autocmd BufReadPost,FileReadPost * normal zR
-    autocmd BufWrite * normal zR
-augroup END
 
+let g:go_fmt_command = "goimports"
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_chan_whitespace_error = 0
 let g:go_highlight_extra_types = 0
