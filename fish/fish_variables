@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EDITOR:code\x1e\x2dw
+SETUVAR --export EDITOR:nvim
 SETUVAR --export JAVA_11_HOME:/Library/Java/JavaVirtualMachines/adoptopenjdk\x2d11\x2ejdk/Contents/Home
 SETUVAR --export JAVA_14_HOME:/Library/Java/JavaVirtualMachines/openjdk\x2d14\x2e0\x2e1\x2ejdk/Contents/Home
 SETUVAR --export JAVA_8_HOME:/Library/Java/JavaVirtualMachines/adoptopenjdk\x2d8\x2ejdk/Contents/Home
