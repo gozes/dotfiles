@@ -100,6 +100,7 @@ null_ls.setup {
   sources = {
     formatting.black,
     formatting.cljstyle,
+    formatting.goimports,
     diagnostics.pylint.with({method = null_ls.methods.DIAGNOSTICS_ON_SAVE,})
   },
 }
