@@ -1,0 +1,7 @@
+theme = "catppuccin_mocha"
+
+[keys.normal]
+C-c = ":wa"
+
+[keys.insert]
+C-c = "normal_mode"
