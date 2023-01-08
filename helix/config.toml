@@ -5,3 +5,11 @@ C-c = ":wa"
 
 [keys.insert]
 C-c = "normal_mode"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
