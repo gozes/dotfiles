@@ -2,6 +2,9 @@ theme = "catppuccin_mocha"
 
 [keys.normal]
 C-c = ":wa"
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_before"
+
 
 [keys.insert]
 C-c = "normal_mode"
