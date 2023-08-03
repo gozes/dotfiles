@@ -136,6 +136,7 @@ P = "paste_clipboard_before"
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 C-c = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -148,3 +149,6 @@ mode.select = "SELECT"
 
 [editor]
 color-modes = true
+
+[editor.lsp]
+display-inlay-hints = true
