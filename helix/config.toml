@@ -2,8 +2,6 @@ theme = "catppuccin_mocha"
 # mast keymaps taken from https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
 [keys.normal]
 C-c = [":wa", "normal_mode"]
-y = "yank_main_selection_to_clipboard"
-p = "paste_clipboard_before"
 C-h = "select_prev_sibling"
 C-j = "shrink_selection"
 C-k = "expand_selection"

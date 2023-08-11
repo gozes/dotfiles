@@ -13,6 +13,7 @@
     ~/.config/fish: fish
     ~/.config/kitty: kitty
     ~/.config/helix: helix
+    ~/.config/zellij: zellij
     ~/.tmux.conf: tmux.conf
 
 - shell:
