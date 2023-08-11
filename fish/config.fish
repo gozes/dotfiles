@@ -19,3 +19,7 @@ if test (uname) = "Darwin"
     alias java14="set -x JAVA_HOME (echo $JAVA_14_HOME )"
    # set -Ux JAVA_HOME $JAVA_8_HOME
 end
+
+function ggt
+    gotests -only $argv[0] $argv[1] -template testify >> $argv[1]
+end
