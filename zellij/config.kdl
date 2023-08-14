@@ -185,6 +185,8 @@ default_shell "fish"
 
 env {
     EDITOR "hx"
+    GH_EDITOR "hx"
+    GIT_EDITOR "hx"
 }
 scrollback_editor "hx"
 
