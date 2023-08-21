@@ -21,5 +21,5 @@ if test (uname) = "Darwin"
 end
 
 function ggt
-    gotests -only $argv[0] $argv[1] -template testify >> $argv[1]
+    gotests -only $argv[1] $argv[2] -template testify >> $argv[3]
 end
