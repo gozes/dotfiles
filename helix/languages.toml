@@ -2,4 +2,4 @@
 name = "rust"
 
 [language-server.rust-analyzer.config]
-checkOnSave = { command = "clippy" }
+check.command = "clippy"
