@@ -3,12 +3,14 @@ set fish_greeting ""
 set -gx fish_user_paths $fish_user_paths  $HOME/.nimble/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.cargo/bin
 set -gx fish_user_paths $fish_user_paths $HOME/go/bin
-set -Ux EDITOR code -w
+set -Ux EDITOR hx
 set -Ux PIPENV_VENV_IN_PROJECT 1
-alias vim=nvim
-alias v=nvim
+alias vim=hx
+alias v=hx
 alias g=lazygit
-alias c=code
+alias c=hx
+alias ze=zellij edit
+alias zr=zellij run
 
 if test (uname) = "Darwin"
     set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
