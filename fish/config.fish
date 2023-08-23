@@ -9,11 +9,10 @@ alias vim=hx
 alias v=hx
 alias g=lazygit
 alias c=hx
-alias ze=zellij edit
+alias ze="zellij edit"
 alias zef="zellij edit -f -c"
-alias zr=zellij run
+alias zr="zellij run"
 alias zrf="zellij run -f -c"
-alias ztp="zellij --layout two-panes"
 
 if test (uname) = "Darwin"
     set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
@@ -27,4 +26,8 @@ end
 
 function ggt
     gotests -w -template testify -only $argv[1] $argv[2]
+end
+
+function ztp 
+    zellij action new-tab --name $argv[1] --layout two-panes
 end
