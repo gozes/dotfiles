@@ -1,8 +1,16 @@
 layout {
+	pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
 	pane split_direction="vertical" {
-		pane size="40%"
-		pane command="hx" {
+		pane  size="40%"
+		pane focus=true command="hx" {
 			args "."
 		}
 	}
+	pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+
+
 }
