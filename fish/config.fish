@@ -9,10 +9,10 @@ alias vim=hx
 alias v=hx
 alias g=lazygit
 alias c=hx
-alias ze=zellij edit -f
-alias zep=zellij edit
-alias zr=zellij run -f
-alias zrp=zellij run
+alias ze=zellij edit
+alias zef=zellij edit -f -c
+alias zr=zellij run
+alias zrf=zellij run -f -c
 
 if test (uname) = "Darwin"
     set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
