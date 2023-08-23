@@ -10,9 +10,10 @@ alias v=hx
 alias g=lazygit
 alias c=hx
 alias ze=zellij edit
-alias zef=zellij edit -f -c
+alias zef="zellij edit -f -c"
 alias zr=zellij run
-alias zrf=zellij run -f -c
+alias zrf="zellij run -f -c"
+alias ztp="zellij --layout two-panes"
 
 if test (uname) = "Darwin"
     set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
