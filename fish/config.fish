@@ -3,7 +3,7 @@ set fish_greeting ""
 set -gx fish_user_paths $fish_user_paths  $HOME/.nimble/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.cargo/bin
 set -gx fish_user_paths $fish_user_paths $HOME/go/bin
-set -gx fish_user_paths $fish_user_paths $HOME/.local/share/bin
+set -gx fish_user_paths $fish_user_paths $HOME/.dbox/bin
 set -Ux EDITOR hx
 set -Ux PIPENV_VENV_IN_PROJECT 1
 alias vim=hx
