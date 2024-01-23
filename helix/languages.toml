@@ -3,3 +3,6 @@ name = "rust"
 
 [language-server.rust-analyzer.config]
 check.command = "clippy"
+
+[language-server.gopls.config.build]
+buildFlags = ["-tags=acceptance,integration,unit"]
