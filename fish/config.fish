@@ -46,13 +46,27 @@ function gh-workflow-id
 end
 
 
-function gh-workflow-status
+function gh-status
     set -l id (gh-workflow-id)
     gh run view $id
 end
 
-function gh-workflow-steps-info-json
-    set -l id (gh-workflow-id) --json jobs --jq '.jobs[] | {name,status,conclusion,databaseId,url}'
+function gh-info-json
+    set -l id (gh-workflow-id) --json jobs --jq '[.jobs[] | {name,conclusion,databaseId,url}]'
     gh run view $id
+end
+
+function gh-watch
+    set -l id (gh-workflow-id) 
+    gh run watch $id -i1
+end
+
+function gh-rerun
+    set -l id (gh-workflow-id)
+    gh run rerun $id --failed
+end
+
+function gh-make-pr 
+    gh pr create --title $argv[1]
 end
 
