@@ -86,7 +86,11 @@ function gh-view-failed-job-web
     gh run view $wid -j $jid -w
 end 
 
+function gh-pr-number
+    gh pr list  -A "@me" --json number --jq '.[].number'
+end
 function gh-opscha
-    gh pr comment 666 -b "@services OPSCHA" -w
+    set -l id (gh-pr-number)
+    gh pr comment $id -b "@services OPSCHA"
 end 
 
