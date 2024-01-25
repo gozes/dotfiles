@@ -70,3 +70,23 @@ function gh-make-pr
     gh pr create --title $argv[1]
 end
 
+
+function gh-failed-step-id
+    echo (gh-info-json) | jq '.[] | select(.conclusion="failure") | .databaseId'
+end
+
+function gh-view-failed-job
+    set -l wid (gh-workflow-id)
+    set -l jid (gh-failed-step-id)
+    gh run view $wid -j $jid
+end 
+function gh-view-failed-job-web
+    set -l wid (gh-workflow-id)
+    set -l jid (gh-failed-step-id)
+    gh run view $wid -j $jid -w
+end 
+
+function gh-opscha
+    gh pr comment 666 -b "@services OPSCHA" -w
+end 
+
