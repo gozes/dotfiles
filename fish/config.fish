@@ -32,3 +32,27 @@ end
 function ztp 
     zellij action new-tab --name $argv[1] --layout two-panes
 end
+
+function git-branch-name 
+    git rev-parse --abbrev-ref HEAD
+end
+
+function gh-workflow-name
+    gh run list --limit 1 --json workflowName --jq '.[].workflowName'
+end
+function gh-workflow-id
+    set -l branch (git-branch-name)
+    gh run list --limit 1 --json databaseId --jq '.[].databaseId' -b $branch
+end
+
+
+function gh-workflow-status
+    set -l id (gh-workflow-id)
+    gh run view $id
+end
+
+function gh-workflow-steps-info-json
+    set -l id (gh-workflow-id) --json jobs --jq '.jobs[] | {name,status,conclusion,databaseId,url}'
+    gh run view $id
+end
+
