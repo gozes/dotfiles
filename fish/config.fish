@@ -94,3 +94,13 @@ function gh-opscha
     gh pr comment $id -b "@services OPSCHA"
 end 
 
+function gh-failed-logs
+    set -l id (gh-workflow-id)
+    gh run view $id --log-failed
+end
+
+function gh-download
+    set -l id (gh-workflow-id)
+    gh run download $id
+end
+
