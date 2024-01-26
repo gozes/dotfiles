@@ -104,3 +104,7 @@ function gh-download
     gh run download $id
 end
 
+function gh-cancel
+    set -l id (gh-workflow-id)
+    gh run cancel $id
+end
