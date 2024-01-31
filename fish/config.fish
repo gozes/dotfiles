@@ -108,3 +108,8 @@ function gh-cancel
     set -l id (gh-workflow-id)
     gh run cancel $id
 end
+
+if test -d $HOME/.asdf
+  source $HOME/.asdf/asdf.fish
+  source $HOME/.asdf/completions/asdf.fish
+end
