@@ -151,6 +151,9 @@ mode.select = "SELECT"
 
 [editor]
 color-modes = true
+insert-final-newline = true
+shell = ["fish", "-c"]
+undercurl = true
 
 [editor.lsp]
 display-inlay-hints = true
