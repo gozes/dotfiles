@@ -157,3 +157,6 @@ undercurl = true
 
 [editor.lsp]
 display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
