@@ -15,6 +15,7 @@
     ~/.config/helix: helix
     ~/.config/zellij: zellij
     ~/.tmux.conf: tmux.conf
+    ~/.jqp.yaml: jqp.yaml
 
 - shell:
   - chsh -s $(which fish)
