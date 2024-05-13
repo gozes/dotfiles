@@ -184,11 +184,11 @@ theme "catppuccin-mocha"
 default_shell "fish"
 
 env {
-    EDITOR "hx"
-    GH_EDITOR "hx"
-    GIT_EDITOR "hx"
+    EDITOR "nvim"
+    GH_EDITOR "nvim"
+    GIT_EDITOR "nvim"
 }
-scrollback_editor "hx"
+scrollback_editor "nvim"
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
 // eg. when terminal window with an active zellij session is closed
