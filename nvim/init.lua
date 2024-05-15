@@ -165,6 +165,7 @@ vim.api.nvim_set_keymap('n', '!', 'g_', { noremap = true })
 vim.api.nvim_set_keymap('v', '&', '^', { noremap = true })
 vim.api.nvim_set_keymap('v', '!', 'g_', { noremap = true })
 vim.keymap.set('n', '<leader>G', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
+vim.keymap.set('n', '<leader>;t', '<cmd>TodoTelescope<cr>', { desc = 'Open Todo commets in telescope' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
