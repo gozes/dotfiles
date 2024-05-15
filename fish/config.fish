@@ -37,6 +37,10 @@ function git-branch-name
     git rev-parse --abbrev-ref HEAD
 end
 
+function git-repo-name
+    basename (git rev-parse --show-toplevel)
+end
+
 function gh-workflow-name
     gh run list --limit 1 --json workflowName --jq '.[].workflowName'
 end
