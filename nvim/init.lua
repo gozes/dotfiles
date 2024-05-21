@@ -321,20 +321,20 @@ require('lazy').setup({
       end, { desc = 'Harpoon add' })
       vim.keymap.set('n', '<C-e>', function()
         harpoon.ui:toggle_quick_menu(harpoon:list())
-      end)
+      end, { desc = 'Harpoon toggle_quick_menu' })
 
       vim.keymap.set('n', '<C-h>', function()
         harpoon:list():select(1)
-      end)
+      end, { desc = 'Harpoon select file 1' })
       vim.keymap.set('n', '<C-t>', function()
         harpoon:list():select(2)
-      end)
+      end, { desc = 'Harpoon select file 2' })
       vim.keymap.set('n', '<C-n>', function()
         harpoon:list():select(3)
-      end)
+      end, { desc = 'Harpoon select file 3' })
       vim.keymap.set('n', '<C-s>', function()
         harpoon:list():select(4)
-      end)
+      end, { desc = 'Harpoon select file 4' })
     end,
   },
   {
@@ -374,6 +374,32 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   -- { import = 'custom.plugins' },
+  {
+    'custom.plugins.zellij',
+    dir = '~/dotfiles/nvim/lua/custom/plugins',
+    config = function()
+      local zellij = require 'custom.plugins.zellij'
+      vim.keymap.set('n', ';zl', function()
+        zellij.right()
+      end, { desc = 'move to zellij pane on the right' })
+
+      vim.keymap.set('n', ';zh', function()
+        zellij.left()
+      end, { desc = 'move to zellij pane on the left' })
+
+      vim.keymap.set('n', ';zj', function()
+        zellij.down()
+      end, { desc = 'move to zellij pane below' })
+
+      vim.keymap.set('n', ';zk', function()
+        zellij.up()
+      end, { desc = 'move to zellij pane above' })
+
+      vim.keymap.set('n', ';zf', function()
+        zellij.floating()
+      end, { desc = 'zellij open floating pane' })
+    end,
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
