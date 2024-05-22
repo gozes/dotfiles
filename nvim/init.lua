@@ -388,6 +388,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>O', '<cmd>Octo<cr>', { desc = 'Octo' })
     end,
   },
+  { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
   {
     'custom.plugins.zellij',
     dir = '~/dotfiles/nvim/lua/custom/plugins',
