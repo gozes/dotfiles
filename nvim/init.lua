@@ -374,7 +374,18 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  --{ import = 'custom.plugins' },
+  {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require('octo').setup()
+    end,
+  },
   {
     'custom.plugins.zellij',
     dir = '~/dotfiles/nvim/lua/custom/plugins',
