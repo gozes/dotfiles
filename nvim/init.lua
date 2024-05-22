@@ -385,10 +385,8 @@ require('lazy').setup({
     config = function()
       require('octo').setup { enable_builtin = true }
       vim.cmd [[hi OctoEditable guibg=none]]
+      vim.keymap.set('n', '<leader>O', '<cmd>Octo<cr>', { desc = 'Octo' })
     end,
-    keys = {
-      { '<leader>O', '<cmd>Octo<cr>', desc = 'Octo' },
-    },
   },
   {
     'custom.plugins.zellij',
