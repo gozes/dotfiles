@@ -383,8 +383,12 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require('octo').setup()
+      require('octo').setup { enable_builtin = true }
+      vim.cmd [[hi OctoEditable guibg=none]]
     end,
+    keys = {
+      { '<leader>O', '<cmd>Octo<cr>', desc = 'Octo' },
+    },
   },
   {
     'custom.plugins.zellij',
