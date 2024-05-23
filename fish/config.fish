@@ -113,6 +113,10 @@ function gh-cancel
     gh run cancel $id
 end
 
+function kitty-reload-config
+    kill -SIGUSR1 (pgrep kitty)
+end
+
 if test -d $HOME/.asdf
   source $HOME/.asdf/asdf.fish
   source $HOME/.asdf/completions/asdf.fish
