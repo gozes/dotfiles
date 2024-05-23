@@ -159,14 +159,6 @@ vim.opt.spell = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-vim.keymap.set('n', '<C-c>', '<cmd>wa<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '&', '^', { noremap = true })
-vim.api.nvim_set_keymap('n', '!', 'g_', { noremap = true })
-vim.api.nvim_set_keymap('v', '&', '^', { noremap = true })
-vim.api.nvim_set_keymap('v', '!', 'g_', { noremap = true })
-vim.keymap.set('n', '<leader>G', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
-vim.keymap.set('n', ';t', '<cmd>TodoTelescope<cr>', { desc = 'Open Todo commets in telescope' })
-vim.keymap.set('n', ';a', '<C-^', { desc = 'Jump to alternet-file' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -200,6 +192,36 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<C-c>', '<cmd>wa<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '&', '^', { noremap = true })
+vim.api.nvim_set_keymap('n', '!', 'g_', { noremap = true })
+vim.api.nvim_set_keymap('v', '&', '^', { noremap = true })
+vim.api.nvim_set_keymap('v', '!', 'g_', { noremap = true })
+vim.keymap.set('n', '<leader>G', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
+vim.keymap.set('n', ';t', '<cmd>TodoTelescope<cr>', { desc = 'Open Todo commets in telescope' })
+vim.keymap.set('n', ';a', '<C-^', { desc = 'Jump to alternet-file' })
+
+local zellij = require 'cmd.zellij'
+vim.keymap.set('n', ';zl', function()
+  zellij.right()
+end, { desc = 'move to zellij pane on the right' })
+
+vim.keymap.set('n', ';zh', function()
+  zellij.left()
+end, { desc = 'move to zellij pane on the left' })
+
+vim.keymap.set('n', ';zj', function()
+  zellij.down()
+end, { desc = 'move to zellij pane below' })
+
+vim.keymap.set('n', ';zk', function()
+  zellij.up()
+end, { desc = 'move to zellij pane above' })
+
+vim.keymap.set('n', ';zf', function()
+  zellij.floating()
+end, { desc = 'zellij open floating pane' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -303,55 +325,9 @@ require('lazy').setup({
 
   require 'kickstart.plugins.catppuccin',
 
-  -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
   require 'kickstart.plugins.mini',
+
   require 'kickstart.plugins.treesitter',
-  { 'NeogitOrg/neogit', dependencies = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' }, config = true },
-  {
-    'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      local harpoon = require 'harpoon'
-      harpoon:setup()
-
-      vim.keymap.set('n', '<leader>a', function()
-        harpoon:list():add()
-      end, { desc = 'Harpoon add' })
-      vim.keymap.set('n', '<C-e>', function()
-        harpoon.ui:toggle_quick_menu(harpoon:list())
-      end, { desc = 'Harpoon toggle_quick_menu' })
-
-      vim.keymap.set('n', '<C-h>', function()
-        harpoon:list():select(1)
-      end, { desc = 'Harpoon select file 1' })
-      vim.keymap.set('n', '<C-t>', function()
-        harpoon:list():select(2)
-      end, { desc = 'Harpoon select file 2' })
-      vim.keymap.set('n', '<C-n>', function()
-        harpoon:list():select(3)
-      end, { desc = 'Harpoon select file 3' })
-      vim.keymap.set('n', '<C-s>', function()
-        harpoon:list():select(4)
-      end, { desc = 'Harpoon select file 4' })
-    end,
-  },
-  {
-    'ray-x/go.nvim',
-    dependencies = { -- optional packages
-      'ray-x/guihua.lua',
-      'neovim/nvim-lspconfig',
-      'nvim-treesitter/nvim-treesitter',
-    },
-    config = function()
-      require('go').setup()
-    end,
-    event = { 'CmdlineEnter' },
-    ft = { 'go', 'gomod' },
-    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
-  },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -368,53 +344,19 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  -- Highlight todo, notes, etc in comments
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+
+  { 'NeogitOrg/neogit', dependencies = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' }, config = true },
+
+  { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  --{ import = 'custom.plugins' },
-  {
-    'pwntester/octo.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-      'nvim-tree/nvim-web-devicons',
-    },
-    config = function()
-      require('octo').setup { enable_builtin = true, suppress_missing_scope = { projects_v2 = true } }
-      vim.cmd [[hi OctoEditable guibg=none]]
-      vim.keymap.set('n', '<leader>O', '<cmd>Octo<cr>', { desc = 'Octo' })
-    end,
-  },
-  { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
-  {
-    'custom.plugins.zellij',
-    dir = '~/dotfiles/nvim/lua/custom/plugins',
-    config = function()
-      local zellij = require 'custom.plugins.zellij'
-      vim.keymap.set('n', ';zl', function()
-        zellij.right()
-      end, { desc = 'move to zellij pane on the right' })
-
-      vim.keymap.set('n', ';zh', function()
-        zellij.left()
-      end, { desc = 'move to zellij pane on the left' })
-
-      vim.keymap.set('n', ';zj', function()
-        zellij.down()
-      end, { desc = 'move to zellij pane below' })
-
-      vim.keymap.set('n', ';zk', function()
-        zellij.up()
-      end, { desc = 'move to zellij pane above' })
-
-      vim.keymap.set('n', ';zf', function()
-        zellij.floating()
-      end, { desc = 'zellij open floating pane' })
-    end,
-  },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
