@@ -10,4 +10,10 @@ return {
     vim.cmd [[hi OctoEditable guibg=none]]
     vim.keymap.set('n', '<leader>O', '<cmd>Octo<cr>', { desc = 'Octo' })
   end,
+  cond = function()
+    vim.fn.system 'which gh'
+    if vim.v.shell_error ~= 0 then
+      return false
+    end
+  end,
 }
