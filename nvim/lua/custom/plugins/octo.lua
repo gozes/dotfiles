@@ -15,5 +15,6 @@ return {
     if vim.v.shell_error ~= 0 then
       return false
     end
+    return true
   end,
 }
