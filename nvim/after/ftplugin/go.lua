@@ -1,0 +1,8 @@
+vim.keymap.set('n', ',a', '<cmd>GoAlt<cr>', { desc = 'Golang: Alternate between code and test file' })
+vim.keymap.set('n', ',ta', '<cmd>GoAddTest<cr>', { desc = 'Golang: Add test for Func' })
+vim.keymap.set('n', ',tf', '<cmd>GoTestFunc<cr>', { desc = 'Golang: Run test for current func' })
+vim.keymap.set('n', ',tF', '<cmd>GoTestFile<cr>', { desc = 'Golang: Run test for current file' })
+vim.keymap.set('n', ',ts', '<cmd>GoTestSubCase<cr>', { desc = 'Golang: Run test subcase' })
+vim.keymap.set('n', ',td', '<cmd>GoDebug -t<cr>', { desc = 'Golang: Debug test' })
+vim.keymap.set('n', ',c', '<cmd>ccl<cr>', { desc = 'Golang: Close quickfix list' })
+vim.keymap.set('n', ',l', '<cmd>GoCodeLenAct<cr>', { desc = 'Golang: Show codelens picker' })
