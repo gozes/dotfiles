@@ -169,6 +169,9 @@ return { -- LSP Configuration & Plugins
               parameterNames = true,
               rangeVariableTypes = true,
             },
+            analyses = {
+              shadow = true,
+            },
           },
         },
       },
