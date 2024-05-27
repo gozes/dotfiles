@@ -2,15 +2,11 @@ layout {
 	pane size=1 borderless=true {
         plugin location="zellij:tab-bar"
         }
+	pane
 	floating_panes {
 		pane {
 		    height "95%"
-		}
-	}
-	pane split_direction="vertical" {
-		pane  size="40%"
-		pane focus=true command="nvim" {
-			args "."
+		    width "95%"
 		}
 	}
 	pane size=1 borderless=true {

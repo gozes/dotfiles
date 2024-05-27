@@ -33,6 +33,11 @@ function ztp
     zellij action new-tab --name $argv[1] --layout two-panes
 end
 
+function zss
+    zellij action new-tab --name $argv[1] --layout small-screen
+end
+
+
 function git-branch-name 
     git rev-parse --abbrev-ref HEAD
 end
