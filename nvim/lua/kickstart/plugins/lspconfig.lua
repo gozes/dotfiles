@@ -231,6 +231,7 @@ return { -- LSP Configuration & Plugins
       'delve',
       'gofumpt',
       'gotests',
+      'iferr',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
