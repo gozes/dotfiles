@@ -8,6 +8,9 @@ return {
   config = function()
     require('go').setup {
       gotests_template = '-template testify',
+      lsp_inlay_hints = {
+        enable = true,
+      },
     }
   end,
   event = { 'CmdlineEnter' },
