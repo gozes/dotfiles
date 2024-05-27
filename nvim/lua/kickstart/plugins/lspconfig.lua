@@ -157,6 +157,7 @@ return { -- LSP Configuration & Plugins
     local servers = {
       clojure_lsp = {},
       -- clangd = {},
+      golangci_lint_ls = {},
       gopls = {
         settings = {
           gopls = {
@@ -226,6 +227,7 @@ return { -- LSP Configuration & Plugins
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
+      'golangci-lint',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
