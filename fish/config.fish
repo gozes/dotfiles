@@ -145,3 +145,7 @@ if status is-interactive
         ! set -q INFOPATH; and set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH;
     end
 end
+
+if command -q zoxide
+    zoxide init fish | source
+end
