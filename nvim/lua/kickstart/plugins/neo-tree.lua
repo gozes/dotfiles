@@ -14,6 +14,7 @@ return {
     nvimtree.setup {
       view = {
         width = 35,
+        side = 'right',
         relativenumber = true,
       },
       -- disable window_picker for
