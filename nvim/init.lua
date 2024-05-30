@@ -347,7 +347,19 @@ require('lazy').setup({
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
-  { 'NeogitOrg/neogit', dependencies = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' }, config = true },
+  {
+    'NeogitOrg/neogit',
+    dependencies = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim', 'nvim-telescope/telescope.nvim' },
+    config = function()
+      local neogit = require 'neogit'
+      neogit.setup {
+        integrations = {
+          diffview = true,
+          telescope = true,
+        },
+      }
+    end,
+  },
 
   { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
 
