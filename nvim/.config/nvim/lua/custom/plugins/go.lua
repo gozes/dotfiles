@@ -7,7 +7,7 @@ return {
   },
   config = function()
     require('go').setup {
-      gotests_template = '-template testify',
+      gotests_template = 'testify',
       lsp_inlay_hints = {
         enable = false,
       },
