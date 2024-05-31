@@ -9,7 +9,7 @@ return {
     require('go').setup {
       gotests_template = '-template testify',
       lsp_inlay_hints = {
-        enable = true,
+        enable = false,
       },
     }
   end,
