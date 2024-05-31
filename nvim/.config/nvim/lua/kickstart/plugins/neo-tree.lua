@@ -41,5 +41,6 @@ return {
     keymap.set('n', '<leader>xe', '<cmd>NvimTreeFindFileToggle<CR>', { desc = 'Toggle file explorer on current file' }) -- toggle file explorer on current file
     keymap.set('n', '<leader>xc', '<cmd>NvimTreeCollapse<CR>', { desc = 'Collapse file explorer' })
     keymap.set('n', '<leader>xr', '<cmd>NvimTreeRefresh<CR>', { desc = 'Refresh file explorer' }) -- refresh file explorer
+    keymap.set('n', '<leader>xf', '<cmd>NvimTreeFoucus<CR>', { desc = 'Foucus on file explorer' }) -- refresh file explorer
   end,
 }
