@@ -5,5 +5,6 @@ vim.keymap.set('n', ',tF', '<cmd>GoTestFile<cr>', { desc = 'Golang: Run test for
 vim.keymap.set('n', ',ts', '<cmd>GoTestSubCase<cr>', { desc = 'Golang: Run test subcase' })
 vim.keymap.set('n', ',td', '<cmd>GoDebug -t<cr>', { desc = 'Golang: Debug test' })
 vim.keymap.set('n', ',if', '<cmd>GoIfErr<cr>', { desc = 'Golang: Add if err' })
+vim.keymap.set('n', ',ip', '<cmd>GoImports<cr>', { desc = 'Golang: Run GoImports' })
 vim.keymap.set('n', ',c', '<cmd>ccl<cr>', { desc = 'Golang: Close quickfix list' })
 vim.keymap.set('n', ',l', '<cmd>GoCodeLenAct<cr>', { desc = 'Golang: Show codelens picker' })
