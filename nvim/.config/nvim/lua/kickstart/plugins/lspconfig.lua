@@ -230,6 +230,7 @@ return { -- LSP Configuration & Plugins
       'golangci-lint',
       'delve',
       'gofumpt',
+      'goimports',
       'gotests',
       'iferr',
     })
