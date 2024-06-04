@@ -5,7 +5,6 @@ set -gx fish_user_paths $fish_user_paths $HOME/.cargo/bin
 set -gx fish_user_paths $fish_user_paths $HOME/go/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.dbox/bin
 set -Ux EDITOR nvim
-set -Ux PIPENV_VENV_IN_PROJECT 1
 alias vim=nvim
 alias v=nvim
 alias g=lazygit
@@ -14,6 +13,9 @@ alias ze="zellij edit"
 alias zef="zellij edit -f -c"
 alias zr="zellij run"
 alias zrf="zellij run -f -c"
+if command -q eza
+    alias ll="eza --icons -a -T  --level=2 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
+end
 
 if test (uname) = "Darwin"
     set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
@@ -37,7 +39,6 @@ function zss
     zellij action new-tab --name $argv[1] --layout small-screen
 end
 
-
 function git-branch-name 
     git rev-parse --abbrev-ref HEAD
 end
@@ -49,11 +50,11 @@ end
 function gh-workflow-name
     gh run list --limit 1 --json workflowName --jq '.[].workflowName'
 end
+
 function gh-workflow-id
     set -l branch (git-branch-name)
     gh run list --limit 1 --json databaseId --jq '.[].databaseId' -b $branch
 end
-
 
 function gh-status
     set -l id (gh-workflow-id)
