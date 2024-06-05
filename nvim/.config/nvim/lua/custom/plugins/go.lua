@@ -8,7 +8,7 @@ return {
   config = function()
     require('go').setup {
       gotests_template = 'testify',
-      goimports = 'goimports',
+      goimports = 'gopls',
       gofmt = 'goimports',
       lsp_inlay_hints = {
         enable = true,
