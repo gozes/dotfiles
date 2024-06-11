@@ -14,6 +14,20 @@ local function floating()
   end
 end
 
+local function nexttab()
+  vim.fn.system 'zellij action go-to-next-tab'
+  if vim.v.shell_error ~= 0 then
+    error 'zellij cant move to next tab'
+  end
+end
+
+local function previoustab()
+  vim.fn.system 'zellij action go-to-previous-tab'
+  if vim.v.shell_error ~= 0 then
+    error 'zellij cant move to previous tab'
+  end
+end
+
 function M.up()
   pane 'up'
 end
@@ -32,6 +46,14 @@ end
 
 function M.floating()
   floating()
+end
+
+function M.nexttab()
+  nexttab()
+end
+
+function M.previoustab()
+  previoustab()
 end
 
 return M

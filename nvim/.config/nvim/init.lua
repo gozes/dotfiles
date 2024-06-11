@@ -223,6 +223,14 @@ vim.keymap.set('n', ';zf', function()
   zellij.floating()
 end, { desc = 'zellij open floating pane' })
 
+vim.keymap.set('n', ';ztn', function()
+  zellij.nexttab()
+end, { desc = 'zellij move to next tab' })
+
+vim.keymap.set('n', ';ztp', function()
+  zellij.previoustab()
+end, { desc = 'zellij move to previous tab' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
