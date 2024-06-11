@@ -28,6 +28,13 @@ local function previoustab()
   end
 end
 
+local function newtab()
+  vim.fn.system 'zellij action new-tab'
+  if vim.v.shell_error ~= 0 then
+    error 'zellij cant open a new tab'
+  end
+end
+
 function M.up()
   pane 'up'
 end
@@ -54,6 +61,10 @@ end
 
 function M.previoustab()
   previoustab()
+end
+
+function M.newtab()
+  newtab()
 end
 
 return M

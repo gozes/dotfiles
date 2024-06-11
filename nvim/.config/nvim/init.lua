@@ -231,6 +231,10 @@ vim.keymap.set('n', ';ztp', function()
   zellij.previoustab()
 end, { desc = 'zellij move to previous tab' })
 
+vim.keymap.set('n', ';znt', function()
+  zellij.newtab()
+end, { desc = 'zellij open new tab' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
