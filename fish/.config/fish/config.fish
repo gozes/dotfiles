@@ -13,8 +13,10 @@ alias ze="zellij edit"
 alias zef="zellij edit -f -c"
 alias zr="zellij run"
 alias zrf="zellij run -f -c"
+alias ztn="zellij action go-to-next-tab"
+alias ztp="zellij action go-to-previous-tab"
 if command -q eza
-    alias ll="eza --icons -a -T  --level=2 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
+    alias ll="eza --icons -a -T  --level=1 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
 end
 
 if test (uname) = "Darwin"
@@ -31,7 +33,7 @@ function ggt
     gotests -w -template testify -only $argv[1] $argv[2]
 end
 
-function ztp 
+function znt 
     zellij action new-tab --name $argv[1] --layout two-panes
 end
 
