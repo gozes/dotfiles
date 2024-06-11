@@ -1,0 +1,6 @@
+[user]
+	name = gozes
+	email = 632922+gozes@users.noreply.github.com
+
+[includeIf "gitdir: ~/Code/Work/"]
+	path = ~/Code/Work/.gitconfig
