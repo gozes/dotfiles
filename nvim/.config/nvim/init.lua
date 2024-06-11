@@ -200,7 +200,7 @@ vim.api.nvim_set_keymap('v', '&', '^', { noremap = true })
 vim.api.nvim_set_keymap('v', '!', 'g_', { noremap = true })
 vim.keymap.set('n', '<leader>G', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
 vim.keymap.set('n', ';t', '<cmd>TodoTelescope<cr>', { desc = 'Open Todo commets in telescope' })
-vim.keymap.set('n', ';a', '<C-^', { desc = 'Jump to alternet-file' })
+vim.keymap.set('n', ';a', '<C-^>', { desc = 'Jump to alternet-file' })
 
 local zellij = require 'cmd.zellij'
 vim.keymap.set('n', ';zl', function()
