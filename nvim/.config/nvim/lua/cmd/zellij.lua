@@ -35,6 +35,13 @@ local function newtab()
   end
 end
 
+local function fullscreen()
+  vim.fn.system 'zellij action toggle-fullscreen'
+  if vim.v.shell_error ~= 0 then
+    error 'zellij cant fullscreen current pane'
+  end
+end
+
 function M.up()
   pane 'up'
 end
@@ -65,6 +72,10 @@ end
 
 function M.newtab()
   newtab()
+end
+
+function M.fullscreen()
+  fullscreen()
 end
 
 return M

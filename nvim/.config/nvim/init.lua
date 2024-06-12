@@ -235,6 +235,10 @@ vim.keymap.set('n', ';znt', function()
   zellij.newtab()
 end, { desc = 'zellij open new tab' })
 
+vim.keymap.set('n', ';ztf', function()
+  zellij.fullscreen()
+end, { desc = 'zellij fullscreen pane' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
