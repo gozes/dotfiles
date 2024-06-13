@@ -3,7 +3,25 @@ return { -- Highlight, edit, and navigate code
   dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'go', 'fish', 'yaml', 'json', 'gomod' },
+    ensure_installed = {
+      'bash',
+      'c',
+      'html',
+      'lua',
+      'luadoc',
+      'markdown',
+      'vim',
+      'vimdoc',
+      'go',
+      'fish',
+      'yaml',
+      'json',
+      'gomod',
+      'gosum',
+      'templ',
+      'gotmpl',
+      'gowork',
+    },
     -- Autoinstall languages that are not installed
     auto_install = true,
     textobjects = {
