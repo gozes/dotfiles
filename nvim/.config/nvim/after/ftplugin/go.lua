@@ -14,11 +14,3 @@ vim.keymap.set('n', ',k', '<cmd>cprev<cr>', { desc = 'Golang: go to previous qui
 vim.keymap.set('n', ',cl', '<cmd>GoCodeLenAct<cr>', { desc = 'Golang: Show codelens picker' })
 vim.keymap.set('n', ',ca', '<cmd>GoCodeAction<cr>', { desc = 'Golang: Show codeAction picker' })
 vim.keymap.set('n', ',h', '<cmd>GoToggleInlay<cr>', { desc = 'Golang: Toggle Inlay hint' })
-
-vim.filetype.add {
-  extension = {
-    gotmpl = 'gotexttmpl',
-    gotexttmpl = 'gotexttmpl',
-    gohtml = 'gohtmltmpl',
-  },
-}

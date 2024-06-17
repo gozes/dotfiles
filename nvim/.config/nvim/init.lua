@@ -239,6 +239,14 @@ vim.keymap.set('n', ';ztf', function()
   zellij.fullscreen()
 end, { desc = 'zellij fullscreen pane' })
 
+vim.filetype.add {
+  extension = {
+    gotmpl = 'gotexttmpl',
+    gotexttmpl = 'gotexttmpl',
+    gohtml = 'gohtmltmpl',
+  },
+}
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
