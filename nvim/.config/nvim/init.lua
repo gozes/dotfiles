@@ -157,6 +157,8 @@ vim.opt.scrolloff = 10
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 
+vim.opt.conceallevel = 1
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
