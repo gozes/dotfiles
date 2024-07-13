@@ -196,6 +196,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<C-c>', '<cmd>wa<cr>', { noremap = true })
+vim.keymap.set('i', '<C-c>', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '&', '^', { noremap = true })
 vim.api.nvim_set_keymap('n', '!', 'g_', { noremap = true })
 vim.api.nvim_set_keymap('v', '&', '^', { noremap = true })
