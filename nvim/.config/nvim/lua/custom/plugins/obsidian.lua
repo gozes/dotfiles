@@ -10,6 +10,7 @@ return {
     { ';oT', '<cmd>ObsidianTemplate<cr>', desc = 'Obsidian: Insert Template' },
     { ';ol', '<cmd>ObsidianLinks<cr>', desc = 'Obsidian: Links' },
     { ';obl', '<cmd>ObsidianBacklinks<cr>', desc = 'Obsidian: BackLinks' },
+    { ';on', '<cmd>ObsidianNew', desc = 'Obsidian: Create New Note' },
   },
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
