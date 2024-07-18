@@ -28,8 +28,6 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
-    notes_subdir = 'Inbox',
-    new_notes_location = 'notes_subdir',
     templates = {
       folder = 'Templates',
       date_format = '%Y-%m-%d',
