@@ -1,0 +1,141 @@
+#!/bin/sh
+VERSION="0.2.1"
+usage() {
+    echo "emailbook $VERSION"'
+A minimalistic address book for e-mails only.
+
+Usage: emailbook FILE [OPTIONS]
+
+Prints all values in FILE if no option is given.
+
+Options:
+-a, --add [KEY] VALUE  Add KEY/VALUE pair to FILE. If KEY is omitted,
+                       VALUE is used as key, too.
+[-s, --search] QUERY   Search FILE for entries with keys or values containing QUERY.
+-k, --key QUERY        Like `--search` but limit search to keys/aliases.
+-v, --value QUERY      Like `--search` but limit search to values.
+-p, --parse SOURCE     Parse stdin for e-mail addresses in header and add them to FILE.
+                       SOURCE might be either --from, --to , --cc, --bcc, or --all.
+-h, --help             Show this help.
+-V, --version          Print version.
+'
+}
+
+checkfilename() {
+    [ $QUIET ] || [ -e "$filename" ] \
+        || echo "File $filename not found. Creating it." 1>&2
+}
+
+keyexists() {
+    escaped=$(echo "$*" | sed 's/[][\.|$(){}?+*^]/\\&/g')
+    # also check display name with/without double quotes
+    quotestoggled=$(echo "$*" | sed -E 's/^"([^"]+)"( +<[^>]+>)/\1\2/;t;s/^([^"]+?)( +<[^>]+>)/"\1"\2/')
+    quotestoggledescaped=$(echo "$quotestoggled" | sed 's/[][\.|$(){}?+*^]/\\&/g')
+    grep -q -E "^$escaped( :|\$)" "$filename" 2> /dev/null \
+        || grep -q -E "^$quotestoggledescaped( :|\$)" "$filename" 2> /dev/null
+}
+
+addentry() {
+    if keyexists "$1"; then
+        [ $QUIET ] || echo "! $1 (skipped)"
+    else
+        [ "$2" ] && line="$1 : $2" || line="$1"
+        [ $QUIET ] || echo "+ $line"
+        echo "$line" >> "$filename"
+    fi
+}
+
+add() {
+    checkfilename
+    case $# in
+    1|2) addentry "$@" ;;
+    *) echo "Expected one or two arguments after -a!"; exit 1 ;;
+    esac
+}
+
+addfromstdin() {
+    # Skip lines without "@", skip lines containing no-reply (or similar),
+    # strip \r, strip leading spaces, do the following replacements:
+    # "'John Doe'" <xxx> → "John Doe" <xxx>
+    # 'John Doe' <xxx> → John Doe <xxx>
+    # "john.doe@example.com" <john.doe@example.com> → <john.doe@example.com>
+    # "<john.doe@example.com>" <john.doe@example.com> → <john.doe@example.com>
+    # john.doe@example.com → <john.doe@example.com>
+    grep '@' \
+        | grep -v -i -E '\bnot?[_-]?reply' \
+        | sed 's/\r$//' \
+        | sed -E 's/^ +//g' \
+        | sed -E "s/(\"?)'([^'\"]+)'(\"?)/\1\2\3/" \
+        | sed -E 's/^"<?([^">]*)>?" +<\1>/<\1>/' \
+        | sed -E 's/^[^<>@ ]*@[^<>@ ]+$/<\0>/' \
+        | sort -u \
+        | while read -r line; do addentry "$line"; done
+}
+
+searchall() {
+    # show entries with matching alias first
+    searchbyalias "$*"
+    searchbyvalueonly "$*"
+}
+
+searchbyalias() {
+    grep -i -E "$* :" "$filename" | sed -E 's/^[^:]+:\s*//'
+}
+
+searchbyvalue() {
+    sed -E 's/^[^:]+:\s*//' "$filename" | grep -i -E "$*"
+}
+
+searchbyvalueonly() {
+    # exclude matches found by searchbyalias
+    grep -i -E -v "$* :" "$filename" | sed -E 's/^[^:]+:\s*//' | grep -i -E "$*"
+}
+
+parsefields() {
+    # Find header fields starting with $1 (p.e. 'To:') plus following lines
+    # starting with a space. Split entries at commas except when quoted. Skip
+    # empty lines. Decode encoded strings. Squeeze double spaces.
+    sed -E '/^\r?$/Q' - \
+        | sed -E -n "/^$1:/{:a ; \$!N ; s/\n\s+/ / ; ta ; P ; D}" \
+        | sed -E "s/^$1:\\s*//" \
+        | grep -v -P '[\x80-\xFF]' \
+        | awk -vFPAT='([^,"]*)("[^"]+")?([^,]*)?' -vOFS='\n' \
+          '{for(i=1;i<=NF;i++) printf("%s\n",$i)}' \
+        | sed -E -e '/^ *$/d' \
+        | perl -CS -MEncode -ne 'print decode("MIME-Header", $_)' \
+        | sed -E -e 's/  +/ /g' \
+        | addfromstdin
+}
+
+parse() {
+    checkfilename
+    case "$1" in
+    --all)  parsefields '(From|To|Cc|CC|Bcc)' ;;
+    # TODO: Include References, In-Reply-To, Reply-To, Return-Path?
+    --from) parsefields 'From' ;;
+    --to)   parsefields 'To' ;;
+    --cc)   parsefields '(Cc|CC)' ;;
+    --bcc)  parsefields 'Bcc' ;;
+    esac
+}
+
+
+case "$1" in
+-h|--help|'') usage; exit ;;
+-V|--version) echo "$VERSION"; exit ;;
+esac
+
+filename="$1"; shift
+
+case "$1" in
+-q|--quiet) shift; QUIET=1 ;;
+esac
+
+case "$1" in
+-a|--add)     shift; add "$@" ;;
+-s|--search)  shift; searchall "$*" ;;
+-k|--key)     shift; searchbyalias "$*" ;;
+-v|--value)   shift; searchbyvalue "$*" ;;
+-p|--parse)   shift; parse "$@" ;;
+*)            searchall "$*" ;;
+esac

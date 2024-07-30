@@ -4,6 +4,7 @@ set -gx fish_user_paths $fish_user_paths  $HOME/.nimble/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.cargo/bin
 set -gx fish_user_paths $fish_user_paths $HOME/go/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.dbox/bin
+set -gx fish_user_paths $fish_user_paths $HOME/.local/gozes/bin
 set -Ux EDITOR nvim
 alias vim=nvim
 alias v=nvim
