@@ -205,6 +205,8 @@ return { -- LSP Configuration & Plugins
               url = '',
             },
             schemas = require('schemastore').yaml.schemas(),
+            hover = true,
+            completion = true,
             customTags = {
               '!And scalar',
               '!And mapping',
