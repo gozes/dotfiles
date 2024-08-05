@@ -6,6 +6,7 @@ set -gx fish_user_paths $fish_user_paths $HOME/go/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.dbox/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.local/gozes/bin
 set -Ux EDITOR nvim
+set -Ux GTK_THEME Adwaita:dark
 alias vim=nvim
 alias v=nvim
 alias g=lazygit
