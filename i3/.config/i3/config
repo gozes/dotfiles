@@ -137,10 +137,10 @@ bindsym $mod+$right focus right
 # bindsym $mod+Right focus right
 
 # move focused window
-bindsym $modShift+$left move window to workspace prev_on_output
+bindsym $modShift+$left move left
 bindsym $modShift+$down move down
 bindsym $modShift+$up move up
-bindsym $modShift+$right move window to workspace next_on_output
+bindsym $modShift+$right move right
 
 # alternatively, you can use the cursor keys:
 # bindsym $modShift+Left move left
@@ -193,6 +193,17 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace 1 output primary
+workspace 2 output primary
+workspace 3 output primary
+workspace 4 output primary
+workspace 5 output primary
+workspace 6 output nonprimary
+workspace 7 output nonprimary
+workspace 8 output nonprimary
+workspace 9 output nonprimary
+workspace 10 output nonprimary
 
 
 # switch to workspace
