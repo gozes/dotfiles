@@ -208,16 +208,31 @@ workspace 8 output $laptopScreen
 workspace 9 output $laptopScreen
 workspace 10 output $laptopScreen
 
-bindsym $modCtrl+l move workspace to output right
-bindsym $modCtrl+h move workspace to output left
-bindsym $modCtrl+j move workspace to output down
-bindsym $modCtrl+k move workspace to output up
+bindsym $modCtrl+$right move workspace to output right
+bindsym $modCtrl+$left move workspace to output left
+bindsym $modCtrl+$down move workspace to output down
+bindsym $modCtrl+$up move workspace to output up
 bindsym $modCtrl+m move workspace to output $dellMonitor
 bindsym $modCtrl+s move workspace to output $laptopScreen
 bindsym $modCtrl+p move workspace to output primary
 
+
+set $jump_to jump: [f]irefox, [t]erminal, [s]lack, [m]usic
+
+mode "$jump_to" {
+	bindsym f [class="^org.mozilla.firefox$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
+	bindsym t [class="^kitty$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
+	bindsym s [class="^Slack$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
+	bindsym m [class="^Spotify$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
+	
+}
+
+bindsym $modAlt+w mode "$jump_to" ;  exec i3-msg "client.focused $red $base $text  $rosewater $red"
+
 # from https://www.reddit.com/r/i3wm/comments/ejjd7w/swap_two_containers/
 mode "swap" {
+	
+
 	# switch to workspace
 	bindsym $mod+1 workspace $ws1
 	bindsym $mod+2 workspace $ws2
@@ -242,11 +257,11 @@ mode "swap" {
 	bindsym Up focus up
 	bindsym Right focus right
 
-	bindsym Return swap container with mark "swapee"; unmark "swapee"; mode "default";
-	bindsym Escape unmark "swapee"; mode "default";
+	bindsym Return swap container with mark "swapee"; unmark "swapee"; mode "default"; exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
+	bindsym Escape unmark "swapee"; mode "default"; exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
 }
 
-bindsym $modAlt+i mark --add "swapee"; mode "swap"
+bindsym $modAlt+i mark --add "swapee"; mode "swap" ; exec i3-msg "client.focused $peach $base $text  $rosewater $peach"
 
 assign [class="^org.mozilla.firefox$"] 1
 assign [class="^kitty$"] 2
@@ -254,6 +269,7 @@ assign [class="^Slack$"] 6
 assign [class="^Spotify$"] 7
 assign [class="^teams-for-linux$"] 8
 
+for_window [class="^.*"] border pixel 2
 
 # switch to workspace
 bindsym Mod4+Right workspace next_on_output
