@@ -98,6 +98,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 set $mod Mod4
 set $modShift Mod4+Shift
 set $modAlt Mod4+Mod1
+set $modCtrl Mod4+Ctrl
 set $up k
 set $down j
 set $left h
@@ -193,17 +194,33 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $dellMonitor HDMI-1
+set $laptopScreen eDP-1
 
-workspace 1 output primary
-workspace 2 output primary
-workspace 3 output primary
-workspace 4 output primary
-workspace 5 output primary
-workspace 6 output nonprimary
-workspace 7 output nonprimary
-workspace 8 output nonprimary
-workspace 9 output nonprimary
-workspace 10 output nonprimary
+workspace 1 output $dellMonitor
+workspace 2 output $dellMonitor
+workspace 3 output $dellMonitor
+workspace 4 output $dellMonitor
+workspace 5 output $dellMonitor
+workspace 6 output $laptopScreen
+workspace 7 output $laptopScreen
+workspace 8 output $laptopScreen
+workspace 9 output $laptopScreen
+workspace 10 output $laptopScreen
+
+bindsym $modCtrl+l move workspace to output right
+bindsym $modCtrl+h move workspace to output left
+bindsym $modCtrl+j move workspace to output down
+bindsym $modCtrl+k move workspace to output up
+bindsym $modCtrl+m move workspace to output $dellMonitor
+bindsym $modCtrl+s move workspace to output $laptopScreen
+bindsym $modCtrl+p move workspace to output primary
+
+assign [class="^org.mozilla.firefox$"] 1
+assign [class="^kitty$"] 2
+assign [class="^Slack$"] 6
+assign [class="^Spotify$"] 7
+assign [class="^teams-for-linux$"] 8
 
 
 # switch to workspace
