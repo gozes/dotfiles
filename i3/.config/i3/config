@@ -50,20 +50,21 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 # # bar
-bar {
-  colors {
-    background         $base
-    statusline         $text
-    focused_statusline $text
-    focused_separator  $base
-    focused_workspace  $base $base $green
-    active_workspace   $base $base $blue
-    inactive_workspace $base $base $surface1
-    urgent_workspace   $base $base $surface1
-    binding_mode       $base $base $surface1
-  }
-  status_command i3status
-}
+# bar {
+#   colors {
+#     background         $base
+#     statusline         $text
+#     focused_statusline $text
+#     focused_separator  $base
+#     focused_workspace  $base $base $green
+#     active_workspace   $base $base $blue
+#     inactive_workspace $base $base $surface1
+#     urgent_workspace   $base $base $surface1
+#     binding_mode       $base $base $surface1
+#   }
+#   workspace_buttons yes
+#   status_command i3status
+# }
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -130,25 +131,25 @@ bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
-bindsym $modShift+$left move left
+bindsym $modShift+$left move window to workspace prev_on_output
 bindsym $modShift+$down move down
 bindsym $modShift+$up move up
-bindsym $modShift+$right move right
+bindsym $modShift+$right move window to workspace next_on_output
 
 # alternatively, you can use the cursor keys:
-bindsym $modShift+Left move left
-bindsym $modShift+Down move down
-bindsym $modShift+Up move up
-bindsym $modShift+Right move right
+# bindsym $modShift+Left move left
+# bindsym $modShift+Down move down
+# bindsym $modShift+Up move up
+# bindsym $modShift+Right move right
 
 # split in horizontal orientation
-bindsym $modShift+h split h
+bindsym $modShift+u split h
 
 # split in vertical orientation
 bindsym $modShift+v split v
@@ -193,12 +194,15 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
+bindsym Mod4+Right workspace next_on_output
+bindsym Mod4+Left workspace prev_on_output
+bindsym $mod+1 workspace number $ws1 
+bindsym $mod+2 workspace number $ws2 
+bindsym $mod+3 workspace number $ws3 
+bindsym $mod+4 workspace number $ws4 
+bindsym $mod+5 workspace number $ws5 
 bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
