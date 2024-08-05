@@ -11,7 +11,7 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono Nerd Font 8
+font pango:JetBrainsMono Nerd Font 12
 
 # catppuccin-mocha
 set $rosewater #f5e0dc
@@ -161,7 +161,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle splith stacking
 
 # toggle tiling / floating
 bindsym $modShift+space floating toggle
