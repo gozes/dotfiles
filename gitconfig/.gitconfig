@@ -6,4 +6,4 @@
 	path = ~/Code/Work/.gitconfig
 
 [includeIf "gitdir:~/Code/Debian/"]
-	path = ~/Code/Debian/.gitconfig
+	path = ~/Code/Debian/.gitconfig-debian
