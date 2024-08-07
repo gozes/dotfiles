@@ -4,3 +4,6 @@
 
 [includeIf "gitdir:~/Code/Work/"]
 	path = ~/Code/Work/.gitconfig
+
+[includeIf "gitdir:~/Code/Debian/"]
+	path = ~/Code/Debian/.gitconfig
