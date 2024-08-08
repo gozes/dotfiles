@@ -157,7 +157,30 @@ return { -- LSP Configuration & Plugins
     local servers = {
       clojure_lsp = {},
       jdtls = {},
-      -- clangd = {},
+      ltex = {
+        enabled = {
+          'bibtex',
+          'gitcommit',
+          'markdown',
+          'org',
+          'tex',
+          'restructuredtext',
+          'rsweave',
+          'latex',
+          'quarto',
+          'rmd',
+          'context',
+          'html',
+          'xhtml',
+          'mail',
+          'plaintext',
+          'go',
+          'python',
+          'rust',
+          'sql',
+          'lua',
+        },
+      },
       golangci_lint_ls = {},
       gopls = {
         settings = {
