@@ -184,7 +184,7 @@ return { -- LSP Configuration & Plugins
               upgrade_dependency = true,
             },
             gofumpt = true,
-            buildFlags = { '-tags', 'integration' },
+            buildFlags = { '-tags=integration acceptance' },
           },
         },
       },
