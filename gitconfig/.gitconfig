@@ -7,3 +7,7 @@
 
 [includeIf "gitdir:~/Code/Debian/"]
 	path = ~/Code/Debian/.gitconfig-debian
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
