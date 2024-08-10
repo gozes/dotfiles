@@ -55,16 +55,6 @@ if command -q eza
     alias ll="eza --icons -a -T  --level=1 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
 end
 
-if test (uname) = "Darwin"
-    set -Ux JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
-    set -Ux JAVA_11_HOME (/usr/libexec/java_home -v 11)
-    set -Ux JAVA_14_HOME (/usr/libexec/java_home -v 14)
-    alias java8="set -x JAVA_HOME (echo $JAVA_8_HOME )"
-    alias java11="set -x JAVA_HOME (echo $JAVA_11_HOME )"
-    alias java14="set -x JAVA_HOME (echo $JAVA_14_HOME )"
-   # set -Ux JAVA_HOME $JAVA_8_HOME
-end
-
 function ggt
     gotests -w -template testify -only $argv[1] $argv[2]
 end
