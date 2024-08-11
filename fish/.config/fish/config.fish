@@ -48,7 +48,7 @@ function gcmsgf
 end
 alias gcb="git checkout -b"
 alias gd="git diff"
-alias gdca="git diff --cached"
+alias gdc="git diff --cached"
 alias gdcw="git diff --cached --word-diff"
 alias gdw="git diff --word-diff"
 if command -q eza
