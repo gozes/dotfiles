@@ -46,6 +46,7 @@ alias gap="git add -p"
 function gcmsgf
     git commit -m (string join '' "fixup! " $argv)
 end
+alias gco="git checkout"
 alias gcb="git checkout -b"
 alias gd="git diff"
 alias gdc="git diff --cached"
