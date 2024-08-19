@@ -224,7 +224,10 @@ mode "$jump_to" {
 	bindsym t [class="^kitty$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
 	bindsym s [class="^Slack$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
 	bindsym m [class="^Spotify$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
+	bindsym Shift+m [class="^tidal-hifi$"] focus ; mode "default" ;  exec i3-msg "client.focused $lavender $base $text  $rosewater $lavender"
 	
+	bindsym Return  mode "default"
+	bindsym Escape mode "default"
 }
 
 bindsym $modAlt+w mode "$jump_to" ;  exec i3-msg "client.focused $red $base $text  $rosewater $red"
@@ -267,6 +270,7 @@ assign [class="^org.mozilla.firefox$"] 1
 assign [class="^kitty$"] 2
 assign [class="^Slack$"] 6
 assign [class="^Spotify$"] 7
+assign [class="^tidal-hifi$"] 7
 assign [class="^teams-for-linux$"] 8
 
 for_window [class="^.*"] border pixel 2
