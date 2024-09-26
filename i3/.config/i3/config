@@ -108,10 +108,10 @@ set $laptopScreen eDP-1
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier $mod
 
-exec kitty
-exec flatpak run com.slack.Slack
-exec flatpak run com.spotify.Client
-exec flatpak run com.todoist.Todoist
+exec kitty ; workspace 1
+exec flatpak run com.slack.Slack ; workspace 1
+exec flatpak run com.spotify.Client ; workspace 1
+exec flatpak run com.todoist.Todoist ; workspace 1
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
