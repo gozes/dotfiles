@@ -31,7 +31,6 @@ return {
     dependencies = {
       { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
-      { 'nvim-telescope/telescope.nvim' },
     },
     build = 'make tiktoken', -- Only on MacOS or Linux
     opts = {
