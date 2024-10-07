@@ -27,7 +27,7 @@ return {
       return true
     end,
     branch = 'canary',
-    event = 'VeryLazy',
+    -- event = 'VeryLazy',
     dependencies = {
       { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
