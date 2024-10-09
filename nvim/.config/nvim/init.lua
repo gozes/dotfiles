@@ -204,6 +204,10 @@ vim.api.nvim_set_keymap('v', '!', 'g_', { noremap = true })
 vim.keymap.set('n', '<leader>g', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
 vim.keymap.set('n', ';t', '<cmd>TodoTelescope<cr>', { desc = 'Open Todo commets in telescope' })
 vim.keymap.set('n', ';a', '<C-^>', { desc = 'Jump to alternet-file' })
+vim.keymap.set('n', '<C-h>', '<Plug>WinMoveLeft', { desc = 'Move to widow left or crate it' })
+vim.keymap.set('n', '<C-j>', '<Plug>WinMoveDown', { desc = 'Move to widow down or crate it' })
+vim.keymap.set('n', '<C-k>', '<Plug>WinMoveUp', { desc = 'Move to widow up or crate it' })
+vim.keymap.set('n', '<C-l>', '<Plug>WinMoveRight', { desc = 'Move to widow right or crate it' })
 
 local zellij = require 'cmd.zellij'
 vim.keymap.set('n', ';zl', function()
