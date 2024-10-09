@@ -1,4 +1,5 @@
 --- https://who.ldelossa.is/posts/gh-nvim/
+--- https://www.youtube.com/watch?v=hhrWwYfMK1I
 return {
   'ldelossa/gh.nvim',
   keys = {
