@@ -1,5 +1,6 @@
 --- https://who.ldelossa.is/posts/gh-nvim/
---- https://www.youtube.com/watch?v=hhrWwYfMK1I
+--- gh demo: https://www.youtube.com/watch?v=hhrWwYfMK1I
+--- git worktree workflow: https://www.youtube.com/watch?v=4_p1OdLeDLE
 return {
   'ldelossa/gh.nvim',
   keys = {
