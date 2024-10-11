@@ -3,6 +3,9 @@
 --- git worktree workflow: https://www.youtube.com/watch?v=VMJ1eAj5HgI and https://nicknisi.com/posts/git-worktrees/
 return {
   'ldelossa/gh.nvim',
+  opts = {
+    map_resize_keys = true,
+  },
   keys = {
     { '<leader>Go', '<cmd>GHOpenPR<cr>', desc = 'Github List PRs' },
     { '<leader>Gtt', '<cmd>GHToggleThread<cr>', desc = 'Github Toggle Thread' },

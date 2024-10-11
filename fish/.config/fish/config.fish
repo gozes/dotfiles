@@ -192,3 +192,7 @@ if command -q fzf
     --color=selected-bg:#45475a \
     --multi"
 end
+
+if command -q uv 
+    uv generate-shell-completion fish | source
+end
