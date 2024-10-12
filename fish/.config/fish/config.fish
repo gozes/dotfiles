@@ -26,6 +26,9 @@ alias glod="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgre
 alias glods="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
 alias glog="git log --oneline --decorate --graph"
+function glogdig 
+    git log --merges --ancestry-path --oneline $argv[1]..origin | tail
+end
 alias gp="git push"
 alias gf="git fetch"
 alias gpd="git push --dry-run"
@@ -46,7 +49,7 @@ alias gca="git commit --amend"
 alias gcane="git commit --amend --no-edit"
 alias gcmsg="git commit -m"
 alias gap="git add -p"
-alias gwc="git clone -bare"
+alias gwc="git clone --bare"
 alias gwar="git worktree add review main"
 alias gwab="git worktree add -b"
 alias gwd="git worktree remove"
