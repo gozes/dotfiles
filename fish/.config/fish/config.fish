@@ -27,22 +27,29 @@ alias glods="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
 alias glog="git log --oneline --decorate --graph"
 alias gp="git push"
+alias gf="git fetch"
 alias gpd="git push --dry-run"
 alias gpf="git push --force-with-lease"
 alias gpf!="git push --force"
 alias grba="git rebase --abort"
 alias grbc="git rebase --continue"
 alias grbi="git rebase -i"
-alias grbin="git rebase -i HEAD~"
 alias grbim="git rebase -i main"
 alias grbis="git rebase -i --autosquash"
 alias gsh="git show"
+function gshb 
+    git show (git blame $argv[1] -L $argv[2] | awk '{print $1}')
+end
 alias gss="git status -s"
 alias gc="git commit"
 alias gca="git commit --amend"
 alias gcane="git commit --amend --no-edit"
 alias gcmsg="git commit -m"
 alias gap="git add -p"
+alias gwc="git clone -bare"
+alias gwar="git worktree add review main"
+alias gwab="git worktree add -b"
+alias gwd="git worktree remove"
 function gcmsgf
     git commit -m (string join '' "fixup! " $argv)
 end
