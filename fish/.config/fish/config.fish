@@ -29,6 +29,16 @@ alias glog="git log --oneline --decorate --graph"
 function glogdig 
     git log --merges --ancestry-path --oneline $argv[1]..origin | tail
 end
+function gpickaxeall
+    git log -S $argv[1] -p
+end
+function gpickaxefile
+    git log -S $argv[1] -p $argv[2]
+end
+
+function gpickaxefirstadded
+    git log -S $argv[1] -p --reverse
+end
 alias gp="git push"
 alias gf="git fetch"
 alias gpd="git push --dry-run"
