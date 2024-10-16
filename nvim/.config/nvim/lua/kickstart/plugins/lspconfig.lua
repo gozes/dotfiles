@@ -155,8 +155,8 @@ return { -- LSP Configuration & Plugins
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      clojure_lsp = {},
-      jdtls = {},
+      -- clojure_lsp = {},
+      -- jdtls = {},
       golangci_lint_ls = {},
       gopls = {
         settings = {
@@ -188,6 +188,7 @@ return { -- LSP Configuration & Plugins
         },
       },
       pyright = {},
+      ruff_lsp = {},
       jsonls = {
         settings = {
           json = {
@@ -304,6 +305,7 @@ return { -- LSP Configuration & Plugins
       'goimports',
       'gotests',
       'iferr',
+      'ruff',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
