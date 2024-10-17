@@ -9,7 +9,6 @@ local prompts = {
   BetterNamings = 'Please provide better names for the following variables and functions.',
   Documentation = 'Please provide documentation for the following code.',
   SwaggerApiDocs = 'Please provide documentation for the following API using Swagger.',
-  SwaggerJsDocs = 'Please write JSDoc for the following API using Swagger.',
   -- Text related prompts
   Summarize = 'Please summarize the following text.',
   Spelling = 'Please correct any grammar and spelling errors in the following text.',
@@ -32,7 +31,7 @@ return {
       { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
     },
-    build = 'make tiktoken', -- Only on MacOS or Linux
+    build = 'make tiktoken',
     opts = {
       debug = true, -- Enable debugging
       auto_follow_cursor = false,
