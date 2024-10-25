@@ -173,6 +173,18 @@ function kitty-reload-config
     kill -SIGUSR1 (pgrep kitty)
 end
 
+function install-rpm-fusion 
+    bash -c "sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm ; sudo dnf config-manager --enable fedora-cisco-openh264"
+end
+
+function install-brew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+end
+
+function install-cil-tools-from-brew
+    brew install neovim go fzf eza zoxide bat git-delta zellij
+end 
+
 if test -d $HOME/.asdf
   source $HOME/.asdf/asdf.fish
   source $HOME/.asdf/completions/asdf.fish
@@ -197,6 +209,10 @@ if status is-interactive
     end
 end
 
+if command -q eza
+    alias ll="eza --icons -a -T  --level=1 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
+end
+
 if command -q zoxide
     zoxide init fish | source
 end
@@ -217,3 +233,9 @@ end
 if command -q uv 
     uv generate-shell-completion fish | source
 end
+
+if command -q bat
+    set -Ux BAT_THEME "Catppuccin Mocha"
+    set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
+end
+
