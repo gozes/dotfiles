@@ -3,6 +3,7 @@
 --- git worktree workflow: https://www.youtube.com/watch?v=VMJ1eAj5HgI and https://nicknisi.com/posts/git-worktrees/
 return {
   'ldelossa/gh.nvim',
+  enabled = false,
   opts = {
     map_resize_keys = true,
   },
