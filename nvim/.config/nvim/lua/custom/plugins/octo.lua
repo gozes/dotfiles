@@ -8,7 +8,7 @@ return {
   config = function()
     require('octo').setup { enable_builtin = true, suppress_missing_scope = { projects_v2 = true } }
     vim.cmd [[hi OctoEditable guibg=none]]
-    vim.keymap.set('n', '<leader>Gl', '<cmd>Octo pr list<cr>', { desc = 'Octo: list PRs' })
+    vim.keymap.set('n', '<leader>Gl', '<cmd>tab Octo pr list<cr>', { desc = 'Octo: list PRs' })
     vim.keymap.set('n', '<leader>Gc', '<cmd>Octo pr changes<cr>', { desc = 'Octo: Show all PR changes' })
     vim.keymap.set('n', '<leader>Ga', '<cmd>Octo pr checks<cr>', { desc = 'Octo: Show GHAs' })
     vim.keymap.set('n', '<leader>Gpr', '<cmd>Octo pr reload<cr>', { desc = 'Octo: Reload PR' })
