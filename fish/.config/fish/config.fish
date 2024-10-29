@@ -240,5 +240,5 @@ if command -q bat
 end
 
 if test -e $HOME/Code/Work/work.fish
-  source $HOME/Code/Work/jira.fish
+  source $HOME/Code/Work/work.fish
 end
