@@ -239,6 +239,6 @@ if command -q bat
     set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
 end
 
-if test -e $HOME/Code/Work/jira.fish
+if test -e $HOME/Code/Work/work.fish
   source $HOME/Code/Work/jira.fish
 end
