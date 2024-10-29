@@ -27,7 +27,7 @@ return { -- Highlight, edit, and navigate code
     auto_install = true,
     textobjects = {
       select = {
-        enable = true,
+        enable = false,
         lookahead = true,
         keymaps = {
           -- You can use the capture groups defined in textobjects.scm
