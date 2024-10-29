@@ -2,7 +2,7 @@ return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
   keys = {
     {
-      '<leader>xx',
+      '<leader>x',
       function()
         require('mini.files').open()
       end,
