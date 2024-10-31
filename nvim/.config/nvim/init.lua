@@ -385,10 +385,14 @@ require('lazy').setup({
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = {
-      signs = false,
+      signs = true,
       keywords = {
         URL = {
           color = 'info',
+        },
+        Q = {
+
+          color = '#f5c2e7',
         },
       },
     },
