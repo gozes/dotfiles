@@ -1,14 +1,5 @@
 return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
-  keys = {
-    {
-      '<leader>x',
-      function()
-        require('mini.files').open()
-      end,
-      desc = 'Open mini.files',
-    },
-  },
   config = function()
     require('mini.files').setup()
     -- Better Around/Inside textobjects
