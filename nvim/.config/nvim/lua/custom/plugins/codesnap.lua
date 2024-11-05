@@ -8,7 +8,7 @@ return {
     require('codesnap').setup {
       has_breadcrumbs = true,
       has_line_number = true,
-      bg_color = '#f5c2e7',
+      bg_color = '#535c68',
       watermark = '',
     }
   end,
