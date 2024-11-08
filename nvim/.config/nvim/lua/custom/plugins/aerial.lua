@@ -16,6 +16,6 @@ return {
       end,
     }
     -- You probably also want to set a keymap to toggle aerial
-    vim.keymap.set('n', '<leader>;cc', '<cmd>AerialToggle!<CR>', { desc = 'Show function callers' })
+    vim.keymap.set('n', ';cc', '<cmd>AerialToggle!<CR>', { desc = 'Show code outline' })
   end,
 }
