@@ -13,7 +13,9 @@ return {
       require('neotest').setup {
         adapters = {
           require 'neotest-golang', -- Registration
-          require 'neotest-python',
+          require('neotest-python').setup {
+            python = { '.venv/bin/python', 'venv/bin/python' },
+          },
         },
       }
     end,
