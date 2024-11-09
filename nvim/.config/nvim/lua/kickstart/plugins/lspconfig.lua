@@ -197,7 +197,7 @@ return { -- LSP Configuration & Plugins
         },
       },
       pyright = {},
-      ruff_lsp = {},
+      ruff = {},
       jsonls = {
         settings = {
           json = {
