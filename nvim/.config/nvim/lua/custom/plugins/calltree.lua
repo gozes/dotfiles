@@ -2,6 +2,7 @@ return {
   {
     'ldelossa/litee.nvim',
     event = 'VeryLazy',
+    enabled = false,
     opts = {
       notify = { enabled = false },
       panel = {
@@ -16,6 +17,7 @@ return {
 
   {
     'ldelossa/litee-calltree.nvim',
+    enabled = false,
     dependencies = 'ldelossa/litee.nvim',
     event = 'VeryLazy',
     opts = {
