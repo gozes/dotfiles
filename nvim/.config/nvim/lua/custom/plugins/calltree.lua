@@ -2,7 +2,6 @@ return {
   {
     'ldelossa/litee.nvim',
     event = 'VeryLazy',
-    enabled = false,
     opts = {
       notify = { enabled = false },
       panel = {
