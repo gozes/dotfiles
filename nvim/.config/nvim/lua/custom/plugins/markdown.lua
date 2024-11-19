@@ -6,5 +6,5 @@ return {
       enabled = true,
     }
   end,
-  ft = { 'markdown', 'quarto' },
+  ft = { 'markdown', 'quarto', 'telekasten' },
 }
