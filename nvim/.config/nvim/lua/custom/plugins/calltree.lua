@@ -16,7 +16,7 @@ return {
 
   {
     'ldelossa/litee-calltree.nvim',
-    enabled = false,
+    enabled = true,
     dependencies = 'ldelossa/litee.nvim',
     event = 'VeryLazy',
     opts = {
