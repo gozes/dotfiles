@@ -2,7 +2,7 @@ return {
   'renerocksai/telekasten.nvim',
   dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-telescope/telescope-media-files.nvim' },
   keys = {
-    { '<leader>z', '<cmd>Telekasten panel<CR>', desc = 'Notes: Command Palette' },
+    { '<leader>z', '<cmd>Telekasten panel<CR>', desc = 'Notes' },
     { '<leader>zf', '<cmd>Telekasten find_notes<CR>', desc = 'Notes: Find Note' },
     { '<leader>zF', '<cmd>Telekasten find_friends<CR>', desc = 'Notes: Find Friend Notes' },
     { '<leader>zr', '<cmd>Telekasten rename_note<CR>', desc = 'Notes: Rename Note' },
@@ -12,6 +12,10 @@ return {
     { '<leader>zb', '<cmd>Telekasten show_backlinks<CR>', desc = 'Notes: Show Backlinks' },
     { '<leader>zn', '<cmd>Telekasten new_note<CR>', desc = 'Notes: New Note' },
     { '<leader>zI', '<cmd>Telekasten insert_img_link<CR>', desc = 'Notes: Insert Image Link' },
+    { '<leader>zt', '<cmd>Telekasten show_tags<CR>', desc = 'Notes: Show Tags' },
+    { '<leader>zP', '<cmd>Telekasten preview_img<CR>', desc = 'Notes: Preview Image' },
+    { '<leader>zp', '<cmd>Telekasten paste_img_and_link<CR>', desc = 'Notes: Paset Image and Link' },
+    { '<leader>zB', '<cmd>Telekasten browse_media<CR>', desc = 'Notes: Browse Media' },
   },
   config = function()
     require('telekasten').setup {
