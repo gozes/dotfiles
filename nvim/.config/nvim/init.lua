@@ -197,6 +197,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 
 vim.keymap.set('n', '<C-c>', '<cmd>wa<cr>', { noremap = true })
 vim.keymap.set('i', '<C-c>', '<Esc>', { noremap = true })
+vim.keymap.set('i', '<C-;>', '§', { noremap = true })
 vim.api.nvim_set_keymap('n', '&', '^', { noremap = true })
 vim.api.nvim_set_keymap('n', '!', 'g_', { noremap = true })
 vim.api.nvim_set_keymap('v', '&', '^', { noremap = true })
