@@ -182,7 +182,7 @@ function install-brew
 end
 
 function install-cil-tools-from-brew
-    brew install neovim go fzf eza zoxide bat git-delta zellij
+    brew install neovim go fzf eza zoxide bat git-delta zellij viu catimg
 end 
 
 if test -d $HOME/.asdf
