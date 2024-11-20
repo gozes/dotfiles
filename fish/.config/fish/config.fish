@@ -185,6 +185,10 @@ function install-cil-tools-from-brew
     brew install neovim go fzf eza zoxide bat git-delta zellij viu catimg
 end 
 
+function install-cil-tools-from-fedora
+sudo dnf install ImageMagick ImageMagick-devel
+end 
+
 if test -d $HOME/.asdf
   source $HOME/.asdf/asdf.fish
   source $HOME/.asdf/completions/asdf.fish
