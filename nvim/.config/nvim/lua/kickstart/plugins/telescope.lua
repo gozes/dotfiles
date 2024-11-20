@@ -53,10 +53,18 @@ return { -- Fuzzy Finder (files, lsp, etc)
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
-      -- pickers = {}
+      pickers = {
+        buffers = {
+          theme = 'dropdown',
+        },
+        spell_suggest = {
+          theme = 'ivy',
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
+          require('telescope.themes').get_ivy(),
         },
       },
     }
