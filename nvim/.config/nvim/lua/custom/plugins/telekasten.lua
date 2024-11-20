@@ -2,7 +2,6 @@ return {
   'renerocksai/telekasten.nvim',
   dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-telescope/telescope-media-files.nvim' },
   keys = {
-    { '<leader>z', '<cmd>Telekasten panel<CR>', desc = 'Notes' },
     { '<leader>zf', '<cmd>Telekasten find_notes<CR>', desc = 'Notes: Find Note' },
     { '<leader>zF', '<cmd>Telekasten find_friends<CR>', desc = 'Notes: Find Friend Notes' },
     { '<leader>zr', '<cmd>Telekasten rename_note<CR>', desc = 'Notes: Rename Note' },
@@ -24,7 +23,7 @@ return {
       image_subdir = vim.fn.expand '~/notes/images',
       home = vim.fn.expand '~/notes', -- Put the name of your notes directory here
       dailies = vim.fn.expand '~/notes/Daily', -- Put the name of your notes directory here
-      follow_url_fallback = "call jobstart('firefox --new-window {{url}}')",
+      follow_url_fallback = "call jobstart('firefox --new-tab {{url}}')",
     }
     require('telescope').load_extension 'media_files'
   end,

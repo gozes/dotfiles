@@ -23,6 +23,14 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>t_', hidden = true },
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>w_', hidden = true },
+      { '<leader>z', group = 'Notes' },
+      { '<leader>z_', hidden = true },
+      { '<leader>g', group = 'Git' },
+      { '<leader>g_', hidden = true },
+      { '<leader>G', group = 'GitHub' },
+      { '<leader>G_', hidden = true },
+      { '<leader>p', group = 'Python' },
+      { '<leader>p_', hidden = true },
     }
     -- visual mode
     require('which-key').add {
