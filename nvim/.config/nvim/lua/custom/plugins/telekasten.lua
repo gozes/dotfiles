@@ -18,6 +18,8 @@ return {
   },
   config = function()
     require('telekasten').setup {
+      take_over_my_home = false,
+      auto_set_filetype = false,
       extension = '.md',
       image_link_style = 'wiki',
       image_subdir = vim.fn.expand '~/notes/images',
