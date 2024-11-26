@@ -1,5 +1,6 @@
 return {
   'renerocksai/telekasten.nvim',
+  enabled = false,
   dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-telescope/telescope-media-files.nvim' },
   keys = {
     { '<leader>zf', '<cmd>Telekasten find_notes<CR>', desc = 'Notes: Find Note' },

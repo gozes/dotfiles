@@ -165,6 +165,15 @@ return { -- LSP Configuration & Plugins
     local servers = {
       -- clojure_lsp = {},
       -- jdtls = {},
+      markdown_oxide = {
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      },
       golangci_lint_ls = {},
       gopls = {
         settings = {
