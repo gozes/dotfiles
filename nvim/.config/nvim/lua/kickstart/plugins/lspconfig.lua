@@ -173,6 +173,9 @@ return { -- LSP Configuration & Plugins
     local servers = {
       -- clojure_lsp = {},
       -- jdtls = {},
+      pyright = {},
+      ruff = {},
+      golangci_lint_ls = {},
       markdown_oxide = {
         capabilities = {
           workspace = {
@@ -182,7 +185,6 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
-      golangci_lint_ls = {},
       gopls = {
         settings = {
           gopls = {
@@ -212,8 +214,6 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
-      pyright = {},
-      ruff = {},
       jsonls = {
         settings = {
           json = {
