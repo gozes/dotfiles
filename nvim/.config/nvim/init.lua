@@ -213,15 +213,6 @@ vim.keymap.set('n', '<C-h>', '<Plug>WinMoveLeft', { desc = 'Move to widow left o
 vim.keymap.set('n', '<C-j>', '<Plug>WinMoveDown', { desc = 'Move to widow down or crate it' })
 vim.keymap.set('n', '<C-k>', '<Plug>WinMoveUp', { desc = 'Move to widow up or crate it' })
 vim.keymap.set('n', '<C-l>', '<Plug>WinMoveRight', { desc = 'Move to widow right or crate it' })
-vim.keymap.set('n', '<leader>zf', function()
-  require('telescope.builtin').find_files { cwd = '~/notes' }
-end, { desc = 'Note: Find Note' })
-vim.keymap.set('n', '<leader>zg', function()
-  require('telescope.builtin').live_grep { cwd = '~/notes' }
-end, { desc = 'Note: Grep Notes' })
-vim.keymap.set('n', '<leader>za', function()
-  require('oil').toggle_float '~/notes'
-end, { desc = 'Note: Add Note' })
 
 local zellij = require 'cmd.zellij'
 vim.keymap.set('n', ';zl', function()
