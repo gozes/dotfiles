@@ -125,13 +125,6 @@ return { -- LSP Configuration & Plugins
             callback = vim.lsp.buf.clear_references,
           })
         end
-        if client.name == 'markdown_oxide' then
-          vim.api.nvim_create_user_command('Daily', function(args)
-            local input = args.args
-
-            vim.lsp.buf.execute_command { command = 'jump', arguments = { input } }
-          end, { desc = 'Open daily note', nargs = '*' })
-        end
 
         -- The following autocommand is used to enable inlay hints in your
         -- code, if the language server you are using supports them
