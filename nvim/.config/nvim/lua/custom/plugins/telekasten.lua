@@ -10,7 +10,13 @@ return {
     { '<leader>zd', '<cmd>Telekasten goto_today<CR>', desc = 'Notes: Today Note' },
     { '<leader>zz', '<cmd>Telekasten follow_link<CR>', desc = 'Notes: Follow Link' },
     { '<leader>zb', '<cmd>Telekasten show_backlinks<CR>', desc = 'Notes: Show Backlinks' },
-    { '<leader>zn', '<cmd>Telekasten new_note<CR>', desc = 'Notes: New Note' },
+    {
+      '<leader>zn',
+      function()
+        require('oil').toggle_float '~/notes'
+      end,
+      desc = 'Notes: New Note',
+    },
     { '<leader>zI', '<cmd>Telekasten insert_img_link<CR>', desc = 'Notes: Insert Image Link' },
     { '<leader>zt', '<cmd>Telekasten show_tags<CR>', desc = 'Notes: Show Tags' },
     { '<leader>zP', '<cmd>Telekasten preview_img<CR>', desc = 'Notes: Preview Image' },
