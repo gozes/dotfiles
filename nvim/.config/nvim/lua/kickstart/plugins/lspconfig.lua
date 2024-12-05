@@ -168,6 +168,7 @@ return { -- LSP Configuration & Plugins
       -- jdtls = {},
       pyright = {},
       ruff = {},
+      ltex = {},
       golangci_lint_ls = {},
       markdown_oxide = {
         capabilities = {
