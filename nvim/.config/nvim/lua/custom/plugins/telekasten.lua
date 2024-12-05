@@ -28,6 +28,7 @@ return {
       dailies = vim.fn.expand '~/notes/Daily', -- Put the name of your notes directory here
       templates = vim.fn.expand '~/notes/Templates',
       template_new_note = vim.fn.expand '~/notes/Templates/New Note Template.md',
+      template_new_daily = vim.fn.expand '~/notes/Templates/Daily Note Template.md',
       follow_url_fallback = "call jobstart('firefox --new-tab {{url}}')",
     }
     require('telescope').load_extension 'media_files'
