@@ -168,7 +168,31 @@ return { -- LSP Configuration & Plugins
       -- jdtls = {},
       pyright = {},
       ruff = {},
-      ltex = {},
+      ltex = {
+        settings = {
+          ltex = {
+            enabled = {
+              'bibtex',
+              'gitcommit',
+              'markdown',
+              'org',
+              'tex',
+              'restructuredtext',
+              'rsweave',
+              'latex',
+              'quarto',
+              'rmd',
+              'context',
+              'html',
+              'xhtml',
+              'mail',
+              'plaintext',
+              'go',
+              'python',
+            },
+          },
+        },
+      },
       golangci_lint_ls = {},
       markdown_oxide = {
         capabilities = {
