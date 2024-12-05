@@ -274,10 +274,9 @@ mode "swap" {
 bindsym $modAlt+i mark --add "swapee"; mode "swap" ; exec i3-msg "client.focused $peach $base $text  $rosewater $peach"
 
 assign [class="^org.mozilla.firefox$"] 1
-assign [class="^kitty$"] 2
 assign [class="^Slack$"] 6
 assign [class="^Spotify$"] 7
-assign [class="^Todoist$"] 8
+assign [class="^Todoist$"] 4
 assign [class="^teams-for-linux$"] 9
 
 for_window [class="^.*"] border pixel 2
