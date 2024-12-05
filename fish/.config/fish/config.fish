@@ -246,3 +246,8 @@ end
 if test -e $HOME/Code/Work/work.fish
   source $HOME/Code/Work/work.fish
 end
+
+if status is-interactive; and command -q zellij
+    set -Ux ZELLIJ_AUTO_ATTACH "true"
+    eval (zellij setup --generate-auto-start fish | string collect)
+end
