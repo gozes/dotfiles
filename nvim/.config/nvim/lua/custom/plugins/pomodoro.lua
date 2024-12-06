@@ -8,10 +8,11 @@ return {
     'rcarriga/nvim-notify',
   },
   keys = {
-    { '<leader>p1', '<cmd>TimerSession p1<CR>', desc = 'Pomo: One Round' },
-    { '<leader>p2', '<cmd>TimerSession p2<CR>', desc = 'Pomo: Two Rounds' },
-    { '<leader>pew', '<cmd>TimerSession ew<CR>', desc = 'Pomo: Exploratory Writing' },
-    { '<leader>peg', '<cmd>TimerSession eg<CR>', desc = 'Pomo: Evergreen Note' },
+    { '<leader>p1', '<cmd>TimerSession p1<CR>', desc = 'Pomo: 25/5' },
+    { '<leader>p2', '<cmd>TimerSession p2<CR>', desc = 'Pomo: 2x 25/5' },
+    { '<leader>p5', '<cmd>TimerSession p50<CR>', desc = 'Pomo: 50m' },
+    { '<leader>pew', '<cmd>TimerSession ew<CR>', desc = 'Pomo: Exploratory Writing(10m)' },
+    { '<leader>peg', '<cmd>TimerSession eg<CR>', desc = 'Pomo: Evergreen Note(25m)' },
   },
   opts = {
     sessions = {
@@ -31,6 +32,10 @@ return {
         { name = 'Focus', duration = '25m' },
         { name = 'Short Break', duration = '5m' },
         { name = 'Focus', duration = '25m' },
+        { name = 'Short Break', duration = '5m' },
+      },
+      p50 = {
+        { name = 'Focus', duration = '50m' },
         { name = 'Short Break', duration = '5m' },
       },
     },
