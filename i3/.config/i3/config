@@ -238,6 +238,8 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 bindsym $modAlt+Right move container to workspace next_on_output
 bindsym $modAlt+Left move container to workspace prev_on_output
+bindsym $modShift+Right move container to output next
+bindsym $modShift+Left move container to output prev
 
 # move focused container to workspace
 bindsym $modAlt+1 move container to workspace number $ws1
