@@ -247,7 +247,16 @@ return { -- LSP Configuration & Plugins
               enable = false,
               url = '',
             },
-            schemas = require('schemastore').yaml.schemas(),
+            schemas = require('schemastore').yaml.schemas {
+              extra = {
+                {
+                  name = 'CF folder',
+                  fileMatch = { '**/cloudformatoin/*.yml', '**/cloudformatoin/*.yaml' },
+                  description = 'match CF inside a folder',
+                  url = 'https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json',
+                },
+              },
+            },
             hover = true,
             completion = true,
             customTags = {
