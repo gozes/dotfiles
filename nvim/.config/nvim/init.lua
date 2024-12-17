@@ -214,6 +214,10 @@ vim.keymap.set('n', '<C-h>', '<Plug>WinMoveLeft', { desc = 'Move to widow left o
 vim.keymap.set('n', '<C-j>', '<Plug>WinMoveDown', { desc = 'Move to widow down or crate it' })
 vim.keymap.set('n', '<C-k>', '<Plug>WinMoveUp', { desc = 'Move to widow up or crate it' })
 vim.keymap.set('n', '<C-l>', '<Plug>WinMoveRight', { desc = 'Move to widow right or crate it' })
+vim.keymap.set('n', '<M-j>', '<cmd>cnext<cr>', { desc = 'Quickfix List: Down' })
+vim.keymap.set('n', '<M-k>', '<cmd>cprev<cr>', { desc = 'Quickfix List: Up' })
+vim.keymap.set('n', '<M-o>', '<cmd>copen<cr>', { desc = 'Quickfix List: Open' })
+vim.keymap.set('n', '<M-c>', '<cmd>cclose<cr>', { desc = 'Quickfix List: Close' })
 
 local zellij = require 'cmd.zellij'
 vim.keymap.set('n', ';zl', function()
