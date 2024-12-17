@@ -243,6 +243,7 @@ return { -- LSP Configuration & Plugins
       yamlls = {
         settings = {
           yaml = {
+            validate = { enable = true },
             schemaStore = {
               enable = false,
               url = '',
