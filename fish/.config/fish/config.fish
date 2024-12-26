@@ -1,6 +1,7 @@
 #theme_gruvbox dark hard
 set fish_greeting ""
-set -gx fish_user_paths $fish_user_paths  $HOME/.nimble/bin
+set -gx fish_user_paths $fish_user_paths $HOME/.nimble/bin
+set -gx fish_user_paths $fish_user_paths $HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/
 set -gx fish_user_paths $fish_user_paths $HOME/.cargo/bin
 set -gx fish_user_paths $fish_user_paths $HOME/go/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.dbox/bin
