@@ -190,10 +190,10 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
--- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
--- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
--- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
--- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<C-c>', '<cmd>wa<cr>', { noremap = true })
 vim.keymap.set('i', '<C-c>', '<Esc>', { noremap = true })
@@ -210,10 +210,6 @@ vim.keymap.set('n', '<leader>gc', '<cmd>DiffviewClose<cr>', { desc = 'Close Diff
 vim.keymap.set('n', '<leader>gf', '<cmd>DiffviewFocusFiles<cr>', { desc = 'Jupm to files in Diffview' })
 vim.keymap.set('n', ';t', '<cmd>TodoTelescope<cr>', { desc = 'Open Todo commets in telescope' })
 vim.keymap.set('n', ';a', '<C-^>', { desc = 'Jump to alternet-file' })
-vim.keymap.set('n', '<C-h>', '<Plug>WinMoveLeft', { desc = 'Move to widow left or crate it' })
-vim.keymap.set('n', '<C-j>', '<Plug>WinMoveDown', { desc = 'Move to widow down or crate it' })
-vim.keymap.set('n', '<C-k>', '<Plug>WinMoveUp', { desc = 'Move to widow up or crate it' })
-vim.keymap.set('n', '<C-l>', '<Plug>WinMoveRight', { desc = 'Move to widow right or crate it' })
 vim.keymap.set('n', '<M-j>', '<cmd>cnext<cr>', { desc = 'Quickfix List: Down' })
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<cr>', { desc = 'Quickfix List: Up' })
 vim.keymap.set('n', '<M-o>', '<cmd>copen<cr>', { desc = 'Quickfix List: Open' })
