@@ -25,7 +25,6 @@ return {
       end
       return true
     end,
-    branch = 'canary',
     -- event = 'VeryLazy',
     dependencies = {
       { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
@@ -33,6 +32,9 @@ return {
     },
     build = 'make tiktoken',
     opts = {
+      highlight_headers = false,
+      separator = '---',
+      error_header = '> [!ERROR] Error',
       debug = true, -- Enable debugging
       auto_follow_cursor = false,
       prompts = prompts,

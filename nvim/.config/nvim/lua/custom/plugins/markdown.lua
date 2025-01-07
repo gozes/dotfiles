@@ -4,6 +4,6 @@ return {
   opts = {
     enabled = true,
     render_modes = { 'n', 'c', 't' },
-    file_types = { 'markdown', 'quarto', 'telekasten' },
+    file_types = { 'markdown', 'quarto', 'telekasten', 'copilot-chat' },
   },
 }
