@@ -18,6 +18,7 @@ local prompts = {
 return {
   {
     'CopilotC-Nvim/CopilotChat.nvim',
+    branch = 'main',
     cond = function()
       vim.fn.system 'which gh'
       if vim.v.shell_error ~= 0 then
@@ -60,7 +61,6 @@ return {
 
       chat.setup(opts)
       -- Setup the CMP integration
-      require('CopilotChat.integrations.cmp').setup()
 
       vim.api.nvim_create_user_command('CopilotChatVisual', function(args)
         chat.ask(args.args, { selection = select.visual })
