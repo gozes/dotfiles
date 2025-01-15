@@ -164,11 +164,11 @@ return {
       },
       -- Quick chat with Copilot
       {
-        '<leader>cqq',
+        '<leader>ccq',
         function()
           local input = vim.fn.input 'Quick Chat: '
           if input ~= '' then
-            vim.cmd('CopilotChatBuffer ' .. input)
+            require('CopilotChat').ask(input, { selection = require('CopilotChat.select').buffer })
           end
         end,
         desc = 'CopilotChat - Quick chat',
