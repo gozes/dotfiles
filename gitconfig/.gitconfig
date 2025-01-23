@@ -17,7 +17,7 @@
 	verbose = true
 [core]
     pager = delta
-	commentchar = ";"
+	commentString = "#;"
 
 [interactive]
     diffFilter = delta --color-only
