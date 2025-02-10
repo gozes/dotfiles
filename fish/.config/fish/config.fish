@@ -190,6 +190,14 @@ function install-cil-tools-from-fedora
 sudo dnf install ImageMagick ImageMagick-devel
 end 
 
+function install-posting-cil
+    uv tool install --python 3.12 posting
+end
+
+function httpw
+    posting --collection $HOME/Code/Work/posting
+end
+
 if test -d $HOME/.asdf
   source $HOME/.asdf/asdf.fish
   source $HOME/.asdf/completions/asdf.fish

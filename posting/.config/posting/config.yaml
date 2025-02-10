@@ -1,0 +1,4 @@
+keymap:
+  quit: ctrl+q
+  help: ctrl+h
+  toggle-collection: ctrl+C
