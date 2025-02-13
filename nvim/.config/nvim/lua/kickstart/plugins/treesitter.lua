@@ -23,6 +23,7 @@ return { -- Highlight, edit, and navigate code
       'gotmpl',
       'gowork',
       'gitcommit',
+      'http',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
