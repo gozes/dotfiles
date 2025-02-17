@@ -28,5 +28,8 @@ return {
     toggle = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    dim = { enabled = true },
+    scroll = { enabled = true },
+    animate = { enabled = true, fps = 60 },
   },
 }
