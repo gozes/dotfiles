@@ -2,19 +2,14 @@ return {
   'olimorris/codecompanion.nvim',
   keys = {
     {
-      '<M-a>',
-      '',
-      'CodeCompanion',
-    },
-    {
       '<M-a>c',
       '<cmd>CodeCompanionChat Toggle<cr>',
-      'CodeCompanion: Toggel Chat',
+      desc = 'CodeCompanion: Toggel Chat',
     },
     {
       '<M-a>p',
       '<cmd>CodeCompanionActions<cr>',
-      'CodeCompanion: Action Palette',
+      desc = 'CodeCompanion: Action Palette',
     },
   },
   opts = {
