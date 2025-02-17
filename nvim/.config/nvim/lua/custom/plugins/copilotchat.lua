@@ -19,6 +19,7 @@ return {
   {
     'CopilotC-Nvim/CopilotChat.nvim',
     branch = 'main',
+    enabled = false,
     cond = function()
       vim.fn.system 'which gh'
       if vim.v.shell_error ~= 0 then
