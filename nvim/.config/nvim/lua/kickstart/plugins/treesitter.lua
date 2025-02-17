@@ -24,6 +24,7 @@ return { -- Highlight, edit, and navigate code
       'gowork',
       'gitcommit',
       'http',
+      'regex',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
