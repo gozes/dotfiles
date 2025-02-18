@@ -7,13 +7,26 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
     explorer = { enabled = true },
-    indent = { enabled = true },
+    indent = { enabled = false },
     input = { enabled = true },
+    dim = { enabled = true },
     notifier = {
       enabled = true,
       timeout = 3000,
     },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      sources = {
+        explorer = {
+          layout = {
+            layout = { position = 'right' },
+          },
+        },
+        git_diff = {
+          layout = 'ivy_split',
+        },
+      },
+    },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = true },
@@ -87,7 +100,7 @@ return {
     {
       '<leader>fp',
       function()
-        Snacks.picker.projects()
+        Snacks.picker.zoxide()
       end,
       desc = 'Projects',
     },
@@ -162,6 +175,13 @@ return {
       '<leader>sA',
       function()
         Snacks.picker.autocmds()
+      end,
+      desc = 'Autocmds',
+    },
+    {
+      '<leader>ss',
+      function()
+        Snacks.picker.spelling()
       end,
       desc = 'Autocmds',
     },
@@ -320,6 +340,13 @@ return {
         Snacks.picker.lsp_symbols()
       end,
       desc = 'LSP Symbols',
+    },
+    {
+      '<leader>cl',
+      function()
+        Snacks.picker.lsp_config()
+      end,
+      desc = 'LSP Config',
     },
     {
       '<leader>gL',
