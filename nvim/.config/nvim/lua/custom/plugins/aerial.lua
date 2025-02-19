@@ -1,6 +1,5 @@
 return {
   'stevearc/aerial.nvim',
-  opts = {},
   -- Optional dependencies
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
@@ -8,6 +7,9 @@ return {
   },
   config = function()
     require('aerial').setup {
+      layout = {
+        default_direction = 'left',
+      },
       -- optionally use on_attach to set keymaps when aerial has attached to a buffer
       on_attach = function(bufnr)
         -- Jump forwards/backwards with '{' and '}'

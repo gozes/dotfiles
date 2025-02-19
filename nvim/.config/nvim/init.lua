@@ -90,6 +90,11 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Global variables.
+vim.g.projects_dir = vim.env.HOME .. '/Code'
+vim.g.personal_projects_dir = vim.g.projects_dir
+vim.g.work_projects_dir = vim.g.projects_dir .. '/Work'
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -214,6 +219,21 @@ vim.keymap.set('n', '<M-j>', '<cmd>cnext<cr>', { desc = 'Quickfix List: Down' })
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<cr>', { desc = 'Quickfix List: Up' })
 vim.keymap.set('n', '<M-o>', '<cmd>copen<cr>', { desc = 'Quickfix List: Open' })
 vim.keymap.set('n', '<M-c>', '<cmd>cclose<cr>', { desc = 'Quickfix List: Close' })
+-- Keeping the cursor centered.
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll downwards' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll upwards' })
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next result' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Previous result' })
+
+-- Indent while remaining in visual mode.
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+-- Tab navigation.
+vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<cr>', { desc = 'Close tab page' })
+vim.keymap.set('n', '<leader>tn', '<cmd>tab split<cr>', { desc = 'New tab page' })
+vim.keymap.set('n', '<leader>to', '<cmd>tabonly<cr>', { desc = 'Close other tab pages' })
+-- Make U opposite to u.
+vim.keymap.set('n', 'U', '<C-r>', { desc = 'Redo' })
 
 local zellij = require 'cmd.zellij'
 vim.keymap.set('n', ';zl', function()
