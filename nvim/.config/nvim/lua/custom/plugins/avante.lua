@@ -11,6 +11,13 @@ return {
       focus = '<M-a>f',
       files = {
         add_current = '<M-a>c', -- Add current buffer to selected files
+        toggle = {
+          default = '<M-a>t',
+          debug = '<M-a>d',
+          hint = '<M-a>h',
+          suggestion = '<M-a>s',
+          repomap = '<M-a>R',
+        },
       },
     },
     provider = 'copilot',
