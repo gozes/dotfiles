@@ -1,5 +1,6 @@
 return {
   'cameron-wags/rainbow_csv.nvim',
+  enabled = false,
   config = true,
   ft = {
     'csv',

@@ -34,6 +34,7 @@ local propms = {
 }
 return {
   'olimorris/codecompanion.nvim',
+  enabled = false,
   keys = {
     {
       'n',
