@@ -64,6 +64,7 @@
   "rest.nvim": { "branch": "main", "commit": "ac22892989de93ac2ffdd0d5549ed13ee631c1d1" },
   "schemastore.nvim": { "branch": "main", "commit": "6d840a01545b9be71c45843f2aabcc384d4fafbf" },
   "scratch.nvim": { "branch": "main", "commit": "3e3d2ad0d7f565bc794d9d3ad40e92509802ecad" },
+  "smart-splits.nvim": { "branch": "master", "commit": "de1d5ed60c1407b7704495d7b3c8e262358728c9" },
   "snacks.nvim": { "branch": "main", "commit": "95878ad32aaf310f465a004ef12e9edddf939287" },
   "snipe.nvim": { "branch": "main", "commit": "0d0a482ac713370196e4fc0025d5aaac5030104d" },
   "telekasten.nvim": { "branch": "main", "commit": "6a10a7929421d6e696e46bbc5aa5627a8cbcf61d" },

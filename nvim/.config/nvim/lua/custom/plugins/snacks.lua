@@ -5,6 +5,7 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
+    terminal = { enabled = true },
     dashboard = { enabled = true },
     explorer = { enabled = false },
     indent = { enabled = false },
@@ -415,18 +416,11 @@ return {
       desc = 'Dismiss All Notifications',
     },
     {
-      '<c-/>',
+      ';r',
       function()
         Snacks.terminal()
       end,
       desc = 'Toggle Terminal',
-    },
-    {
-      '<c-_>',
-      function()
-        Snacks.terminal()
-      end,
-      desc = 'which_key_ignore',
     },
     {
       ']]',
