@@ -3,6 +3,14 @@ return {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
     event = 'InsertEnter',
+    opts = {
+      panel = {
+        keymap = nil,
+      },
+      suggestion = {
+        keymap = nil,
+      },
+    },
     config = function()
       require('copilot').setup {}
     end,

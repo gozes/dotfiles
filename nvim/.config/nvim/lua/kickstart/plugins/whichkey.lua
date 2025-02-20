@@ -29,7 +29,7 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>g_', hidden = true },
       { '<leader>G', group = 'GitHub' },
       { '<leader>G_', hidden = true },
-      { '<leader>p', group = 'Python' },
+      { '<leader>p', group = 'Pomo/Python' },
       { '<leader>p_', hidden = true },
     }
     -- visual mode

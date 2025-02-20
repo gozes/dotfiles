@@ -6,7 +6,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    explorer = { enabled = true },
+    explorer = { enabled = false },
     indent = { enabled = false },
     input = { enabled = true },
     dim = { enabled = true },
@@ -74,13 +74,6 @@ return {
         Snacks.picker.notifications()
       end,
       desc = 'Notification History',
-    },
-    {
-      '<leader>e',
-      function()
-        Snacks.explorer()
-      end,
-      desc = 'File Explorer',
     },
     -- find
     {
