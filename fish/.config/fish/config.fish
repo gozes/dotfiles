@@ -221,6 +221,14 @@ if status is-interactive
         ! set -q INFOPATH; and set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH;
     end
 end
+if test -n "$HOMEBREW_PREFIX"  -a  -d "$HOMEBREW_PREFIX/share/fish/vendor_completions.d"
+    set -l files $(path resolve $HOMEBREW_PREFIX/share/fish/vendor_completions.d/{jj,gh,fd,brew,luarocks,uv,uvx,eza,zoxide,curl,yq}.fish)
+    for file in $files
+	if test -e $file
+	source $file
+	end
+    end
+end
 
 if command -q eza
     alias ll="eza --icons -a -T  --level=1 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
