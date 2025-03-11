@@ -74,9 +74,6 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gdcw="git diff --cached --word-diff"
 alias gdw="git diff --word-diff"
-if command -q eza
-    alias ll="eza --icons -a -T  --level=1 --group-directories-first --no-permissions --no-user --no-time --no-filesize"
-end
 
 function ggt
     gotests -w -template testify -only $argv[1] $argv[2]
