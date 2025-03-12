@@ -154,8 +154,7 @@ end
 
 function gh-failed-logs
     set -l id (gh-workflow-id)
-    gh run view $id --log-failed
-end
+    gh run view $id --log-failed end
 
 function gh-download
     set -l id (gh-workflow-id)
@@ -216,14 +215,6 @@ if status is-interactive
         fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin";
         ! set -q MANPATH; and set MANPATH ''; set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
         ! set -q INFOPATH; and set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH;
-    end
-end
-if test -n "$HOMEBREW_PREFIX"  -a  -d "$HOMEBREW_PREFIX/share/fish/vendor_completions.d"
-    set -l files $(path resolve $HOMEBREW_PREFIX/share/fish/vendor_completions.d/{jj,gh,fd,brew,luarocks,uv,uvx,eza,zoxide,curl,yq}.fish)
-    for file in $files
-	if test -e $file
-	source $file
-	end
     end
 end
 
