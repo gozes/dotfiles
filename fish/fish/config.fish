@@ -154,7 +154,8 @@ end
 
 function gh-failed-logs
     set -l id (gh-workflow-id)
-    gh run view $id --log-failed end
+    gh run view $id --log-failed 
+end
 
 function gh-download
     set -l id (gh-workflow-id)
