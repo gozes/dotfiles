@@ -38,4 +38,11 @@ return {
     'nvim-tree/nvim-web-devicons', -- or echasnovski/mini.icons
     'zbirenbaum/copilot.lua', -- for providers='copilot'
   },
+  cond = function()
+    vim.fn.system 'which gh'
+    if vim.v.shell_error ~= 0 then
+      return false
+    end
+    return true
+  end,
 }
