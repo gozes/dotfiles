@@ -39,7 +39,7 @@ author = "gozes"
 
 # GROUP OVERRIDES
 [group.work]
-paths = ["YV"]
+paths = ["work"]
 
 [group.work.note]
 filename = "{{title}}"

@@ -11,7 +11,7 @@ return {
     },
     { '<leader>zR', '<cmd>ZkRelated<CR>', desc = 'Notes: Related' },
     { '<leader>zd', '<cmd>ZkNew {group = "daily", }<CR>', desc = 'Notes: Today Note' },
-    { '<leader>zz', '<cmd>ZkLinks<CR>', desc = 'Notes: Links' },
+    { '<leader>zl', '<cmd>ZkLinks<CR>', desc = 'Notes: Links' },
     { '<leader>zb', '<cmd>ZkBacklinks<CR>', desc = 'Notes: Backlinks' },
     { '<leader>zn', '<cmd>ZkNew {group = "ref",  title = vim.fn.input("Title: ")}<CR>', desc = 'Notes: Create New Ref Note' },
     { '<leader>zm', '<cmd>ZkNew {group = "main", title = vim.fn.input("Title: ")}<CR>', desc = 'Notes: Create New Main Note' },
