@@ -19,6 +19,7 @@ return {
     { '<leader>zM', '<cmd>ZkMention<CR>', desc = 'Notes: Mentions' },
     { '<leader>zw', '<cmd>ZkNew {group = "work", title = vim.fn.input("Title: ")}<CR>', desc = 'Notes: Create New Work Note' },
     { '<leader>zt', '<cmd>ZkTags<CR>', desc = 'Notes: Tags' },
+    { '<leader>zo', '<cmd>ZkOrphans<CR>', desc = 'Notes: Orphans' },
   },
   config = function()
     local zk = require 'zk'
@@ -46,12 +47,13 @@ return {
         end,
       }, { title = 'Note: Mentions' })
     )
+    commands.add('ZkOrphans', make_edit_fn({ orphan = true }, { title = 'Zk Orphans' }))
     require('zk').setup {
       picker = 'snacks_picker',
       picker_options = {
         snacks_picker = {
           layout = {
-            preset = 'ivy',
+            preset = 'ivy_split',
           },
         },
       },
