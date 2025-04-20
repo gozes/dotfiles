@@ -9,6 +9,7 @@ set -gx fish_user_paths $fish_user_paths $HOME/.local/gozes/bin
 set -gx fish_user_paths $fish_user_paths $HOME/swift/usr/bin
 set -Ux EDITOR nvim
 set -Ux GTK_THEME Adwaita:dark
+set -gx ZK_NOTEBOOK_DIR $HOME/notes
 alias vim=nvim
 alias v=nvim
 alias g=lazygit
