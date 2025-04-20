@@ -1,7 +1,8 @@
 return {
   'zk-org/zk-nvim',
   keys = {
-    { '<leader>zf', '<cmd>ZkNotes {  match = { vim.fn.input("Search: ") } }<CR>', desc = 'Notes: Find Note' },
+    { '<leader>zs', '<cmd>ZkNotes {  match = { vim.fn.input("Search: ") } }<CR>', desc = 'Notes: Search Notes' },
+    { '<leader>zf', '<cmd>ZkNotes<CR>', desc = 'Notes: Find Note' },
     {
       '<leader>zr',
       function()
