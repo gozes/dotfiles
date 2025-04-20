@@ -113,7 +113,7 @@ ls = "zk edit --interactive"
 # sear notes by tags
 t = "zk edit --interactive --tag $argv"
 
-config = 'nvim "$HOME/.dotfiles/zk/config.toml"'
+config = 'nvim "$HOME/.dotfiles/zk/zk/config.toml"'
 
 # new journal entry
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/Daily"'
