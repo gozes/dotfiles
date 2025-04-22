@@ -48,14 +48,14 @@ return {
       function()
         require('zk.commands').get 'ZkNew' { group = 'ref', title = vim.fn.input 'Title: ' }
       end,
-      desc = 'Notes: Create New Ref Note',
+      desc = 'Notes: New Ref Note',
     },
     {
       '<leader>zm',
       function()
         require('zk.commands').get 'ZkNew' { group = 'main', title = vim.fn.input 'Title: ' }
       end,
-      desc = 'Notes: Create New Main Note',
+      desc = 'Notes: New Main Note',
     },
     { '<leader>zM', '<cmd>ZkMention<CR>', desc = 'Notes: Mentions' },
     {
@@ -63,7 +63,7 @@ return {
       function()
         require('zk.commands').get 'ZkNew' { group = 'work', title = vim.fn.input 'Title: ' }
       end,
-      desc = 'Notes: Create New Work Note',
+      desc = 'Notes: New Work Note',
     },
     { '<leader>zt', '<cmd>ZkTags<CR>', desc = 'Notes: Tags' },
     { '<leader>zt', '<cmd>ZkTagless<CR>', desc = 'Notes: Tagless' },
