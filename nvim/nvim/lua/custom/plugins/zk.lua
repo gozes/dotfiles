@@ -68,6 +68,13 @@ return {
     { '<leader>zt', '<cmd>ZkTags<CR>', desc = 'Notes: Tags' },
     { '<leader>zT', '<cmd>ZkTagless<CR>', desc = 'Notes: Tagless' },
     { '<leader>zo', '<cmd>ZkOrphans<CR>', desc = 'Notes: Orphans' },
+    {
+      '<leader>zc',
+      function()
+        Snacks.bufdelete.delete()
+      end,
+      desc = 'Notes: Unload and close curent note',
+    },
   },
   config = function()
     local zk = require 'zk'
