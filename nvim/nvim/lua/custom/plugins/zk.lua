@@ -11,14 +11,21 @@ return {
     {
       '<leader>zf',
       function()
-        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { '-hold' } }
+        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { '-backlog' } }
       end,
       desc = 'Notes: Find Note',
     },
     {
+      '<leader>zB',
+      function()
+        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { 'backlog' } }
+      end,
+      desc = 'Notes: Backlog',
+    },
+    {
       '<leader>zi',
       function()
-        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { 'inbox -hold' } }
+        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { 'inbox' } }
       end,
       desc = 'Notes: Inbox',
     },
