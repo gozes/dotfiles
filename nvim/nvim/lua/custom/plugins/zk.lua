@@ -66,7 +66,7 @@ return {
       desc = 'Notes: New Work Note',
     },
     { '<leader>zt', '<cmd>ZkTags<CR>', desc = 'Notes: Tags' },
-    { '<leader>zt', '<cmd>ZkTagless<CR>', desc = 'Notes: Tagless' },
+    { '<leader>zT', '<cmd>ZkTagless<CR>', desc = 'Notes: Tagless' },
     { '<leader>zo', '<cmd>ZkOrphans<CR>', desc = 'Notes: Orphans' },
   },
   config = function()
