@@ -11,6 +11,7 @@ return {
     indent = { enabled = false },
     input = { enabled = true },
     dim = { enabled = true },
+    bufdelete = { enabled = true },
     notifier = {
       enabled = true,
       timeout = 3000,
