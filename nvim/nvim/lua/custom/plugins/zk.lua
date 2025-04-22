@@ -1,25 +1,70 @@
 return {
   'zk-org/zk-nvim',
   keys = {
-    { '<leader>zs', '<cmd>ZkNotes {  match = { vim.fn.input("Search: ") } }', desc = 'Notes: Search Notes' },
-    { '<leader>zf', '<cmd>ZkNotes {excludeHrefs = {"daily"}, tags = {"-hold"}}<CR>', desc = 'Notes: Find Note' },
-    { '<leader>zi', '<cmd>ZkNotes {excludeHrefs = {"daily"}, tags = {"inbox -hold"}}<CR>', desc = 'Notes: Inbox' },
+    {
+      '<leader>zs',
+      function()
+        require('zk.commands').get 'ZkNew' { match = { vim.fn.input 'Search: ' } }
+      end,
+      desc = 'Notes: Search Notes',
+    },
+    {
+      '<leader>zf',
+      function()
+        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { '-hold' } }
+      end,
+      desc = 'Notes: Find Note',
+    },
+    {
+      '<leader>zi',
+      function()
+        require('zk.commands').get 'ZkNotes' { excludeHrefs = { 'daily' }, tags = { 'inbox -hold' } }
+      end,
+      desc = 'Notes: Inbox',
+    },
     { '<leader>zF', '<cmd>ZkNotes<CR>', desc = 'Notes: Find In All' },
     {
       '<leader>zr',
-      { "<cmd>'<,'>ZkNewFromContentSelection { title = vim.fn.input 'Title: ', group = 'main' }", mode = 'v' },
+      function()
+        require('zk.commands').get 'ZkNewFromContentSelection' { title = vim.fn.input 'Title: ', group = 'main' }
+      end,
+      mode = 'v',
       desc = 'Notes: Refactor Selection to New Note',
     },
     { '<leader>zR', '<cmd>ZkRelated<CR>', desc = 'Notes: Related' },
     { '<leader>zuf', '<cmd>ZkUnlinkedMentionFrom<CR>', desc = 'Notes: Mention From' },
     { '<leader>zut', '<cmd>ZkUnlinkedMentionTo<CR>', desc = 'Notes: Mention To' },
-    { '<leader>zd', '<cmd>ZkNew {group = "daily", }<CR>', desc = 'Notes: Today Note' },
+    {
+      '<leader>zd',
+      function()
+        require('zk.commands').get 'ZkNew' { group = 'daily' }
+      end,
+      desc = 'Notes: Today Note',
+    },
     { '<leader>zl', '<cmd>ZkLinks<CR>', desc = 'Notes: Links' },
     { '<leader>zb', '<cmd>ZkBacklinks<CR>', desc = 'Notes: Backlinks' },
-    { '<leader>zn', '<cmd>ZkNew {group = "ref",  title = vim.fn.input("Title: ")}', desc = 'Notes: Create New Ref Note' },
-    { '<leader>zm', '<cmd>ZkNew {group = "main", title = vim.fn.input("Title: ")}', desc = 'Notes: Create New Main Note' },
+    {
+      '<leader>zn',
+      function()
+        require('zk.commands').get 'ZkNew' { group = 'ref', title = vim.fn.input 'Title: ' }
+      end,
+      desc = 'Notes: Create New Ref Note',
+    },
+    {
+      '<leader>zm',
+      function()
+        require('zk.commands').get 'ZkNew' { group = 'main', title = vim.fn.input 'Title: ' }
+      end,
+      desc = 'Notes: Create New Main Note',
+    },
     { '<leader>zM', '<cmd>ZkMention<CR>', desc = 'Notes: Mentions' },
-    { '<leader>zw', '<cmd>ZkNew {group = "work", title = vim.fn.input("Title: ")}', desc = 'Notes: Create New Work Note' },
+    {
+      '<leader>zw',
+      function()
+        require('zk.commands').get 'ZkNew' { group = 'work', title = vim.fn.input 'Title: ' }
+      end,
+      desc = 'Notes: Create New Work Note',
+    },
     { '<leader>zt', '<cmd>ZkTags<CR>', desc = 'Notes: Tags' },
     { '<leader>zt', '<cmd>ZkTagless<CR>', desc = 'Notes: Tagless' },
     { '<leader>zo', '<cmd>ZkOrphans<CR>', desc = 'Notes: Orphans' },
