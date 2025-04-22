@@ -71,7 +71,7 @@ return {
     {
       '<leader>zc',
       function()
-        Snacks.bufdelete.delete()
+        Snacks.bufdelete()
       end,
       desc = 'Notes: Unload and close curent note',
     },
