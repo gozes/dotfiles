@@ -169,31 +169,31 @@ return { -- LSP Configuration & Plugins
       zk = {},
       pyright = {},
       ruff = {},
-      ltex = {
-        settings = {
-          ltex = {
-            enabled = {
-              'bibtex',
-              'gitcommit',
-              'markdown',
-              'org',
-              'tex',
-              'restructuredtext',
-              'rsweave',
-              'latex',
-              'quarto',
-              'rmd',
-              'context',
-              'html',
-              'xhtml',
-              'mail',
-              'plaintext',
-              'go',
-              'python',
-            },
-          },
-        },
-      },
+      -- ltex = {
+      --   settings = {
+      --     ltex = {
+      --       enabled = {
+      --         'bibtex',
+      --         'gitcommit',
+      --         'markdown',
+      --         'org',
+      --         'tex',
+      --         'restructuredtext',
+      --         'rsweave',
+      --         'latex',
+      --         'quarto',
+      --         'rmd',
+      --         'context',
+      --         'html',
+      --         'xhtml',
+      --         'mail',
+      --         'plaintext',
+      --         'go',
+      --         'python',
+      --       },
+      --     },
+      --   },
+      -- },
       golangci_lint_ls = {},
       -- markdown_oxide = {
       --   capabilities = {
@@ -204,6 +204,17 @@ return { -- LSP Configuration & Plugins
       --     },
       --   },
       -- },
+      harper_ls = {
+        settings = {
+          ['harper-ls'] = {
+            linters = {
+              LinkingVerbs = true,
+              BoringWords = true,
+              UseGenitive = true,
+            },
+          },
+        },
+      },
       gopls = {
         settings = {
           gopls = {
