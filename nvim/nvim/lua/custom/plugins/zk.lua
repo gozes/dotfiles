@@ -96,8 +96,8 @@ return {
       options = vim.tbl_extend('force', { mention = { note }, linkTo = { note } }, options or {})
       zk.edit(options, { title = 'Zk Unlinked Mention To' })
     end)
-    commands.add('ZkOrphans', make_edit_fn({ orphan = true }, { title = 'Zk Orphans' }))
-    commands.add('ZkTagless', make_edit_fn({ tagless = true }, { title = 'Zk Tagless' }))
+    commands.add('ZkOrphans', make_edit_fn({ orphan = true, excludeHrefs = { 'daily' } }, { title = 'Zk Orphans' }))
+    commands.add('ZkTagless', make_edit_fn({ tagless = true, excludeHrefs = { 'daily' } }, { title = 'Zk Tagless' }))
     require('zk').setup {
       picker = 'snacks_picker',
       picker_options = {
