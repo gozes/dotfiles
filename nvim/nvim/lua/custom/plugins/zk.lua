@@ -15,6 +15,7 @@ return {
       end,
       desc = 'Notes: Find Note',
     },
+    { '<leader>zF', '<cmd>ZkNotes<CR>', desc = 'Notes: Find In All' },
     {
       '<leader>zB',
       function()
@@ -29,7 +30,7 @@ return {
       end,
       desc = 'Notes: Inbox',
     },
-    { '<leader>zF', '<cmd>ZkNotes<CR>', desc = 'Notes: Find In All' },
+    { '<leader>zI', '<cmd>ZkIndex<CR>', desc = 'Notes: Index' },
     {
       '<leader>zem',
       function()
