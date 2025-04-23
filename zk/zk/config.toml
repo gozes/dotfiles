@@ -29,6 +29,7 @@ id-length = 8
 # Letter case for the random IDs.
 id-case = "lower"
 
+[format.markdown]
 link-format = "wiki"
 
 
