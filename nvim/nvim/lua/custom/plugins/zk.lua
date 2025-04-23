@@ -2,7 +2,7 @@ return {
   'zk-org/zk-nvim',
   keys = {
     {
-      '<leader>zs',
+      '<leader>zg',
       function()
         require('zk.commands').get 'ZkNew' { match = { vim.fn.input 'Search: ' } }
       end,
