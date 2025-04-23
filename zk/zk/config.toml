@@ -29,8 +29,6 @@ id-length = 8
 # Letter case for the random IDs.
 id-case = "lower"
 
-[format.markdown]
-link-format = "wiki"
 
 
 # EXTRA VARIABLES
@@ -72,10 +70,8 @@ template = "main.md"
 
 # MARKDOWN SETTINGS
 [format.markdown]
-# Enable support for #hashtags
 hashtags = true
-# Enable support for :colon:separated:tags:
-colon-tags = true
+link-format = "wiki"
 
 
 # EXTERNAL TOOLS
