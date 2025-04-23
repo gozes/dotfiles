@@ -31,12 +31,20 @@ return {
     },
     { '<leader>zF', '<cmd>ZkNotes<CR>', desc = 'Notes: Find In All' },
     {
-      '<leader>zr',
+      '<leader>zem',
       function()
         require('zk.commands').get 'ZkNewFromContentSelection' { title = vim.fn.input 'Title: ', group = 'main' }
       end,
       mode = 'v',
-      desc = 'Notes: Refactor Selection to New Note',
+      desc = 'Notes: Extract Selection to Main Note',
+    },
+    {
+      '<leader>zer',
+      function()
+        require('zk.commands').get 'ZkNewFromContentSelection' { title = vim.fn.input 'Title: ', group = 'ref' }
+      end,
+      mode = 'v',
+      desc = 'Notes: Extract Selection to Ref Note',
     },
     { '<leader>zR', '<cmd>ZkRelated<CR>', desc = 'Notes: Related' },
     { '<leader>zuf', '<cmd>ZkUnlinkedMentionFrom<CR>', desc = 'Notes: Mention From' },
