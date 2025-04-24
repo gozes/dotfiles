@@ -9,7 +9,7 @@ language = "en"
 default-title = "Untitled-{{format-date now '%Y-%m-%d'}}"
 
 # Template used to generate a note's filename, without extension.
-filename = "{{title}}"
+filename = "{{slug title}}"
 
 # The file extension used for the notes.
 extension = "md"
@@ -41,7 +41,7 @@ author = "gozes"
 paths = ["work"]
 
 [group.work.note]
-filename = "{{title}}"
+filename = "{{slug title}}"
 extension = "md"
 
 [group.daily]
@@ -55,14 +55,14 @@ template = "daily.md"
 [group.ref]
 
 [group.ref.note]
-filename = "{{title}}"
+filename = "{{slug title}}"
 extension = "md"
 template = "ref.md"
 
 [group.main]
 
 [group.main.note]
-filename = "{{title}}"
+filename = "{{slug title}}"
 extension = "md"
 template = "main.md"
 
