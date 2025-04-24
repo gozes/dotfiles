@@ -62,16 +62,9 @@ return {
     {
       '<leader>zn',
       function()
-        require('zk.commands').get 'ZkNew' { group = 'ref', title = vim.fn.input 'Title: ' }
+        require('zk.commands').get 'ZkNew' { title = vim.fn.input 'Title: ' }
       end,
-      desc = 'Notes: New Ref Note',
-    },
-    {
-      '<leader>zm',
-      function()
-        require('zk.commands').get 'ZkNew' { group = 'main', title = vim.fn.input 'Title: ' }
-      end,
-      desc = 'Notes: New Main Note',
+      desc = 'Notes: New Note',
     },
     { '<leader>zM', '<cmd>ZkMention<CR>', desc = 'Notes: Mentions' },
     {
