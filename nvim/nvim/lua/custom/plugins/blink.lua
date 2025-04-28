@@ -34,6 +34,37 @@ return { -- Autocompletion
       opts = {},
     },
     'folke/lazydev.nvim',
+    {
+      'saghen/blink.pairs',
+      version = '*', -- (recommended) only required with prebuilt binaries
+
+      -- download prebuilt binaries from github releases
+      dependencies = 'saghen/blink.download',
+
+      --- @module 'blink.pairs'
+      --- @type blink.pairs.Config
+      opts = {
+        mappings = {
+          -- you can call require("blink.pairs.mappings").enable() and require("blink.pairs.mappings").disable() to enable/disable mappings at runtime
+          enabled = true,
+          -- see the defaults: https://github.com/Saghen/blink.pairs/blob/main/lua/blink/pairs/config/mappings.lua#L10
+          pairs = {},
+        },
+        highlights = {
+          enabled = true,
+          groups = {
+            'BlinkPairsOrange',
+            'BlinkPairsPurple',
+            'BlinkPairsBlue',
+          },
+          matchparen = {
+            enabled = true,
+            group = 'MatchParen',
+          },
+        },
+        debug = false,
+      },
+    },
   },
   --- @module 'blink.cmp'
   --- @type blink.cmp.Config
@@ -76,12 +107,6 @@ return { -- Autocompletion
       -- By default, you may press `<c-space>` to show the documentation.
       -- Optionally, set `auto_show = true` to show the documentation after a delay.
       documentation = { auto_show = false, auto_show_delay_ms = 500 },
-      accept = {
-        -- experimental auto-brackets support
-        auto_brackets = {
-          enabled = true,
-        },
-      },
     },
 
     sources = {
