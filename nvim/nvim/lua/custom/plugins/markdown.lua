@@ -5,5 +5,9 @@ return {
     enabled = true,
     render_modes = { 'n', 'c', 't' },
     file_types = { 'markdown', 'quarto', 'telekasten', 'copilot-chat', 'Avante' },
+    inline_highlight = {
+      render_modes = true,
+      highlight = '@comment.todo',
+    },
   },
 }
