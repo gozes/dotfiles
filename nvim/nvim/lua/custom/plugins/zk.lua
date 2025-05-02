@@ -57,6 +57,13 @@ return {
       end,
       desc = 'Notes: Today Note',
     },
+    {
+      '<leader>zW',
+      function()
+        require('zk.commands').get 'ZkNew' { group = 'weekly' }
+      end,
+      desc = 'Notes: Create Weekly Note',
+    },
     { '<leader>zl', '<cmd>ZkLinks<CR>', desc = 'Notes: Links' },
     { '<leader>zb', '<cmd>ZkBacklinks<CR>', desc = 'Notes: Backlinks' },
     {

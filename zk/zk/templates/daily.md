@@ -1,5 +1,6 @@
 ---
 title: {{ format-date now '%Y-%m-%d' }}
+tags: [daily]
 ---
 # {{ format-date now '%Y-%m-%d' }}
 
