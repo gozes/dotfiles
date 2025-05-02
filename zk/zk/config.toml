@@ -55,7 +55,7 @@ template = "daily.md"
 [group.weekly]
 paths = ["weekly"]
 
-[group.daily.note]
+[group.weekly.note]
 filename = "{{ format-date (date 'last sunday') '%Y-%m-%d' }}-{{ format-date now '%Y-%m-%d' }}"
 extension = "md"
 template = "weekly.md"
