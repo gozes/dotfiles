@@ -53,14 +53,14 @@ return {
     {
       '<leader>zd',
       function()
-        require('zk.commands').get 'ZkNew' { group = 'daily' }
+        require('zk.commands').get 'ZkNew' { group = 'daily', dir = 'daily' }
       end,
       desc = 'Notes: Today Note',
     },
     {
       '<leader>zW',
       function()
-        require('zk.commands').get 'ZkNew' { group = 'weekly' }
+        require('zk.commands').get 'ZkNew' { group = 'weekly', dir = 'weekly' }
       end,
       desc = 'Notes: Create Weekly Note',
     },
@@ -77,7 +77,7 @@ return {
     {
       '<leader>zw',
       function()
-        require('zk.commands').get 'ZkNew' { group = 'work', title = vim.fn.input 'Title: ' }
+        require('zk.commands').get 'ZkNew' { group = 'work', title = vim.fn.input 'Title: ', dir = 'work' }
       end,
       desc = 'Notes: New Work Note',
     },
