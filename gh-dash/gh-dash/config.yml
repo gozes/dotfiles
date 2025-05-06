@@ -67,10 +67,10 @@ keybindings:
   universal: []
   issues: []
   prs:   
-  - key: C
+  - key: ctrl+r
     name: code review
     command: >
-      zellij action -c {{.RepoPath}} -n {{.HeadRefName}} review '
+      zellij action new-tab -c {{.RepoPath}} -n {{.HeadRefName}} review '
       nvim -c ":silent Octo pr edit {{.PrNumber}}"
       '
   branches: []
