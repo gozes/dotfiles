@@ -45,7 +45,7 @@ filename = "{{slug title}}"
 extension = "md"
 
 [group.daily]
-paths = ["daily"]
+paths = ["~/notes/daily/"]
 
 [group.daily.note]
 filename = "{{format-date now '%Y-%m-%d'}}"
