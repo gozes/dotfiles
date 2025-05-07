@@ -19,3 +19,7 @@ else
   jj bookmark move --to "closest_pushable(@)" "$@"
 fi
 """, ""]
+
+[user]
+email = "juan.sanchez.montalvo@youview.com"
+name = "Juan A. Sanchez"
