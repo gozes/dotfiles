@@ -1,0 +1,21 @@
+[git]
+auto-local-bookmark = true
+push-new-bookmarks = true
+
+[ui]
+diff.format = "git"
+pager = "delta"
+
+# taken from https://github.com/jj-vcs/jj/discussions/5568#discussioncomment-13034102
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+
+[aliases]
+tug = ["util", "exec", "--", "sh", "-c", """
+if [ "x$1" = "x" ]; then
+  jj bookmark move --from "closest_bookmark(@)" --to "closest_pushable(@)"
+else
+  jj bookmark move --to "closest_pushable(@)" "$@"
+fi
+""", ""]

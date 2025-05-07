@@ -5,8 +5,6 @@
 [includeIf "gitdir:~/Code/Work/"]
 	path = ~/Code/Work/.gitconfig
 
-[includeIf "gitdir:~/Code/Debian/"]
-	path = ~/Code/Debian/.gitconfig-debian
 [init]
 	defaultBranch = main
 [core]
@@ -25,6 +23,7 @@
 [delta]
     navigate = true    # use n and N to move between diff sections
     features = catppuccin-mocha
+    side-by-side = true
 
     # delta detects terminal colors automatically; set one of these to disable auto-detection
     # dark = true
