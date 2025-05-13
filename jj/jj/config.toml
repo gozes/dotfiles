@@ -21,6 +21,7 @@ else
 fi
 """, ""]
 c = ["commit"]
+cb = ["new", "-B @","--no-edit", "-m"]
 ci = ["commit", "--interactive"]
 e = ["edit"]
 i = ["git", "init", "--colocate"]
