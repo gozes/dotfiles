@@ -30,6 +30,7 @@ pull = ["git", "fetch"]
 push = ["git", "push", "--allow-new"]
 r = ["rebase"]
 s = ["squash"]
+sa = ["squash", "-u", "--into"]
 si = ["squash", "--interactive"]
 
 [user]
