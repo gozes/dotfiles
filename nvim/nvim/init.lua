@@ -260,6 +260,14 @@ vim.keymap.set('n', ';ztf', function()
   zellij.fullscreen()
 end, { desc = 'zellij fullscreen pane' })
 
+vim.keymap.set('n', '<leader>zp', function()
+  zellij.zkpush()
+end, { desc = 'Notes: Push' })
+
+vim.keymap.set('n', '<leader>zP', function()
+  zellij.zkpull()
+end, { desc = 'Notes: Pull' })
+
 vim.filetype.add {
   extension = {
     gotmpl = 'gotexttmpl',

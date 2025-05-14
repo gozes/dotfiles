@@ -42,6 +42,13 @@ local function fullscreen()
   end
 end
 
+local function run(cmd)
+  vim.fn.system('zellij run -f -c --  ' .. cmd)
+  if vim.v.shell_error ~= 0 then
+    error 'zellij cant run command'
+  end
+end
+
 function M.up()
   pane 'up'
 end
@@ -76,6 +83,14 @@ end
 
 function M.fullscreen()
   fullscreen()
+end
+
+function M.zkpull()
+  run 'zk pull'
+end
+
+function M.zkpush()
+  run 'zk push'
 end
 
 return M
