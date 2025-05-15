@@ -1,1 +1,5 @@
-set shell := ["fish" "-c"]
+set shell := ["fish" ,"-c"]
+zk-pull:
+	zk pull
+zk-push: zk-pull
+	zk push
