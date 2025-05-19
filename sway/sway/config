@@ -1,0 +1,316 @@
+# Sway config file
+#
+# Please see https://github.com/swaywm/sway/wiki for a complete reference!
+#
+# This config file was converted from i3 to Sway
+#
+
+# Font for window titles
+font pango:JetBrainsMono Nerd Font 12
+
+# catppuccin-mocha colors
+set $rosewater #f5e0dc
+set $flamingo #f2cdcd
+set $pink #f5c2e7
+set $mauve #cba6f7
+set $red #f38ba8
+set $maroon #eba0ac
+set $peach #fab387
+set $yellow #f9e2af
+set $green #a6e3a1
+set $teal #94e2d5
+set $sky #89dceb
+set $sapphire #74c7ec
+set $blue #89b4fa
+set $lavender #b4befe
+set $text #cdd6f4
+set $subtext1 #bac2de
+set $subtext0 #a6adc8
+set $overlay2 #9399b2
+set $overlay1 #7f849c
+set $overlay0 #6c7086
+set $surface2 #585b70
+set $surface1 #45475a
+set $surface0 #313244
+set $base #1e1e2e
+set $mantle #181825
+set $crust #11111b
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+# Mod key setup
+set $mod Mod4
+set $modShift Mod4+Shift
+set $modAlt Mod4+Mod1
+set $modCtrl Mod4+Ctrl
+
+# Output configuration (Wayland specific)
+# Note: In Sway, HDMI-1 is typically HDMI-A-1, but you should verify with `swaymsg -t get_outputs`
+set $dellMonitor HDMI-A-1
+set $laptopScreen eDP-1
+
+# Output configuration
+output $dellMonitor resolution auto position 0,0
+output $laptopScreen resolution auto position 1920,0
+
+# Wallpaper
+output * bg ~/dotfiles/wallpapers/Clannad-Family.jpg fill
+
+# Input configuration (Wayland specific)
+# Example configuration:
+# input "1:1:AT_Translated_Set_2_keyboard" {
+#     xkb_layout us
+# }
+# 
+# input "2:7:SynPS/2_Synaptics_TouchPad" {
+#     tap enabled
+#     natural_scroll enabled
+# }
+
+# Focus control
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
+
+# Move focused window
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left
+
+# Split orientation
+bindsym $mod+Mod4+v split h
+bindsym $mod+v split v
+
+# Terminal
+bindsym $mod+Return exec $term
+
+# Kill focused window
+bindsym $modAlt+q kill
+
+# Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Layout modes
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle splith stacking
+
+# Floating modifier
+floating_modifier $mod normal
+
+# Audio controls
+set $refresh_status killall -SIGUSR1 swaybar
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_status
+
+# Drag floating windows
+tiling_drag modifier titlebar
+
+# App launcher
+bindsym $mod+d exec wofi --show drun
+
+# Toggle floating
+bindsym $modShift+space floating toggle
+
+# Scratchpad
+bindsym $modShift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# Workspace definitions
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Workspace outputs
+workspace $ws1 output $dellMonitor
+workspace $ws2 output $dellMonitor
+workspace $ws3 output $dellMonitor
+workspace $ws4 output $dellMonitor
+workspace $ws5 output $dellMonitor
+workspace $ws6 output $dellMonitor
+workspace $ws7 output $dellMonitor
+workspace $ws8 output $dellMonitor
+workspace $ws9 output $laptopScreen
+workspace $ws10 output $laptopScreen
+
+# Focus controls
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+bindsym $mod+c focus child
+bindsym $modShift+p focus output primary
+bindsym $modShift+n focus output nonprimary
+
+# Moving windows between outputs
+bindsym $modAlt+m move container to output primary
+bindsym $modShift+m move container to output nonprimary
+bindsym $modAlt+b move container to workspace number $ws3 ; workspace number $ws3
+bindsym $modAlt+s move container to output $laptopScreen
+
+# Auto back and forth workspaces
+workspace_auto_back_and_forth yes
+
+# Workspace navigation
+bindsym Mod4+Right workspace next_on_output
+bindsym Mod4+Left workspace prev_on_output
+bindsym $mod+y workspace number $ws1 
+bindsym $mod+i workspace number $ws2 
+bindsym $mod+x workspace number $ws3 
+bindsym $mod+p workspace number $ws4 
+bindsym $mod+u workspace number $ws5 
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Moving containers between workspaces
+bindsym $modAlt+Right move container to workspace next_on_output
+bindsym $modAlt+Left move container to workspace prev_on_output
+bindsym $modShift+Right move container to output right
+bindsym $modShift+Left move container to output left
+
+# Move focused container to workspace
+bindsym $modAlt+y move container to workspace number $ws1
+bindsym $modAlt+i move container to workspace number $ws2
+bindsym $modAlt+x move container to workspace number $ws3
+bindsym $modAlt+p move container to workspace number $ws4
+bindsym $modAlt+u move container to workspace number $ws5
+bindsym $modAlt+6 move container to workspace number $ws6
+bindsym $modAlt+7 move container to workspace number $ws7
+bindsym $modAlt+8 move container to workspace number $ws8
+bindsym $modAlt+9 move container to workspace number $ws9
+bindsym $modAlt+0 move container to workspace number $ws10
+
+# Jump to mode
+set $jump_to jump: [f]irefox, [t]erminal, [s]lack, [m]usic
+
+mode "$jump_to" {
+	bindsym b [app_id="firefox"] focus ; mode "default" ; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+	bindsym t [app_id="kitty"] focus ; mode "default" ; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+	bindsym s [app_id="Slack"] focus ; mode "default" ; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+	bindsym m [app_id="Spotify"] focus ; mode "default" ; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+	bindsym d [app_id="Todoist"] focus ; mode "default" ; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+	
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+bindsym $modAlt+w mode "$jump_to" ; exec swaymsg "client.focused $red $base $text $rosewater $red"
+
+# Swap containers mode
+mode "swap" {
+	# switch to workspace
+	bindsym $mod+y workspace $ws1
+	bindsym $mod+i workspace $ws2
+	bindsym $mod+x workspace $ws3
+	bindsym $mod+p workspace $ws4
+	bindsym $mod+u workspace $ws5
+	bindsym $mod+6 workspace $ws6
+	bindsym $mod+7 workspace $ws7
+	bindsym $mod+8 workspace $ws8
+	bindsym $mod+9 workspace $ws9
+	bindsym $mod+0 workspace $ws10
+
+	# change focus
+	bindsym $mod+h focus left
+	bindsym $mod+j focus down
+	bindsym $mod+k focus up
+	bindsym $mod+l focus right
+
+	# change focus (without mod)
+	bindsym Left focus left
+	bindsym Down focus down
+	bindsym Up focus up
+	bindsym Right focus right
+
+	bindsym Return swap container with mark "swapee"; unmark "swapee"; mode "default"; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+	bindsym Escape unmark "swapee"; mode "default"; exec swaymsg "client.focused $lavender $base $text $rosewater $lavender"
+}
+
+bindsym $modAlt+i mark --add "swapee"; mode "swap" ; exec swaymsg "client.focused $peach $base $text $rosewater $peach"
+
+# App assignments
+# Note: In Wayland, app_id is used instead of class for native apps
+assign [app_id="firefox"] 1
+assign [app_id="Slack"] 9
+assign [app_id="Spotify"] 7
+assign [app_id="Todoist"] 4
+assign [app_id="teams-for-linux"] 10
+
+
+# Border style
+default_border pixel 5
+
+# Reload, restart and exit
+bindsym $modShift+c reload
+bindsym $modShift+r restart
+# Exit menu (Sway specific - replaces i3-nagbar)
+bindsym $modShift+e exec swaynag -t warning -m 'Do you want to exit sway?' -B 'Yes' 'swaymsg exit'
+
+# Resize mode
+mode "resize" {
+    bindsym h resize shrink width 10px
+    bindsym j resize grow height 10px
+    bindsym k resize shrink height 10px
+    bindsym l resize grow width 10px
+
+    # Cursor keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Status bar
+# bar {
+#     swaybar_command waybar
+# }
+
+# You can also use a more minimalist approach:
+bar {
+    position top
+    status_command while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done
+
+    colors {
+        background $base
+        statusline $text
+        focused_workspace $base $base $green
+        active_workspace $base $base $blue
+        inactive_workspace $base $base $surface1
+        urgent_workspace $base $base $surface1
+    }
+}
+
+# Sway specific settings
+# Idle configuration
+exec swayidle -w \
+    timeout 300 'swaylock -f -c 000000' \
+    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f -c 000000'
+
+# Include additional configuration files
+include /etc/sway/config.d/*
