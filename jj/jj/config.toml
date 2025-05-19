@@ -33,6 +33,7 @@ r = ["rebase"]
 s = ["squash"]
 sa = ["squash", "-u", "--into"]
 si = ["squash", "--interactive"]
+dm = ["desc" "-m"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
