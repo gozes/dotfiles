@@ -259,3 +259,23 @@ if status is-interactive; and command -q zellij
     set -Ux ZELLIJ_AUTO_ATTACH "true"
     eval (zellij setup --generate-auto-start fish | string collect)
 end
+
+function envsource
+    echo "Setting environment variables from $argv"
+    set -f envfile "$argv"
+    if not test -f "$envfile"
+        echo "Unable to load $envfile"
+        return 1
+    end
+    while read line
+        # Skip comments and empty lines
+        if not string match -qr '^#|^$' "$line"
+            set item (string split -m 1 '=' $line)
+            set -gx $item[1] $item[2]
+        end
+    end < "$envfile"
+end
+
+# Usage:
+envsource ~/.env
+
