@@ -275,7 +275,3 @@ function envsource
         end
     end < "$envfile"
 end
-
-# Usage:
-envsource ~/.env
-
