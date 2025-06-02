@@ -45,7 +45,7 @@ return {
     },
     provider = 'copilot',
     copilot = {
-      model = 'gpt-4.5',
+      model = 'gpt-4.5-preview',
     },
     behaviour = {
       enable_token_counting = false,
