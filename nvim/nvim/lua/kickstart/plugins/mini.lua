@@ -1,6 +1,11 @@
 return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
   config = function()
+    local diff = require 'mini.diff'
+    diff.setup {
+      -- Disabled by default
+      source = diff.gen_source.none(),
+    }
     require('mini.files').setup()
     -- Better Around/Inside textobjects
     --

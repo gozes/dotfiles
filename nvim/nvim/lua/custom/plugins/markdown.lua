@@ -4,7 +4,7 @@ return {
   opts = {
     enabled = true,
     render_modes = { 'n', 'c', 't' },
-    file_types = { 'markdown', 'quarto', 'telekasten', 'copilot-chat', 'Avante' },
+    file_types = { 'markdown', 'quarto', 'telekasten', 'copilot-chat', 'Avante', 'codecompanion' },
     inline_highlight = {
       render_modes = true,
       highlight = '@comment.todo',
