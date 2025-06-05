@@ -1,5 +1,6 @@
 return {
   'yetone/avante.nvim',
+  enabled = false,
   event = 'VeryLazy',
   lazy = false,
   version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
@@ -43,9 +44,15 @@ return {
         },
       },
     },
-    provider = 'copilot',
-    copilot = {
-      model = 'claude-3-7-sonnet-20250219',
+    providers = {
+      copilot = {
+        model = 'claude-3.7-sonnet',
+        endpoint = 'https://api.githubcopilot.com',
+        allow_insecure = false,
+        timeout = 10 * 60 * 1000,
+        max_completion_tokens = 1000000,
+        reasoning_effort = 'high',
+      },
     },
     behaviour = {
       enable_token_counting = false,
