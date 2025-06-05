@@ -45,7 +45,7 @@ return {
     },
     provider = 'copilot',
     copilot = {
-      model = 'claude-3-7-sonnet',
+      model = 'claude-3-7-sonnet-20250219',
     },
     behaviour = {
       enable_token_counting = false,
