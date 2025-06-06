@@ -4,7 +4,7 @@ return {
     {
       '<leader>zg',
       function()
-        require('zk.commands').get 'ZkNew' { match = { vim.fn.input 'Search: ' } }
+        require('zk.commands').get 'ZkNotes' { match = { vim.fn.input 'Search: ' } }
       end,
       desc = 'Notes: Search Notes',
     },
