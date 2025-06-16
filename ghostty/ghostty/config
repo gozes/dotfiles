@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 #
 theme = catppuccin-mocha
-#font-family = ComicShannsMono
-font-family = GohuFont 11 Nerd Font
+font-family = ComicShannsMono
+#font-family = GohuFont 11 Nerd Font
 gtk-titlebar = false
 link-url = true
