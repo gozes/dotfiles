@@ -12,8 +12,13 @@ return { -- You can easily change to a different colorscheme.
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
     --
     --
-    textcolor = '#cdd6f4'
+    textcolor = '#f9e2af'
     require('catppuccin').setup {
+      color_overrides = {
+        mocha = {
+          base = '#000000',
+        },
+      },
       highlight_overrides = {
         all = function(colors)
           return {
