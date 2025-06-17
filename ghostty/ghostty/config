@@ -47,3 +47,4 @@ font-family = ComicShannsMono
 #font-family = GohuFont 11 Nerd Font
 gtk-titlebar = false
 link-url = true
+background = #000000
