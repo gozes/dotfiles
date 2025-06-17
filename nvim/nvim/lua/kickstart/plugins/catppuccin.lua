@@ -17,6 +17,8 @@ return { -- You can easily change to a different colorscheme.
       color_overrides = {
         mocha = {
           base = '#000000',
+          mantle = '#000000',
+          crust = '#000000',
         },
       },
       highlight_overrides = {
