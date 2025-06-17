@@ -41,7 +41,7 @@ return { -- You can easily change to a different colorscheme.
             ['@function.call'] = { fg = textcolor },
             ['@function.builtin'] = { fg = textcolor },
             ['@boolean'] = { fg = textcolor },
-            ['@number'] = { fg = '#fbc19d' },
+            ['@number'] = { fg = '#89b4fa' },
             ['@constant.builtin'] = { fg = textcolor },
             ['@comment'] = { fg = '#bcc5fe' },
             ['@spell'] = { fg = '#ebbaef' },
