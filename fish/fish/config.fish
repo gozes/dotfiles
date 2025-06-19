@@ -181,7 +181,8 @@ function install-brew
 end
 
 function install-cil-tools-from-brew
-    brew install neovim go fzf eza zoxide bat git-delta zellij viu catimg jj just zk
+    brew tap 7sedam7/krafna
+    brew install neovim go fzf eza zoxide bat git-delta zellij viu catimg jj just zk krafna
 end 
 
 function install-cil-tools-from-fedora
