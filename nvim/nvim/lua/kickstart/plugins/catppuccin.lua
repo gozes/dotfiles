@@ -29,6 +29,7 @@ return { -- You can easily change to a different colorscheme.
         all = function(colors)
           return {
             ['@parameter'] = { fg = creamtextcolor },
+            ['@constant'] = { fg = creamtextcolor },
             ['@text'] = { fg = creamtextcolor },
             ['@field'] = { fg = creamtextcolor },
             ['@property'] = { fg = creamtextcolor },
