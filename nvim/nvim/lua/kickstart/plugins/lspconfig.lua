@@ -194,7 +194,7 @@ return { -- LSP Configuration & Plugins
       --     },
       --   },
       -- },
-      golangci_lint_ls = {},
+      -- golangci_lint_ls = {},
       -- markdown_oxide = {
       --   capabilities = {
       --     workspace = {
@@ -218,15 +218,15 @@ return { -- LSP Configuration & Plugins
       gopls = {
         settings = {
           gopls = {
-            -- hints = {
-            --   assignVariableTypes = true,
-            --   compositeLiteralFields = true,
-            --   compositeLiteralTypes = true,
-            --   constantValues = true,
-            --   functionTypeParameters = true,
-            --   parameterNames = true,
-            --   rangeVariableTypes = true,
-            -- },
+            hints = {
+              assignVariableTypes = true,
+              compositeLiteralFields = true,
+              compositeLiteralTypes = true,
+              constantValues = true,
+              functionTypeParameters = true,
+              parameterNames = true,
+              rangeVariableTypes = true,
+            },
             analyses = {
               shadow = true,
             },
@@ -364,8 +364,8 @@ return { -- LSP Configuration & Plugins
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
-      ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-      automatic_installation = false,
+      -- ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+      -- automatic_installation = false,
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
