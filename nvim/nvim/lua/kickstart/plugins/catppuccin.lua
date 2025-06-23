@@ -17,6 +17,7 @@ return { -- You can easily change to a different colorscheme.
     local commentcolor = '#f5c2e7'
     local numbercolor = '#89b4fa'
     local creamtextcolor = '#d4c7a2'
+    local conditioncolor = '#eba0ac'
     require('catppuccin').setup {
       color_overrides = {
         mocha = {
@@ -50,11 +51,11 @@ return { -- You can easily change to a different colorscheme.
             ['@keyword.exception'] = { fg = creamtextcolor },
             ['@keyword.import'] = { fg = creamtextcolor },
             ['@keyword.type'] = { fg = creamtextcolor },
-            ['@keyword.conditional'] = { fg = creamtextcolor },
+            ['@keyword.conditional'] = { fg = conditioncolor },
             -- ['@keyword.conditional'] = { fg = '#cba6f7' },
-            ['@keyword.repeat'] = { fg = creamtextcolor },
+            ['@keyword.repeat'] = { fg = conditioncolor },
             -- ['@keyword.repeat'] = { fg = '#cba6f7' },
-            ['@keyword.return'] = { fg = creamtextcolor },
+            ['@keyword.return'] = { fg = conditioncolor },
             -- ['@keyword.return'] = { fg = '#c2eebd' },
             ['@function.call'] = { fg = creamtextcolor },
             ['@function.builtin'] = { fg = creamtextcolor },
