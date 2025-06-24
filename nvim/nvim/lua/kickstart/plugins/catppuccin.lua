@@ -64,6 +64,7 @@ return { -- You can easily change to a different colorscheme.
             ['@constant.builtin'] = { fg = creamtextcolor },
             ['@string'] = { fg = stringcolor },
             ['@comment'] = { fg = commentcolor },
+            ['@comment.documentation'] = { fg = commentcolor },
             -- ['@spell'] = { fg = '#ebbaef' },
             -- Function = { fg = textcolor },
             -- Keyword = { fg = textcolor },
