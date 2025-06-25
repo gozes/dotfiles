@@ -321,7 +321,7 @@ return {
             },
           },
         },
-        -- golangci_lint_ls = {},
+        golangci_lint_ls = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -381,7 +381,7 @@ return {
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = false,
+        automatic_installation = true,
         automatic_enable = true,
         handlers = {
           function(server_name)
