@@ -81,33 +81,33 @@ return {
           map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
 
           -- Find references for the word under your cursor.
-          -- map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-          --
-          -- -- Jump to the implementation of the word under your cursor.
-          -- --  Useful when your language has ways of declaring types without an actual implementation.
-          -- map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+          --map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+
+          -- Jump to the implementation of the word under your cursor.
+          --  Useful when your language has ways of declaring types without an actual implementation.
+          --map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
-          -- map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+          --map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
-          -- map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+          --map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           -- Fuzzy find all the symbols in your current document.
           --  Symbols are things like variables, functions, types, etc.
-          -- map('gO', require('telescope.builtin').lsp_document_symbols, 'Open Document Symbols')
+          --map('gO', require('telescope.builtin').lsp_document_symbols, 'Open Document Symbols')
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          -- map('gW', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
+          --map('gW', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
 
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
           --  the definition of its *type*, not where it was *defined*.
-          -- map('grt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
+          --map('grt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
 
           -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
           ---@param client vim.lsp.Client
@@ -208,178 +208,148 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-      -- clojure_lsp = {},
-      -- jdtls = {},
-      zk = {},
-      pyright = {},
-      ruff = {},
-      -- ltex = {
-      --   settings = {
-      --     ltex = {
-      --       enabled = {
-      --         'bibtex',
-      --         'gitcommit',
-      --         'markdown',
-      --         'org',
-      --         'tex',
-      --         'restructuredtext',
-      --         'rsweave',
-      --         'latex',
-      --         'quarto',
-      --         'rmd',
-      --         'context',
-      --         'html',
-      --         'xhtml',
-      --         'mail',
-      --         'plaintext',
-      --         'go',
-      --         'python',
-      --       },
-      --     },
-      --   },
-      -- },
-      -- golangci_lint_ls = {},
-      -- markdown_oxide = {
-      --   capabilities = {
-      --     workspace = {
-      --       didChangeWatchedFiles = {
-      --         dynamicRegistration = true,
-      --       },
-      --     },
-      --   },
-      -- },
-      harper_ls = {
-        settings = {
-          ['harper-ls'] = {
-            linters = {
-              LinkingVerbs = true,
-              BoringWords = true,
-              UseGenitive = true,
+        -- clojure_lsp = {},
+        -- jdtls = {},
+        zk = {},
+        pyright = {},
+        ruff = {},
+        harper_ls = {
+          settings = {
+            ['harper-ls'] = {
+              linters = {
+                LinkingVerbs = true,
+                BoringWords = true,
+                UseGenitive = true,
+              },
             },
           },
         },
-      },
-      gopls = {
-        settings = {
-          gopls = {
-            hints = {
-              assignVariableTypes = true,
-              compositeLiteralFields = true,
-              compositeLiteralTypes = true,
-              constantValues = true,
-              functionTypeParameters = true,
-              parameterNames = true,
-              rangeVariableTypes = true,
-            },
-            analyses = {
-              shadow = true,
-            },
-            codelenses = {
-              generate = true, -- show the `go generate` lens.
-              gc_details = true, -- Show a code lens toggling the display of gc's choices.
-              test = true,
-              tidy = true,
-              vendor = true,
-              regenerate_cgo = true,
-              upgrade_dependency = true,
-            },
-            gofumpt = true,
-            buildFlags = { '-tags=integration acceptance' },
-          },
-        },
-      },
-      jsonls = {
-        settings = {
-          json = {
-            schemas = require('schemastore').json.schemas(),
-            validate = { enable = true },
-          },
-        },
-      },
-      yamlls = {
-        settings = {
-          yaml = {
-            validate = { enable = true },
-            schemaStore = { enable = true },
-            hover = true,
-            completion = true,
-            customTags = {
-              '!And scalar',
-              '!And mapping',
-              '!And sequence',
-              '!If scalar',
-              '!If mapping',
-              '!If sequence',
-              '!Not scalar',
-              '!Not mapping',
-              '!Not sequence',
-              '!Equals scalar',
-              '!Equals mapping',
-              '!Equals sequence',
-              '!Or scalar',
-              '!Or mapping',
-              '!Or sequence',
-              '!FindInMap scalar',
-              '!FindInMap mappping',
-              '!FindInMap sequence',
-              '!Base64 scalar',
-              '!Base64 mapping',
-              '!Base64 sequence',
-              '!Cidr scalar',
-              '!Cidr mapping',
-              '!Cidr sequence',
-              '!Ref scalar',
-              '!Ref mapping',
-              '!Ref sequence',
-              '!Sub scalar',
-              '!Sub mapping',
-              '!Sub sequence',
-              '!GetAtt scalar',
-              '!GetAtt mapping',
-              '!GetAtt sequence',
-              '!GetAZs scalar',
-              '!GetAZs mapping',
-              '!GetAZs sequence',
-              '!ImportValue scalar',
-              '!ImportValue mapping',
-              '!ImportValue sequence',
-              '!Select scalar',
-              '!Select mapping',
-              '!Select sequence',
-              '!Split scalar',
-              '!Split mapping',
-              '!Split sequence',
-              '!Join scalar',
-              '!Join mapping',
-              '!Join sequence',
+        gopls = {
+          settings = {
+            gopls = {
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+              analyses = {
+                shadow = true,
+              },
+              codelenses = {
+                generate = true, -- show the `go generate` lens.
+                gc_details = true, -- Show a code lens toggling the display of gc's choices.
+                test = true,
+                tidy = true,
+                vendor = true,
+                regenerate_cgo = true,
+                upgrade_dependency = true,
+              },
+              gofumpt = true,
+              buildFlags = { '-tags=integration acceptance' },
             },
           },
         },
-      },
-      -- rust_analyzer = {},
-      -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-      --
-      -- Some languages (like typescript) have entire language plugins that can be useful:
-      --    https://github.com/pmizio/typescript-tools.nvim
-      --
-      -- But for many setups, the LSP (`tsserver`) will work just fine
-      -- tsserver = {},
-      --
+        jsonls = {
+          settings = {
+            json = {
+              schemas = require('schemastore').json.schemas(),
+              validate = { enable = true },
+            },
+          },
+        },
+        yamlls = {
+          settings = {
+            yaml = {
+              validate = { enable = true },
+              schemaStore = { enable = true },
+              hover = true,
+              completion = true,
+              customTags = {
+                '!And scalar',
+                '!And mapping',
+                '!And sequence',
+                '!If scalar',
+                '!If mapping',
+                '!If sequence',
+                '!Not scalar',
+                '!Not mapping',
+                '!Not sequence',
+                '!Equals scalar',
+                '!Equals mapping',
+                '!Equals sequence',
+                '!Or scalar',
+                '!Or mapping',
+                '!Or sequence',
+                '!FindInMap scalar',
+                '!FindInMap mappping',
+                '!FindInMap sequence',
+                '!Base64 scalar',
+                '!Base64 mapping',
+                '!Base64 sequence',
+                '!Cidr scalar',
+                '!Cidr mapping',
+                '!Cidr sequence',
+                '!Ref scalar',
+                '!Ref mapping',
+                '!Ref sequence',
+                '!Sub scalar',
+                '!Sub mapping',
+                '!Sub sequence',
+                '!GetAtt scalar',
+                '!GetAtt mapping',
+                '!GetAtt sequence',
+                '!GetAZs scalar',
+                '!GetAZs mapping',
+                '!GetAZs sequence',
+                '!ImportValue scalar',
+                '!ImportValue mapping',
+                '!ImportValue sequence',
+                '!Select scalar',
+                '!Select mapping',
+                '!Select sequence',
+                '!Split scalar',
+                '!Split mapping',
+                '!Split sequence',
+                '!Join scalar',
+                '!Join mapping',
+                '!Join sequence',
+              },
+            },
+          },
+        },
+        -- golangci_lint_ls = {},
+        -- clangd = {},
+        -- gopls = {},
+        -- pyright = {},
+        -- rust_analyzer = {},
+        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+        --
+        -- Some languages (like typescript) have entire language plugins that can be useful:
+        --    https://github.com/pmizio/typescript-tools.nvim
+        --
+        -- But for many setups, the LSP (`ts_ls`) will work just fine
+        -- ts_ls = {},
+        --
 
-      lua_ls = {
-        -- cmd = {...},
-        -- filetypes = { ...},
-        -- capabilities = {},
-        settings = {
-          Lua = {
-            completion = {
-              callSnippet = 'Replace',
+        lua_ls = {
+          -- cmd = { ... },
+          -- filetypes = { ... },
+          -- capabilities = {},
+          settings = {
+            Lua = {
+              completion = {
+                callSnippet = 'Replace',
+              },
+              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+              -- diagnostics = { disable = { 'missing-fields' } },
             },
-            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-            -- diagnostics = { disable = { 'missing-fields' } },
           },
         },
-
+      }
 
       -- Ensure the servers and tools above are installed
       --
@@ -397,12 +367,22 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'golangci-lint',
+        'delve',
+        'gofumpt',
+        'goimports',
+        'gotests',
+        'iferr',
+        'ruff',
+        'sqlfmt',
+        'sqlfluff',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
+        automatic_enable = true,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
