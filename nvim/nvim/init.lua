@@ -370,12 +370,12 @@ require('lazy').setup({
 
   require 'kickstart.plugins.telescope',
 
-  require 'kickstart.plugins.blink',
-
   require 'kickstart.plugins.lspconfig',
 
+  require 'kickstart.plugins.blink',
+
   require 'kickstart.plugins.conform',
- -- require 'kickstart.plugins.cmp',
+  -- require 'kickstart.plugins.cmp',
   require 'kickstart.plugins.catppuccin',
 
   require 'kickstart.plugins.mini',
