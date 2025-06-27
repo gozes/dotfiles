@@ -42,6 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 #
+#custom-shader = shaders/bettercrt.glsl
 theme = catppuccin-mocha
 font-family = ComicShannsMono
 #font-family = GohuFont 11 Nerd Font
