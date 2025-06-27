@@ -3,8 +3,14 @@ auto-local-bookmark = true
 push-new-bookmarks = true
 
 [ui]
-diff.format = "git"
+diff-formatter = ":git"
 pager = "delta"
+default-command = ["log"]
+editor = "nvim"
+bookmark-list-sort-keys = ["committer-date"]
+
+[ui.movement]
+edit = true
 
 # taken from https://github.com/jj-vcs/jj/discussions/5568#discussioncomment-13034102
 [revset-aliases]
@@ -27,6 +33,7 @@ ci = ["commit", "--interactive"]
 e = ["edit"]
 i = ["git", "init", "--colocate"]
 nb = ["bookmark", "create", "-r @-"] # "new bookmark"
+bl = ["bookmark", "list"]
 pull = ["git", "fetch"]
 push = ["git", "push", "--allow-new"]
 r = ["rebase"]
@@ -34,7 +41,9 @@ s = ["squash"]
 sa = ["squash", "-u", "--into"]
 si = ["squash", "--interactive"]
 dm = ["desc", "-m"]
+ginit = ["git", "init", "--colocate"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
 name = "Juan A. Sanchez"
+
