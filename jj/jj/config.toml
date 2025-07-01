@@ -28,6 +28,7 @@ else
 fi
 """, ""]
 c = ["commit"]
+cm = ["commit", "-m"]
 cb = ["new", "-B @","--no-edit", "-m"]
 ca = ["new", "-A @","--no-edit", "-m"]
 ci = ["commit", "--interactive"]
