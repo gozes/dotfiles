@@ -265,7 +265,8 @@ return {
           settings = {
             yaml = {
               validate = { enable = true },
-              schemaStore = { enable = true },
+              schemaStore = { enable = false, url = '' },
+              schemas = require('schemastore').yaml.schemas(),
               hover = true,
               completion = true,
               customTags = {
