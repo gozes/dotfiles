@@ -323,6 +323,14 @@ return {
           },
         },
         golangci_lint_ls = {},
+        ols = {
+          init_options = {
+            checker_args = '-strict-style',
+            collections = {
+              { name = 'libs', path = vim.fn.expand '$HOME/odin/libs' },
+            },
+          },
+        },
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
