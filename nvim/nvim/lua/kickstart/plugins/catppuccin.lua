@@ -18,6 +18,12 @@ return { -- You can easily change to a different colorscheme.
     local numbercolor = '#89b4fa'
     local creamtextcolor = '#d4c7a2'
     local conditioncolor = '#eba0ac'
+    local cyberyellow = '#fadf2d'
+    local cybergreen = '#d8fa3c'
+    local cyberpink = '#fe1492'
+    local cyberblue = '#042ac1'
+    local cybertiel = '#01fffe'
+    local cyberligthblue = '#97cafa'
     require('catppuccin').setup {
       color_overrides = {
         mocha = {
@@ -51,11 +57,11 @@ return { -- You can easily change to a different colorscheme.
             ['@keyword.exception'] = { fg = creamtextcolor },
             ['@keyword.import'] = { fg = creamtextcolor },
             ['@keyword.type'] = { fg = creamtextcolor },
-            ['@keyword.conditional'] = { fg = conditioncolor },
+            ['@keyword.conditional'] = { fg = cyberpink },
             -- ['@keyword.conditional'] = { fg = '#cba6f7' },
-            ['@keyword.repeat'] = { fg = conditioncolor },
+            ['@keyword.repeat'] = { fg = cyberpink },
             -- ['@keyword.repeat'] = { fg = '#cba6f7' },
-            ['@keyword.return'] = { fg = conditioncolor },
+            ['@keyword.return'] = { fg = cyberpink },
             -- ['@keyword.return'] = { fg = '#c2eebd' },
             ['@function.call'] = { fg = creamtextcolor },
             ['@function.builtin'] = { fg = creamtextcolor },
