@@ -4,6 +4,13 @@ return {
     {
       '<leader>j',
       function()
+        require('justice').select()
+      end,
+      desc = 'Run just task',
+    },
+    {
+      '<leader>J',
+      function()
         require('justice').select { justfile = '~/dotfiles/just/just/justfile' }
       end,
       desc = 'Run global just task',
