@@ -5,7 +5,7 @@ return { -- You can easily change to a different colorscheme.
   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   'catppuccin/nvim',
   name = 'catppuccin',
-  enabled = false,
+  enabled = true,
   priority = 1000, -- Make sure to load this before all the other start plugins.
   config = function()
     -- Load the colorscheme here.
@@ -14,6 +14,7 @@ return { -- You can easily change to a different colorscheme.
     --
     --
     local textcolor = '#f9e2af'
+    local blackbackground = '#000000'
     local stringcolor = '#a6adc8'
     local commentcolor = '#f5c2e7'
     local numbercolor = '#89b4fa'
@@ -25,53 +26,63 @@ return { -- You can easily change to a different colorscheme.
     local cyberblue = '#042ac1'
     local cybertiel = '#01fffe'
     local cyberligthblue = '#97cafa'
+    local jbbackground = '#0C2827'
+    local jbtextcolor = '#B9BCAB'
+    local jbstringcolor = '#77CCCB'
+    local jbtypecolor = '#B1E1D1'
+    local jbcommentcolor = '#5EAD38'
+    local jbnumbercolor = '#AEEAD8'
+    local jbconditioncolor = '#BFD4E6'
     require('catppuccin').setup {
       color_overrides = {
         mocha = {
-          base = '#000000',
-          mantle = '#000000',
-          crust = '#000000',
+          base = jbbackground,
+          mantle = jbbackground,
+          crust = jbbackground,
         },
       },
       highlight_overrides = {
         all = function(colors)
           return {
-            ['@parameter'] = { fg = creamtextcolor },
-            ['@constant'] = { fg = creamtextcolor },
-            ['@text'] = { fg = creamtextcolor },
-            ['@field'] = { fg = creamtextcolor },
-            ['@property'] = { fg = creamtextcolor },
-            ['@constructor'] = { fg = creamtextcolor },
-            ['@module'] = { fg = creamtextcolor },
-            ['@variable.parameter'] = { fg = creamtextcolor },
-            ['@variable.member'] = { fg = creamtextcolor },
-            ['@variable'] = { fg = creamtextcolor },
-            ['@operator'] = { fg = creamtextcolor },
-            ['@function'] = { fg = creamtextcolor },
-            ['@function.method'] = { fg = creamtextcolor },
-            ['@function.method.call'] = { fg = creamtextcolor },
-            ['@type'] = { fg = creamtextcolor },
-            ['@type.builtin'] = { fg = creamtextcolor },
-            ['@keyword'] = { fg = creamtextcolor },
-            ['@keyword.function'] = { fg = creamtextcolor },
-            ['@keyword.operator'] = { fg = creamtextcolor },
-            ['@keyword.exception'] = { fg = creamtextcolor },
-            ['@keyword.import'] = { fg = creamtextcolor },
-            ['@keyword.type'] = { fg = creamtextcolor },
-            ['@keyword.conditional'] = { fg = conditioncolor },
+            ['@parameter'] = { fg = jbtextcolor },
+            ['@constant'] = { fg = jbtextcolor },
+            ['@text'] = { fg = jbtextcolor },
+            ['@field'] = { fg = jbtextcolor },
+            ['@property'] = { fg = jbtextcolor },
+            ['@constructor'] = { fg = jbtextcolor },
+            ['@module'] = { fg = jbtextcolor },
+            ['@variable.parameter'] = { fg = jbtextcolor },
+            ['@variable.member'] = { fg = jbtextcolor },
+            ['@variable'] = { fg = jbtextcolor },
+            ['@operator'] = { fg = jbtextcolor },
+            ['@function'] = { fg = jbtextcolor },
+            ['@function.method'] = { fg = jbtextcolor },
+            ['@function.method.call'] = { fg = jbtextcolor },
+            ['@type'] = { fg = jbtextcolor },
+            ['@type.builtin'] = { fg = jbtextcolor },
+            ['@type.definition'] = { fg = jbtypecolor },
+            ['@keyword'] = { fg = jbtextcolor },
+            ['@punctuation'] = { fg = jbtextcolor },
+            ['@punctuation.bracket'] = { fg = jbtextcolor },
+            ['@keyword.function'] = { fg = jbtextcolor },
+            ['@keyword.operator'] = { fg = jbtextcolor },
+            ['@keyword.exception'] = { fg = jbtextcolor },
+            ['@keyword.import'] = { fg = jbtextcolor },
+            ['@keyword.type'] = { fg = jbtextcolor },
+            ['@keyword.conditional'] = { fg = jbconditioncolor },
             -- ['@keyword.conditional'] = { fg = '#cba6f7' },
-            ['@keyword.repeat'] = { fg = conditioncolor },
+            ['@keyword.repeat'] = { fg = jbconditioncolor },
             -- ['@keyword.repeat'] = { fg = '#cba6f7' },
-            ['@keyword.return'] = { fg = conditioncolor },
+            ['@keyword.return'] = { fg = jbconditioncolor },
             -- ['@keyword.return'] = { fg = '#c2eebd' },
-            ['@function.call'] = { fg = creamtextcolor },
-            ['@function.builtin'] = { fg = creamtextcolor },
-            ['@boolean'] = { fg = creamtextcolor },
+            ['@function.call'] = { fg = jbtextcolor },
+            ['@function.builtin'] = { fg = jbtextcolor },
+            ['@boolean'] = { fg = jbtextcolor },
             ['@number'] = { fg = numbercolor },
-            ['@constant.builtin'] = { fg = creamtextcolor },
-            ['@string'] = { fg = stringcolor },
-            ['@comment'] = { fg = commentcolor },
-            ['@comment.documentation'] = { fg = commentcolor },
+            ['@constant.builtin'] = { fg = jbtextcolor },
+            ['@string'] = { fg = jbstringcolor },
+            ['@comment'] = { fg = jbcommentcolor },
+            ['@comment.documentation'] = { fg = jbcommentcolor },
             -- ['@spell'] = { fg = '#ebbaef' },
             -- Function = { fg = textcolor },
             -- Keyword = { fg = textcolor },
