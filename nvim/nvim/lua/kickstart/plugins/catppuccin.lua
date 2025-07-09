@@ -8,6 +8,7 @@ return { -- You can easily change to a different colorscheme.
   enabled = true,
   priority = 1000, -- Make sure to load this before all the other start plugins.
   config = function()
+    compile_path = vim.fn.stdpath 'cache' .. '/catppuccin'
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles, and you could load
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
@@ -29,14 +30,15 @@ return { -- You can easily change to a different colorscheme.
     local jbbackgroundold = '#0C2827'
     local jbbackground = '#09262A'
     local jbtextcolorold = '#B9BCAB'
-    local jbtextcolor = '#B9B59D'
+    local jbtextcolorold2 = '#B9B59D'
+    local jbtextcolor = '#BDBA9F'
     local jbstringcolor = '#77CCCB'
     local jbtypecolor = '#B1E1D1'
     local jbcommentcolor = '#5EAD38'
     local jbnumbercolor = '#AEEAD8'
     local jbconditioncolorold = '#BFD4E6'
     local jbconditioncolor = '#F7FCFF'
-    local jbwhite = '#F4FBFD'
+    local jbwhite = '#FBFFFF'
     require('catppuccin').setup {
       color_overrides = {
         mocha = {
@@ -75,11 +77,11 @@ return { -- You can easily change to a different colorscheme.
             ['@keyword.exception'] = { fg = jbtextcolor },
             ['@keyword.import'] = { fg = jbtextcolor },
             ['@keyword.type'] = { fg = jbtextcolor },
-            ['@keyword.conditional'] = { fg = jbconditioncolor },
+            ['@keyword.conditional'] = { fg = jbwhite },
             -- ['@keyword.conditional'] = { fg = '#cba6f7' },
-            ['@keyword.repeat'] = { fg = jbconditioncolor },
+            ['@keyword.repeat'] = { fg = jbwhite },
             -- ['@keyword.repeat'] = { fg = '#cba6f7' },
-            ['@keyword.return'] = { fg = jbconditioncolor },
+            ['@keyword.return'] = { fg = jbwhite },
             -- ['@keyword.return'] = { fg = '#c2eebd' },
             ['@function.call'] = { fg = jbtextcolor },
             ['@function.builtin'] = { fg = jbtextcolor },
