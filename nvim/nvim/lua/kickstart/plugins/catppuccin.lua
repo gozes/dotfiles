@@ -28,7 +28,7 @@ return { -- You can easily change to a different colorscheme.
     local cyberligthblue = '#97cafa'
     local jbbackgroundold = '#0C2827'
     local jbbackground = '#09262A'
-    local jbtextcolor = '#B9BCAB'
+    local jbtextcolorold = '#B9BCAB'
     local jbtextcolor = '#B9B59D'
     local jbstringcolor = '#77CCCB'
     local jbtypecolor = '#B1E1D1'
