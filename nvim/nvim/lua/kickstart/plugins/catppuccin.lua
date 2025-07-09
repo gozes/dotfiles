@@ -29,11 +29,14 @@ return { -- You can easily change to a different colorscheme.
     local jbbackgroundold = '#0C2827'
     local jbbackground = '#09262A'
     local jbtextcolor = '#B9BCAB'
+    local jbtextcolor = '#B9B59D'
     local jbstringcolor = '#77CCCB'
     local jbtypecolor = '#B1E1D1'
     local jbcommentcolor = '#5EAD38'
     local jbnumbercolor = '#AEEAD8'
-    local jbconditioncolor = '#BFD4E6'
+    local jbconditioncolorold = '#BFD4E6'
+    local jbconditioncolor = '#F7FCFF'
+    local jbwhite = '#F4FBFD'
     require('catppuccin').setup {
       color_overrides = {
         mocha = {
@@ -45,6 +48,8 @@ return { -- You can easily change to a different colorscheme.
       highlight_overrides = {
         all = function(colors)
           return {
+            LineNr = { fg = jbwhite },
+            Whitespace = { fg = jbwhite },
             ['@parameter'] = { fg = jbtextcolor },
             ['@constant'] = { fg = jbtextcolor },
             ['@text'] = { fg = jbtextcolor },
@@ -61,7 +66,7 @@ return { -- You can easily change to a different colorscheme.
             ['@function.method.call'] = { fg = jbtextcolor },
             ['@type'] = { fg = jbtextcolor },
             ['@type.builtin'] = { fg = jbtextcolor },
-            ['@type.definition'] = { fg = jbtypecolor },
+            ['@type.definition'] = { fg = jbwhite },
             ['@keyword'] = { fg = jbtextcolor },
             ['@punctuation'] = { fg = jbtextcolor },
             ['@punctuation.bracket'] = { fg = jbtextcolor },
