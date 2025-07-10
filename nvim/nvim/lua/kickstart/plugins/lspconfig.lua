@@ -238,6 +238,10 @@ return {
               },
               analyses = {
                 shadow = true,
+                nilness = true,
+                unusedparams = true,
+                unusedwrite = true,
+                useany = true,
               },
               codelenses = {
                 generate = true, -- show the `go generate` lens.
@@ -250,7 +254,11 @@ return {
               },
               gofumpt = true,
               buildFlags = { '-tags=integration acceptance' },
-              directoryFilters = { '-**/node_modules', '**/testdata' },
+              usePlaceholders = true,
+              completeUnimported = true,
+              staticcheck = true,
+              directoryFilters = { '-.git', '-.vscode', '-.idea', '-.vscode-test', '-**/node_modules', '-.jj' },
+              semanticTokens = true,
             },
           },
         },
@@ -391,7 +399,7 @@ return {
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = true,
+        automatic_installation = false,
         automatic_enable = true,
         handlers = {
           function(server_name)
