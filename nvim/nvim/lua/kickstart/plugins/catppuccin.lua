@@ -39,6 +39,8 @@ return { -- You can easily change to a different colorscheme.
     local jbconditioncolorold = '#BFD4E6'
     local jbconditioncolor = '#F7FCFF'
     local jbwhite = '#FBFFFF'
+    local jbsatuslinebackground = '#D1B88A'
+    local jbsatuslinetextcolor = '#142511'
     require('catppuccin').setup {
       color_overrides = {
         mocha = {
@@ -52,6 +54,16 @@ return { -- You can easily change to a different colorscheme.
           return {
             LineNr = { fg = jbwhite },
             Whitespace = { fg = jbwhite },
+            MiniStatuslineModeCommand = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineModeNormal = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineModeOther = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineModeReplace = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineModeVisual = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineModeInsert = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineInactive = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineFilename = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineFileinfo = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
+            MiniStatuslineDevinfo = { bg = jbsatuslinebackground, fg = jbsatuslinetextcolor },
             ['@parameter'] = { fg = jbtextcolor },
             ['@constant'] = { fg = jbtextcolor },
             ['@text'] = { fg = jbtextcolor },
