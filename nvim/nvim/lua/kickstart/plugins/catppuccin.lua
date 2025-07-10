@@ -38,7 +38,7 @@ return { -- You can easily change to a different colorscheme.
     local jbnumbercolor = '#AEEAD8'
     local jbconditioncolorold = '#BFD4E6'
     local jbconditioncolor = '#F7FCFF'
-    local jbwhite = '#FBFFFF'
+    local jbwhite = '#FFFFFF'
     local jbsatuslinebackground = '#D1B88A'
     local jbsatuslinetextcolor = '#142511'
     require('catppuccin').setup {
