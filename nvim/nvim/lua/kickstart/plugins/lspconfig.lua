@@ -250,6 +250,7 @@ return {
               },
               gofumpt = true,
               buildFlags = { '-tags=integration acceptance' },
+              directoryFilters = { '-**/node_modules', '**/testdata' },
             },
           },
         },
