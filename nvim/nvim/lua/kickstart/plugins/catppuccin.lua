@@ -90,6 +90,7 @@ return { -- You can easily change to a different colorscheme.
             ['@keyword.import'] = { fg = jbtextcolor },
             ['@keyword.type'] = { fg = jbtextcolor },
             ['@keyword.conditional'] = { fg = jbwhite },
+            ['@keyword.coroutine'] = { fg = jbwhite },
             -- ['@keyword.conditional'] = { fg = '#cba6f7' },
             ['@keyword.repeat'] = { fg = jbwhite },
             -- ['@keyword.repeat'] = { fg = '#cba6f7' },
