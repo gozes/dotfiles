@@ -252,7 +252,6 @@ return {
                 regenerate_cgo = true,
                 upgrade_dependency = true,
               },
-              gofumpt = true,
               buildFlags = { '-tags=integration acceptance' },
               usePlaceholders = true,
               completeUnimported = true,
