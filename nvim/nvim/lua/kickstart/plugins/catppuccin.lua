@@ -35,6 +35,7 @@ return { -- You can easily change to a different colorscheme.
       Pop1 = '#20d0e0',
       Condition = '#FFFFFF',
       Text = '#d0b892',
+      White = '#f0f0f0',
     }
     local textcolor = '#f9e2af'
     local blackbackground = '#000000'
@@ -113,10 +114,10 @@ return { -- You can easily change to a different colorscheme.
             ['@keyword.exception'] = { fg = jbcolors.Text },
             ['@keyword.import'] = { fg = jbcolors.Text },
             ['@keyword.type'] = { fg = jbcolors.Text },
-            ['@keyword.conditional'] = { fg = jbcolors.Condition },
-            ['@keyword.coroutine'] = { fg = jbcolors.Condition },
-            ['@keyword.repeat'] = { fg = jbcolors.Condition },
-            ['@keyword.return'] = { fg = jbcolors.Condition },
+            ['@keyword.conditional'] = { fg = jbcolors.Condition, style = { 'bold' } },
+            ['@keyword.coroutine'] = { fg = jbcolors.Condition, style = { 'bold' } },
+            ['@keyword.repeat'] = { fg = jbcolors.Condition, style = { 'bold' } },
+            ['@keyword.return'] = { fg = jbcolors.Condition, style = { 'bold' } },
             ['@function.call'] = { fg = jbcolors.Text },
             ['@function.builtin'] = { fg = jbcolors.Text },
             ['@boolean'] = { fg = jbcolors.Text },
