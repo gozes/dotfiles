@@ -211,7 +211,8 @@ return {
         -- clojure_lsp = {},
         -- jdtls = {},
         zk = {},
-        pyright = {},
+        -- pyright = {},
+        ty = {},
         ruff = {},
         harper_ls = {
           settings = {
