@@ -272,64 +272,48 @@ return {
         yamlls = {
           settings = {
             yaml = {
+              customTags = {
+                '!fn',
+                '!And',
+                '!If',
+                '!Not',
+                '!Equals',
+                '!Or',
+                '!FindInMap sequence',
+                '!Base64',
+                '!Cidr',
+                '!Ref',
+                '!Ref Scalar',
+                '!Sub',
+                '!GetAtt',
+                '!GetAZs',
+                '!ImportValue',
+                '!Select',
+                '!Split',
+                '!Join sequence',
+              },
               validate = { enable = true },
               schemaStore = { enable = true },
               schemas = {
-                ['https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json'] = 'cloudformation/**',
+                ['https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json'] = {
+                  'cloudformation/**/*.yaml', -- Keep your existing specific path
+                  'cloudformation/**/*.yml',
+                  'cloudformation/*.yaml', -- Keep your existing specific path
+                  'cloudformation/*.yml',
+                  'template*.yaml', -- For files named 'template.yaml' in the root
+                  'template*.yml',
+                  '*.cfn.yaml', -- If you use a '.cfn.yaml' suffix
+                  '*.cfn.yml',
+                  '**/*template.yaml', -- For any file ending with 'template.yaml'
+                  '**/*template.yml',
+                  '**/main.yaml', -- Common for entry point templates
+                  '**/serverless.yaml', -- If you're also using Serverless Framework
+                  -- Add more specific patterns if you have them, e.g., '**/ecs-service.yaml'
+                },
                 ['https://json.schemastore.org/github-workflow.json'] = '/.github/workflows/*',
               },
               hover = true,
               completion = true,
-              -- customTags = {
-              --   '!And scalar',
-              --   '!And mapping',
-              --   '!And sequence',
-              --   '!If scalar',
-              --   '!If mapping',
-              --   '!If sequence',
-              --   '!Not scalar',
-              --   '!Not mapping',
-              --   '!Not sequence',
-              --   '!Equals scalar',
-              --   '!Equals mapping',
-              --   '!Equals sequence',
-              --   '!Or scalar',
-              --   '!Or mapping',
-              --   '!Or sequence',
-              --   '!FindInMap scalar',
-              --   '!FindInMap mappping',
-              --   '!FindInMap sequence',
-              --   '!Base64 scalar',
-              --   '!Base64 mapping',
-              --   '!Base64 sequence',
-              --   '!Cidr scalar',
-              --   '!Cidr mapping',
-              --   '!Cidr sequence',
-              --   '!Ref scalar',
-              --   '!Ref mapping',
-              --   '!Ref sequence',
-              --   '!Sub scalar',
-              --   '!Sub mapping',
-              --   '!Sub sequence',
-              --   '!GetAtt scalar',
-              --   '!GetAtt mapping',
-              --   '!GetAtt sequence',
-              --   '!GetAZs scalar',
-              --   '!GetAZs mapping',
-              --   '!GetAZs sequence',
-              --   '!ImportValue scalar',
-              --   '!ImportValue mapping',
-              --   '!ImportValue sequence',
-              --   '!Select scalar',
-              --   '!Select mapping',
-              --   '!Select sequence',
-              --   '!Split scalar',
-              --   '!Split mapping',
-              --   '!Split sequence',
-              --   '!Join scalar',
-              --   '!Join mapping',
-              --   '!Join sequence',
-              -- },
             },
           },
         },
@@ -398,21 +382,16 @@ return {
         'sqlfluff',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      for server, config in pairs(servers) do
+        if not vim.tbl_isempty(config) then
+          vim.lsp.config(server, config)
+        end
+      end
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
         automatic_enable = true,
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
       }
     end,
   },
