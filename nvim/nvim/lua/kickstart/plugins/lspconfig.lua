@@ -258,7 +258,7 @@ return {
               completeUnimported = true,
               staticcheck = true,
               directoryFilters = { '-.git', '-.vscode', '-.idea', '-.vscode-test', '-**/node_modules', '-.jj' },
-              semanticTokens = true,
+              semanticTokens = false, -- either enable semantic tokens or use treesitter
             },
           },
         },

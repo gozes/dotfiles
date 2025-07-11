@@ -8,7 +8,6 @@ return { -- You can easily change to a different colorscheme.
   enabled = true,
   priority = 1000, -- Make sure to load this before all the other start plugins.
   config = function()
-    compile_path = vim.fn.stdpath 'cache' .. '/catppuccin'
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles, and you could load
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
@@ -67,6 +66,7 @@ return { -- You can easily change to a different colorscheme.
     local jbsatuslinebackground = '#D1B88A'
     local jbsatuslinetextcolor = '#142511'
     require('catppuccin').setup {
+      compile_path = vim.fn.stdpath 'cache' .. '/catppuccin',
       color_overrides = {
         mocha = {
           base = jbcolors.Background,
@@ -126,34 +126,13 @@ return { -- You can easily change to a different colorscheme.
             ['@string'] = { fg = jbcolors.String_Constant },
             ['@comment'] = { fg = jbcolors.Comment },
             ['@comment.documentation'] = { fg = jbcolors.Comment },
-            -- ['@spell'] = { fg = '#ebbaef' },
-            -- Function = { fg = textcolor },
-            -- Keyword = { fg = textcolor },
-            -- Character = { fg = textcolor },
-            -- Constant = { fg = textcolor },
-            -- Special = { fg = textcolor },
-            -- Operator = { fg = textcolor },
-            -- Identifier = { fg = textcolor },
-            -- Type = { fg = textcolor },
-            -- Structure = { fg = textcolor },
-            -- Label = { fg = textcolor },
-            -- Exception = { fg = textcolor },
-            -- PreProc = { fg = textcolor },
-            -- Include = { fg = textcolor },
-            -- Macro = { fg = textcolor },
-            -- StorageClass = { fg = textcolor },
-            -- Boolean = { fg = '#fcceb2' },
-            -- Number = { fg = '#fcceb2' },
-            -- String = { fg = '#ebbaef' },
-            -- Comment = { fg = '#b4befe' },
-            -- Conditional = { fg = '#bac2de' },
-            -- Repeat = { fg = '#bac2de' },
           }
         end,
       },
     }
     -- You can configure highlights by doing something like:
     -- vim.cmd.hi 'Comment gui=none'
+
     vim.cmd.colorscheme 'catppuccin-mocha'
   end,
 }
