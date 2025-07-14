@@ -2,6 +2,7 @@ return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
   config = function()
     local diff = require 'mini.diff'
+    local gen_ai_spec = require('mini.extra').gen_ai_spec
     diff.setup {
       -- Disabled by default
       source = diff.gen_source.none(),
@@ -13,7 +14,16 @@ return { -- Collection of various small independent plugins/modules
     --  - va)  - [V]isually select [A]round [)]paren
     --  - yinq - [Y]ank [I]nside [N]ext [']quote
     --  - ci'  - [C]hange [I]nside [']quote
-    require('mini.ai').setup { n_lines = 500 }
+    require('mini.ai').setup {
+      n_lines = 500,
+      custom_textobjects = {
+        B = gen_ai_spec.buffer(),
+        D = gen_ai_spec.diagnostic(),
+        I = gen_ai_spec.indent(),
+        L = gen_ai_spec.line(),
+        N = gen_ai_spec.number(),
+      },
+    }
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     --
