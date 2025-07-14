@@ -1,5 +1,6 @@
 return {
   'ravitemer/mcphub.nvim',
+  event = 'VeryLazy',
   opts = {
     use_bundled_binary = true,
     extensions = {
