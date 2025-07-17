@@ -268,6 +268,10 @@ vim.keymap.set('n', '<leader>zP', function()
   zellij.zkpull()
 end, { desc = 'Notes: Pull' })
 
+vim.keymap.set('n', ';zV', function()
+  zellij.nvim_pane()
+end, { desc = 'zellij open nvim pane' })
+
 vim.filetype.add {
   extension = {
     gotmpl = 'gotexttmpl',

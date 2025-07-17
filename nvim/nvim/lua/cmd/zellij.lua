@@ -49,6 +49,13 @@ local function run(cmd)
   end
 end
 
+local function run_pane(cmd)
+  vim.fn.system('zellij run  -c --  ' .. cmd)
+  if vim.v.shell_error ~= 0 then
+    error 'zellij cant run command'
+  end
+end
+
 function M.up()
   pane 'up'
 end
@@ -91,6 +98,10 @@ end
 
 function M.zkpush()
   run 'zk push'
+end
+
+function M.nvim_pane()
+  run_pane 'nvim'
 end
 
 return M
