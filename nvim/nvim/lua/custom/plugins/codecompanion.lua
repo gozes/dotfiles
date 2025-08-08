@@ -34,7 +34,7 @@
 -- }
 return {
   'olimorris/codecompanion.nvim',
-  enabled = true,
+  enabled = false,
   keys = {
     {
       '<M-a>e',
