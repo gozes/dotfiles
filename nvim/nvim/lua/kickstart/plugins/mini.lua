@@ -7,7 +7,7 @@ return { -- Collection of various small independent plugins/modules
       -- Disabled by default
       source = diff.gen_source.none(),
     }
-    require('mini.files').setup()
+    -- require('mini.files').setup()
     -- Better Around/Inside textobjects
     --
     -- Examples:
@@ -25,7 +25,7 @@ return { -- Collection of various small independent plugins/modules
       },
     }
 
-    require('mini.jump2d').setup()
+    -- require('mini.jump2d').setup()
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     --
