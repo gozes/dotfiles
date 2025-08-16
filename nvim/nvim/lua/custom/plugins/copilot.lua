@@ -15,7 +15,7 @@ return {
       require('copilot').setup {}
     end,
     cond = function()
-      vim.fn.system 'which gh'
+      vim.fn.system 'ls ~/Code/work'
       if vim.v.shell_error ~= 0 then
         return false
       end

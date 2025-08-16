@@ -22,7 +22,7 @@ return {
     vim.keymap.set('n', '<leader>GC', '<cmd>Octo comment add<cr>', { desc = 'Octo: Add a new comment' })
   end,
   cond = function()
-    vim.fn.system 'which gh'
+    vim.fn.system 'ls ~/Code/work'
     if vim.v.shell_error ~= 0 then
       return false
     end
