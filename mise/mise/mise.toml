@@ -1,0 +1,8 @@
+[tools]
+go = "latest"
+python = "latest"
+uv = "latest"
+jj = "latest"
+jjui = "latest"
+hugo = "latest"
+
