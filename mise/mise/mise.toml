@@ -5,4 +5,5 @@ uv = "latest"
 jj = "latest"
 jjui = "latest"
 hugo = "latest"
+zellij = "latest"
 
