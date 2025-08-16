@@ -245,10 +245,6 @@ if command -q fzf
     --multi"
 end
 
-if command -q uv 
-    uv generate-shell-completion fish | source
-    fish_add_path "$HOME/.local/share/../bin"
-end
 
 if command -q bat
     set -Ux BAT_THEME "Catppuccin Mocha"
@@ -259,10 +255,20 @@ if test -e $HOME/Code/Work/work.fish
   source $HOME/Code/Work/work.fish
 end
 
-if status is-interactive; and command -q zellij
-    set -Ux ZELLIJ_AUTO_ATTACH "true"
-    eval (zellij setup --generate-auto-start fish | string collect)
+# if status is-interactive; and command -q zellij
+#     set -Ux ZELLIJ_AUTO_ATTACH "true"
+#     eval (zellij setup --generate-auto-start fish | string collect)
+# end
+
+if status is-interactive; and command -q mise
+    mise activate fish | source
 end
+
+if command -q uv 
+    uv generate-shell-completion fish | source
+    fish_add_path "$HOME/.local/share/../bin"
+end
+
 
 function envsource
     echo "Setting environment variables from $argv"
