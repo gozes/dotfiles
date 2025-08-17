@@ -200,6 +200,28 @@ function httpw
     posting --collection $HOME/Code/Work/posting
 end
 
+function omarchy-remove-paid-software
+    sudo yay -Rns 1password-beta 1password-cli spotify typora zoom
+end
+
+function omarchy-install-dev-tools
+    cd ~/dotfiles
+    stow mise
+    mise install
+    cd -
+end
+
+function omarchy-install-os-pacakages
+    sudo pacman -S zk ghostty flatpak stow git-delta bat
+end
+
+
+function omarchy-package-setup
+    omarchy-remove-paid-software
+    omarchy-install-os-pacakages
+    omarchy-install-dev-tools
+end
+
 if test -d $HOME/.asdf
   source $HOME/.asdf/asdf.fish
   source $HOME/.asdf/completions/asdf.fish
