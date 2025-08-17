@@ -7,4 +7,5 @@ jjui = "latest"
 hugo = "latest"
 zellij = "latest"
 usage = "latest"
+gemini-cli = "latest"
 
