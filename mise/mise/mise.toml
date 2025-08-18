@@ -10,3 +10,8 @@ usage = "latest"
 node = "latest"
 gemini-cli = "latest"
 
+[settings]
+
+[settings.python]
+compile = false
+
