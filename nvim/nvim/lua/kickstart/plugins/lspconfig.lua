@@ -414,6 +414,7 @@ return {
         'sqlfluff',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      vim.api.nvim_command 'MasonToolsInstall'
       for server, config in pairs(servers) do
         if not vim.tbl_isempty(config) then
           vim.lsp.config(server, config)
