@@ -9,6 +9,7 @@ zellij = "latest"
 usage = "latest"
 node = "latest"
 gemini-cli = "latest"
+ruby = "latest"
 
 [settings]
 
