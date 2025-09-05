@@ -17,3 +17,7 @@ neovim = "latest"
 [settings.python]
 compile = false
 
+[settings.ruby]
+ruby_install = true
+
+
