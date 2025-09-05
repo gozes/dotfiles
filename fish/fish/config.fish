@@ -240,7 +240,7 @@ if status is-interactive
 	set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/homebrew"
     end
     if test -n "$HOMEBREW_PREFIX"
-        fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin";
+        fish_add_path -agP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin";
         ! set -q MANPATH; and set MANPATH ''; set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
         ! set -q INFOPATH; and set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH;
     end
