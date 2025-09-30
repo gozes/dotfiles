@@ -286,14 +286,14 @@ if status is-interactive; and command -q mise
     mise activate fish | source
 end
 
-if status is-interactive; and command -q go-copilot-proxy
-    go-copilot-proxy completion fish | source
-end
+# if status is-interactive; and command -q go-copilot-proxy
+#     go-copilot-proxy completion fish | source
+# end
 
 
-if status is-interactive; and command -q crush
-    alias crush="$HOME/dotfiles/fish/fish/crush.fish"
-end
+# if status is-interactive; and command -q crush
+#     alias crush="$HOME/dotfiles/fish/fish/crush.fish"
+# end
 
 if status is-interactive; and command -q uv 
     uv generate-shell-completion fish | source

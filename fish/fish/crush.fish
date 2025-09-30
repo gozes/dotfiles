@@ -2,7 +2,7 @@
 
 # Defaults (override via env before calling)
 set -q PROXY_BIN; or set PROXY_BIN go-copilot-proxy
-set -q PROXY_PORT; or set PROXY_PORT 38080
+set -q PROXY_PORT; or set PROXY_PORT 8080
 set -q PROXY_ADDR; or set PROXY_ADDR 127.0.0.1
 set PROXY_URL http://$PROXY_ADDR:$PROXY_PORT
 
