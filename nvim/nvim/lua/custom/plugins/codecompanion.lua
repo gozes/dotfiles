@@ -61,6 +61,22 @@ return {
     },
   },
   opts = {
+    strategies = {
+      chat = {
+        name = 'copilot',
+        model = 'gpt-5',
+      },
+      inline = {
+
+        name = 'copilot',
+        model = 'gpt-5',
+      },
+      cmd = {
+
+        name = 'copilot',
+        model = 'gpt-5',
+      },
+    },
     --prompt_library = propms,
     extensions = {
       mcphub = {
@@ -72,26 +88,26 @@ return {
         },
       },
     },
-    adapters = {
-      copilot = function()
-        return require('codecompanion.adapters').extend('copilot', {
-          name = 'copilot-claude',
-          schema = {
-            models = {
-              default = 'claude-sonnet-4-20250514',
-            },
-          },
-        })
-      end,
-    },
+    -- adapters = {
+    --   copilot = function()
+    --     return require('codecompanion.adapters').extend('copilot', {
+    --       name = 'copilot-claude',
+    --       schema = {
+    --         models = {
+    --           default = 'gpt-5',
+    --         },
+    --       },
+    --     })
+    --   end,
+    -- },
   },
-  cond = function()
-    vim.fn.system 'which gh'
-    if vim.v.shell_error ~= 0 then
-      return false
-    end
-    return true
-  end,
+  -- cond = function()
+  --   vim.fn.system 'which gh'
+  --   if vim.v.shell_error ~= 0 then
+  --     return false
+  --   end
+  --   return true
+  -- end,
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',

@@ -1,6 +1,7 @@
 return {
   'ravitemer/mcphub.nvim',
   event = 'VeryLazy',
+  enabled = false,
   opts = {
     use_bundled_binary = true,
     extensions = {
@@ -9,13 +10,13 @@ return {
       },
     },
   },
-  cond = function()
-    vim.fn.system 'ls ~/Code/work'
-    if vim.v.shell_error ~= 0 then
-      return false
-    end
-    return true
-  end,
+  -- cond = function()
+  --   vim.fn.system 'ls ~/Code/work'
+  --   if vim.v.shell_error ~= 0 then
+  --     return false
+  --   end
+  --   return true
+  -- end,
   dependencies = {
     'nvim-lua/plenary.nvim', -- Required for Job and HTTP requests
   },
