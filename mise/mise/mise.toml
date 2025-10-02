@@ -11,6 +11,7 @@ node = "latest"
 gemini-cli = "latest"
 ruby = "latest"
 neovim = "latest"
+opencode = "latest"
 
 [settings]
 
