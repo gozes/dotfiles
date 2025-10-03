@@ -282,9 +282,9 @@ end
 #     eval (zellij setup --generate-auto-start fish | string collect)
 # end
 
-if status is-interactive; and command -q mise
-    mise activate fish | source
-end
+# if status is-interactive; and command -q mise
+#     mise activate fish | source
+# end
 
 # if status is-interactive; and command -q go-copilot-proxy
 #     go-copilot-proxy completion fish | source
