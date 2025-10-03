@@ -1,7 +1,8 @@
 return {
   'linux-cultist/venv-selector.nvim',
-  dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap-python' },
+  dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap-python', 'mfussenegger/nvim-dap' },
   branch = 'main',
+  enabled = false,
   opts = {
     name = { 'venv', '.venv' },
     dap_enabled = true,
