@@ -9,16 +9,15 @@ zellij = "latest"
 usage = "latest"
 node = "latest"
 gemini-cli = "latest"
-ruby = "latest"
+#ruby = "latest"
 neovim = "latest"
 opencode = "latest"
+lua = "5.1"
 
 [settings]
 
 [settings.python]
 compile = false
 
-[settings.ruby]
-ruby_install = true
 
 
