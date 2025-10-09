@@ -43,14 +43,18 @@
 		"sequential-thinking": {
 			"type": "local",
 			"command": [
-				"npx -y @modelcontextprotocol/server-sequential-thinking"
+				"npx",
+				"-y",
+				" @modelcontextprotocol/server-sequential-thinking"
 			],
 			"enabled": true
 		},
 		"memory": {
 			"type": "local",
 			"command": [
-				"npx -y @modelcontextprotocol/server-memory"
+				"npx",
+				"-y",
+				"@modelcontextprotocol/server-memory"
 			],
 			"environment": {
 				"MEMORY_FILE_PATH": "$HOME/.config/mcpmemory/memory.json"
