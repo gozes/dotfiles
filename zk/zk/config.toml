@@ -127,6 +127,7 @@ ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --title $argv'
 # update zk notes
 push = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; cd -"
 pull = "cd $ZK_NOTEBOOK_DIR; git pull; zk index; cd -"
+boot = "z $ZK_NOTEBOOK_DIR; zk init; cd .zk; rm config.toml; rm -rf templates; zk index; z -"
 
 # remove a files
 #rm = "zk list --interactive --quiet --format path --delimiter0 $argv | xargs -0 rm -vf --"
