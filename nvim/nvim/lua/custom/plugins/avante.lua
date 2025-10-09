@@ -1,6 +1,6 @@
 return {
   'yetone/avante.nvim',
-  enabled = true,
+  enabled = false,
   event = 'VeryLazy',
   lazy = false,
   version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
@@ -70,7 +70,7 @@ return {
     'ravitemer/mcphub.nvim',
   },
   cond = function()
-    vim.fn.system 'ls ~/Code/work'
+    vim.fn.system 'ls ~/Code/Work'
     if vim.v.shell_error ~= 0 then
       return false
     end
