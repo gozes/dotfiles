@@ -1,0 +1,44 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"theme": "catppuccin",
+	"instructions": [
+		"$ZK_NOTEBOOK_DIR/AGENTS.md",
+		"$HOME/Code/Work/jira/AGENTS.md",
+		"$HOME/Code/Work/*/AGENTS.md"
+	],
+	"lsp": {
+		"zk": {
+			"command": [
+				"zk lsp"
+			],
+			"extensions": [
+				".md",
+				".go",
+				".yaml",
+				".yml",
+				".py",
+				".json",
+				".lua"
+			]
+		}
+	},
+	"mcp": {
+		"jira": {
+			"type": "local",
+			"command": [
+				"npx",
+				"-y",
+				"mcp-remote",
+				"https://mcp.atlassian.com/v1/sse"
+			],
+			"enabled": true
+		},
+		"github": {
+			"type": "local",
+			"command": [
+				"$HOME/Code/Work/gh-mcp.fish"
+			],
+			"enabled": true
+		}
+	},
+}
