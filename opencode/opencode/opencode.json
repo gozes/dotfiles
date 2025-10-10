@@ -33,23 +33,6 @@
 			],
 			"enabled": true
 		},
-		"github": {
-			"type": "local",
-			"command": [
-				"docker",
-				"run",
-				"-i",
-				"--rm",
-				"-e",
-				"GITHUB_PERSONAL_ACCESS_TOKEN=$GITHUB_PAT",
-				"-e",
-				"GITHUB_READ_ONLY=1",
-				"-e",
-				"GITHUB_HOST=https:$GITHUB_HOST",
-				"ghcr.io/github/github-mcp-server:latest"
-			],
-			"enabled": true
-		},
 		"sequential-thinking": {
 			"type": "local",
 			"command": [
