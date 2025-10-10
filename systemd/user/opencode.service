@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenCode Server (fish + mise)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/dotfiles/opencode/opencode/server.fish
+Restart=always
+RestartSec=2
+
+# Keep PATH minimal; fish config will set the real PATH when sourced
+Environment=PATH=/usr/bin:/bin
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
