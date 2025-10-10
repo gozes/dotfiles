@@ -1,6 +1,7 @@
 return {
   'NickvanDyke/opencode.nvim',
   event = 'VeryLazy',
+  enabled = false,
   dependencies = {
     -- Recommended for `ask()` and `select()`.
     -- Required for `toggle()`.
