@@ -66,9 +66,6 @@
 				"-y",
 				"@modelcontextprotocol/server-memory"
 			],
-			"environment": {
-				"MEMORY_FILE_PATH": "$HOME/.config/mcpmemory/memory.json"
-			}
 		},
 		"firefox": {
 			"type": "local",
