@@ -8,7 +8,9 @@ return {
   },
   config = function()
     vim.g.opencode_opts = {
-      port = 6660,
+      terminal = {
+        cmd = 'opencode attach http://localhost:6660',
+      },
       -- Your configuration, if any — see `lua/opencode/config.lua`
     }
 
