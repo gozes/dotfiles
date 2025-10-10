@@ -1,5 +1,5 @@
 [Unit]
-Description=OpenCode Server (fish + mise)
+Description=OpenCode Server (fish + mise, serve)
 After=network-online.target
 Wants=network-online.target
 
@@ -9,8 +9,7 @@ ExecStart=%h/dotfiles/opencode/opencode/server.fish
 Restart=always
 RestartSec=2
 
-# Keep PATH minimal; fish config will set the real PATH when sourced
-Environment=PATH=/usr/bin:/bin
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
 
 StandardOutput=journal
 StandardError=journal
