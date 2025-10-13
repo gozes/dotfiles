@@ -23,6 +23,25 @@
 		}
 	},
 	"mcp": {
+		"github": {
+			"type": "local",
+			"command": [
+				"docker",
+				"run",
+				"-i",
+				"--rm",
+				"-e",
+				"GITHUB_PERSONAL_ACCESS_TOKEN=$GITHUB_PAT",
+				"-e",
+				"GITHUB_READ_ONLY=1",
+				"-e",
+				"GITHUB_HOST=https://$GITHUB_HOST",
+				"-e",
+				"GITHUB_TOOLS_ALLOWLIST=pull_request_comments_list,pull_request_review_comments_list,pull_request_reviews_list,pull_request_reviews_comments_list,pull_request_review_threads_list,pull_request_statuses_list,pull_request_checks_list,check_runs_list_for_ref,check_suites_list_for_ref,checks_annotations_list,actions_workflow_dispatch,actions_workflow_rerun,actions_workflow_run_rerun,actions_workflow_run_jobs_list,actions_workflow_run_logs_get,actions_workflow_run_attempt_logs_get,actions_job_logs_get",
+				"ghcr.io/github/github-mcp-server:latest"
+			],
+			"enabled": true
+		},
 		"jira": {
 			"type": "local",
 			"command": [
