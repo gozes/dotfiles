@@ -8,6 +8,7 @@ return {
   opts = {
     lsp_cfg = false,
     gofumpt = false,
+    gotests_template = 'testify',
     -- lsp_keymaps = false,
     -- other options
   },
