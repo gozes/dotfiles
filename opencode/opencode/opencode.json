@@ -23,16 +23,6 @@
 		}
 	},
 	"mcp": {
-		"jira": {
-			"type": "local",
-			"command": [
-				"npx",
-				"-y",
-				"mcp-remote",
-				"https://mcp.atlassian.com/v1/sse"
-			],
-			"enabled": true
-		},
 		"sequential-thinking": {
 			"type": "local",
 			"command": [
