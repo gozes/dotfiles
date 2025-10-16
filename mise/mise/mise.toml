@@ -13,6 +13,7 @@ gemini-cli = "latest"
 neovim = "latest"
 opencode = "latest"
 lua = "5.1"
+delta = "latest"
 
 [settings]
 
