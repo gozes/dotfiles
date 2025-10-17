@@ -297,7 +297,7 @@ end
 
 if status is-interactive; and command -q uv 
     uv generate-shell-completion fish | source
-    fish_add_path "$HOME/.local/share/../bin"
+    # fish_add_path "$HOME/.local/share/../bin"
 end
 
 

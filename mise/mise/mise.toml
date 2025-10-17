@@ -16,9 +16,8 @@ delta = "latest"
 lua = "5.4"
 
 [settings]
+python.uv_venv_auto = true
 
-[settings.python]
-compile = false
 
 
 
