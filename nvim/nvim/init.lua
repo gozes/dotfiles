@@ -280,6 +280,9 @@ vim.filetype.add {
   },
 }
 
+-- Prepend mise shims to PATH
+vim.env.PATH = vim.env.HOME .. '/.local/share/mise/shims:' .. vim.env.PATH
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
