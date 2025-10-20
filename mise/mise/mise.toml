@@ -24,7 +24,8 @@ sd = "latest"
 jq = "latest"
 jqp = "latest"
 yq = "latest"
-lua = "5.1"
+cue = "latest"
+lua = "latest"
 
 [settings]
 python.uv_venv_auto = true
