@@ -26,6 +26,7 @@ jqp = "latest"
 yq = "latest"
 cue = "latest"
 lua = "latest"
+lazygit = "latest"
 
 [settings]
 python.uv_venv_auto = true
