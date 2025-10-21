@@ -13,6 +13,11 @@ set -Ux BUNDLE_SIMULATE_VERSION 4
 set -Ux MANPAGER nvim +Man!
 set -Ux GTK_THEME Adwaita:dark
 set -gx ZK_NOTEBOOK_DIR $HOME/notes
+
+if status is-interactive; and command -q mise
+    mise activate fish | source
+end
+
 alias vim=nvim
 alias v=nvim
 alias g=lazygit
@@ -282,9 +287,6 @@ end
 #     eval (zellij setup --generate-auto-start fish | string collect)
 # end
 
-if status is-interactive; and command -q mise
-    mise activate fish | source
-end
 
 # if status is-interactive; and command -q go-copilot-proxy
 #     go-copilot-proxy completion fish | source
