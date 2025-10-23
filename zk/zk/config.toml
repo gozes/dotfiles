@@ -79,7 +79,7 @@ template = "main.md"
 # MARKDOWN SETTINGS
 [format.markdown]
 hashtags = true
-link-format = "[[{{title}}]]"
+link-format = "wiki"
 
 
 # EXTERNAL TOOLS
