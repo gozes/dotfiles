@@ -143,3 +143,7 @@ boot = "z $ZK_NOTEBOOK_DIR; zk init; cd .zk; rm config.toml; rm -rf templates; z
 wiki-title = "hint"
 # Warn for dead links between notes.
 dead-link = "error"
+
+[lsp.completion]
+# Show the note title in the completion pop-up, or fallback on its path if empty.
+note-label = "{{title-or-path}}"
