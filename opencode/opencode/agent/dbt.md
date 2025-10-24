@@ -4,6 +4,9 @@ description: Make change and updates to DBT base projects
 mode: subagent
 model: github-copilot/gpt-5
 temperature: 0.1
+permissions: 
+   bash:
+      git commit: deny
 ---
 
 You are an expert on DBT. Focus on:
