@@ -18,7 +18,7 @@ edit = true
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
-'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+'immutable_heads()' = "builtin_immutable_heads() | (trunk().. & ~mine())"
 
 [aliases]
 tug = ["util", "exec", "--", "sh", "-c", """
@@ -36,6 +36,7 @@ ci = ["commit", "--interactive"]
 e = ["edit"]
 i = ["git", "init", "--colocate"]
 nb = ["bookmark", "create", "-r @-"] # "new bookmark"
+bn = ["bookmark", "create", "-r @-"] # "new bookmark"
 bl = ["bookmark", "list"]
 pull = ["git", "fetch"]
 push = ["git", "push", "--allow-new"]
@@ -45,6 +46,8 @@ sa = ["squash", "-u", "--into"]
 si = ["squash", "--interactive"]
 dm = ["desc", "-m"]
 ginit = ["git", "init", "--colocate"]
+main-rebase = ["rebase", "-d", "main"]
+develop-rebase = ["rebase", "-d", "develop"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
