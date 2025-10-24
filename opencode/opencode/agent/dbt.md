@@ -15,6 +15,8 @@ folder if exist before starting your task
 - Keeping any test related to change passing after every change
 - you are not allowed to use `dbt run` only `dbt compile`, `dbt build`, and `dbt
 test`
+- if any error happen as part of the compile, build, or test find out why and
+fix them
 
 
 
