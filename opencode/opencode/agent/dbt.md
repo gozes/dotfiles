@@ -17,6 +17,7 @@ folder if exist before starting your task
 test`
 - if any error happen as part of the compile, build, or test find out why and
 fix them
+- run `sqlfluff fix --dialect=redshift` on any sql files you change
 
 
 
