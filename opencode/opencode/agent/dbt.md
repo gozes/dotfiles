@@ -1,7 +1,7 @@
 
 ---
 description: Make change and updates to DBT base projects
-mode: subagent
+mode: primary
 model: github-copilot/gpt-5
 temperature: 0.1
 permissions: 
