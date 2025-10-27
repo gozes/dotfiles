@@ -19,7 +19,10 @@ folder if exist before starting your task
 - you are not allowed to use `dbt run` only `dbt compile`, `dbt build`, and `dbt
 test`
 - if any error happen as part of the compile, build, or test find out why and
-fix them
+fix them and keep the issue and how to fix it your memory.
+- if you encounter an error as part of the compile, build, or test check your
+memory to see if come across it or something similar that will help you solve
+this issue 
 - run `sqlfluff fix --dialect=redshift` on any sql files you change
 - Never update the `CHANGLOG` file
 
