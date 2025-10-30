@@ -46,8 +46,8 @@ sa = ["squash", "-u", "--into"]
 si = ["squash", "--interactive"]
 dm = ["desc", "-m"]
 ginit = ["git", "init", "--colocate"]
-main-rebase = ["rebase", "-d", "main"]
-develop-rebase = ["rebase", "-d", "develop"]
+rmain = ["rebase", "-d", "main"]
+rdevlop = ["rebase", "-d", "develop"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
