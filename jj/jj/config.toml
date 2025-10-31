@@ -9,7 +9,6 @@ default-command = ["log"]
 editor = "nvim"
 bookmark-list-sort-keys = ["committer-date"]
 diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
-merge-editor = ["meld", "$left", "$base", "$right", "-o", "$output"]
 
 [ui.movement]
 edit = true
@@ -46,8 +45,8 @@ sa = ["squash", "-u", "--into"]
 si = ["squash", "--interactive"]
 dm = ["desc", "-m"]
 ginit = ["git", "init", "--colocate"]
-rmain = ["rebase", "-d", "main"]
-rdevlop = ["rebase", "-d", "develop"]
+rbm = ["rebase","-s","@-", "-d", "main"]
+rbd = ["rebase", "-s","@-","-d", "develop"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
