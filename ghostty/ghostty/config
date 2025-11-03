@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 #
 #custom-shader = shaders/bettercrt.glsl
-theme = Catppuccin Mocha
+theme = catppuccin-mocha.conf
 font-family = ComicShannsMono
 #font-family = GohuFont 11 Nerd Font
 gtk-titlebar = false
