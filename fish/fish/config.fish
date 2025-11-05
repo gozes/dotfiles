@@ -188,13 +188,30 @@ function install-brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 end
 
+function install-ghostty
+    dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+    dnf install ghostty
+end
+
+
 function install-cil-tools-from-brew
-    brew tap 7sedam7/krafna
-    brew install neovim go fzf eza zoxide bat git-delta zellij viu catimg jj just zk krafna
+    (install-brew)
+    brew install zk 
 end 
 
-function install-cil-tools-from-fedora
-sudo dnf install ImageMagick ImageMagick-devel
+function bootstrap-mise
+    sudo dnf copr enable jdxcode/mise
+    sudo dnf install mise
+    mise install
+end 
+
+
+function bootstrap-fedora-install
+    (install-rpm-fusion)
+    (install-ghostty)
+    (bootstrap-mise)
+    (install-cil-tools-from-brew)
+
 end 
 
 function install-posting-cil
