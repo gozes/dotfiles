@@ -195,7 +195,7 @@ end
 
 
 function install-cil-tools-from-brew
-    (install-brew)
+    install-brew
     brew install zk 
 end 
 
@@ -207,10 +207,10 @@ end
 
 
 function bootstrap-fedora-install
-    (install-rpm-fusion)
-    (install-ghostty)
-    (bootstrap-mise)
-    (install-cil-tools-from-brew)
+    install-rpm-fusion
+    install-ghostty
+    bootstrap-mise
+    install-cil-tools-from-brew
 
 end 
 
