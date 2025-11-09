@@ -358,7 +358,7 @@ return {
             },
           },
         },
-        ruby_lsp = {},
+        --ruby_lsp = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
