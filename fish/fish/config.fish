@@ -189,13 +189,12 @@ function install-brew
 end
 
 function install-ghostty
-    dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-    dnf install ghostty
+    sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+   sudo  dnf install ghostty
 end
 
 
 function install-cil-tools-from-brew
-    install-brew
     brew install zk 
 end 
 
