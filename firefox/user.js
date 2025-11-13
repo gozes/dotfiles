@@ -739,4 +739,8 @@ user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.places.speculativeConnect.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.predictor.enabled", false);
-
+/** PASSWORDS ***/
+user_pref("signon.formlessCapture.enabled", false);
+user_pref("signon.privateBrowsingCapture.enabled", false);
+user_pref("network.auth.subresource-http-auth-allow", 1);
+user_pref("editor.truncate_user_pastes", false);
