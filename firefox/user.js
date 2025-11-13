@@ -744,3 +744,11 @@ user_pref("signon.formlessCapture.enabled", false);
 user_pref("signon.privateBrowsingCapture.enabled", false);
 user_pref("network.auth.subresource-http-auth-allow", 1);
 user_pref("editor.truncate_user_pastes", false);
+
+// PREF: enforce DNS-over-HTTPS (DoH)
+user_pref("network.trr.mode", 2);
+user_pref("network.trr.max-fails", 5);
+// PREF: enforce DNS-over-HTTPS (DoH)
+user_pref("network.trr.mode", 3);
+// PREF: set DoH provider
+user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000048"); // Hagezi Light + TIF
