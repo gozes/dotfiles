@@ -65,7 +65,7 @@
 				"CONTAINERIZED=true",
 				"browser-control-mcp"
 			],
-			"enabled": true
+			"enabled": false
 		},
 		"aws-docs": {
 			"type": "local",
