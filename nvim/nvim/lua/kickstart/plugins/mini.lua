@@ -1,5 +1,6 @@
 return { -- Collection of various small independent plugins/modules
   'echasnovski/mini.nvim',
+  event = 'VeryLazy',
   config = function()
     local diff = require 'mini.diff'
     local gen_ai_spec = require('mini.extra').gen_ai_spec
