@@ -52,3 +52,6 @@ rbd = ["rebase", "-s","@-","-d", "develop"]
 email = "juan.sanchez.montalvo@youview.com"
 name = "Juan A. Sanchez"
 
+[fix.tools.sqlfluff]
+command = ["sqlfluff", "fix", "--dialect=redshift", "$path"]
+patterns = ["glob:'**/*.sql'"]
