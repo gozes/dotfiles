@@ -49,6 +49,7 @@
 				"-y",
 				"@modelcontextprotocol/server-memory"
 			],
+			"enabled": true,
 		},
 		"firefox": {
 			"type": "local",
