@@ -213,7 +213,8 @@ return {
         -- jdtls = {},
         zk = {},
         -- pyright = {},
-        ty = {},
+        -- ty = {},
+        pyrefly = {},
         ruff = {},
         harper_ls = {
           settings = {
