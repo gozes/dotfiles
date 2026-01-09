@@ -55,3 +55,6 @@ name = "Juan A. Sanchez"
 [fix.tools.sqlfluff]
 command = ["sqlfluff", "fix", "--dialect=redshift", "$path"]
 patterns = ["glob:'**/*.sql'"]
+
+[remotes.origin]
+auto-track-bookmarks = "glob:*"
