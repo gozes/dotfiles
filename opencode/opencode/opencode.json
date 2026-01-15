@@ -9,8 +9,8 @@
 	"lsp": {
 		"notes-lsp": {
 			"command": [
-				"zk", 
-				"lsp",
+				"zk",
+				"lsp"
 			],
 			"extensions": [
 				".md",
@@ -50,7 +50,7 @@
 				"-y",
 				"@modelcontextprotocol/server-memory"
 			],
-			"enabled": true,
+			"enabled": true
 		},
 		"firefox": {
 			"type": "local",
@@ -73,7 +73,7 @@
 			"type": "local",
 			"command": [
 				"uvx",
-				"awslabs.aws-documentation-mcp-server@latest",
+				"awslabs.aws-documentation-mcp-server@latest"
 			],
 			"environment": {
 				"FASTMCP_LOG_LEVEL": "ERROR",
@@ -81,6 +81,6 @@
 				"MCP_USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 			},
 			"enabled": false
-		},
-	},
+		}
+	}
 }
