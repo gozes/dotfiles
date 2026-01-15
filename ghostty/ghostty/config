@@ -50,3 +50,4 @@ font-family = DroidSansM Nerd Font
 font-size = 14
 gtk-titlebar = false
 link-url = true
+window-decoration = none
