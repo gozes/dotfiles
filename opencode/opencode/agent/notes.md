@@ -1,7 +1,7 @@
 ---
 description: Notes workflow via notes-lsp (zk lsp)
 mode: subagent
-model: github-copilot/gpt-5.2
+model: github-copilot/gpt-5-mini
 temperature: 0.1
 permission:
   bash:
