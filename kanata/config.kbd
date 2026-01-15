@@ -1,28 +1,135 @@
-;; defsrc is still necessary
+;; Universal Kanata config (Mac + Framework + NuPhy Air75)
+;; - Kanata-managed Dvorak
+;; - Home-row mods on Dvorak a/o/e/u and h/t/n/s
+;; - Space-hold -> layer l1
+;; - While holding Space (in l1), hold physical n (Dvorak b) -> layer l3
+;; - Caps tap Esc, hold -> l2
+;; - Tab tap Tab, hold -> l4
+;; - Enter tap Enter, hold -> l5
+;; - Right Alt hold-only -> l6
+
 (defcfg
   process-unmapped-keys yes
 )
 
-(defsrc
-  caps a s d f j k l ;
-)
 (defvar
-  tap-time 150
+  tap-time 200
   hold-time 200
 )
 
-(defalias
-  escctrl (tap-hold 100 100 esc lctl)
-  a (tap-hold $tap-time $hold-time a lmet)
-  s (tap-hold $tap-time $hold-time s lalt)
-  d (tap-hold $tap-time $hold-time d lsft)
-  f (tap-hold $tap-time $hold-time f lctl)
-  j (tap-hold $tap-time $hold-time j rctl)
-  k (tap-hold $tap-time $hold-time k rsft)
-  l (tap-hold $tap-time $hold-time l ralt)
-  ; (tap-hold $tap-time $hold-time ; rmet)
+;; Physical keyboard layout (ANSI-ish).
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt                spc                 ralt rmet rctl
 )
 
+(defalias
+  ;; Home-row mods (Dvorak letters).
+  ;; Dvorak mapping on ANSI home row:
+  ;;   a -> a
+  ;;   s -> o
+  ;;   d -> e
+  ;;   f -> u
+  ;;   h -> d
+  ;;   j -> h
+  ;;   k -> t
+  ;;   l -> n
+  ;;   ; -> s
+
+  A (tap-hold $tap-time $hold-time a lmet)
+  O (tap-hold $tap-time $hold-time o lalt)
+  E (tap-hold $tap-time $hold-time e lsft)
+  U (tap-hold $tap-time $hold-time u lctl)
+
+  H (tap-hold $tap-time $hold-time h lctl)
+  T (tap-hold $tap-time $hold-time t lsft)
+  N (tap-hold $tap-time $hold-time n lalt)
+  S (tap-hold $tap-time $hold-time s lmet)
+
+  ;; Layer access keys.
+  CAPS_L2 (tap-hold $tap-time $hold-time esc (layer-while-held l2))
+  TAB_L4  (tap-hold $tap-time $hold-time tab (layer-while-held l4))
+  ENT_L5  (tap-hold $tap-time $hold-time ret (layer-while-held l5))
+  SPC_L1  (tap-hold $tap-time $hold-time spc (layer-while-held l1))
+
+  ;; Nested gateway: in l1, physical 'n' becomes momentary l3.
+  N_L3 (layer-while-held l3)
+
+  ;; Hold-only media layer.
+  RALT_L6 (layer-while-held l6)
+
+  ;; Mouse wheel actions (interval ms, distance units)
+  MWU (mwheel-up 50 120)
+  MWD (mwheel-down 50 120)
+  MWL (mwheel-left 50 120)
+  MWR (mwheel-right 50 120)
+)
+
+;; Base layer: Dvorak typing (managed by Kanata) + your layer keys.
 (deflayer base
-  @escctrl @a @s @d @f @j @k @l @;
+  grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  @TAB_L4 '    ,    .    p    y    f    g    c    r    l    /    =    \
+  @CAPS_L2 @A   @O   @E   @U   i    d    @H   @T   @N   @S   -    @ENT_L5
+  lsft ;    q    j    k    x    b    m    w    v    z    rsft
+  lctl lmet lalt                @SPC_L1             @RALT_L6 rmet rctl
+)
+
+;; Layer l1: Port of Vial layer 1, adapted to ANSI.
+;; Difference: physical 'n' is a gateway to l3 (Dvorak b) while space is held.
+(deflayer l1
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   [    S-7  S--  -    ]    XX   XX   XX   XX   XX   XX   XX   XX
+  XX   +    S-9  S-4  S-5  S-6  S-0  XX   XX   XX   XX   XX
+  XX   S-[  S-1  S-2  S-3  S-]  XX   @N_L3 XX   XX   XX   XX   XX
+  XX   XX   XX                 S-bksl               XX   XX   XX
+)
+
+;; Layer l2: Vial layer 2 (numbers).
+(deflayer l2
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   [    7    8    9    ]    XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   ;    4    5    6    =    XX   XX   XX   XX   XX   XX
+  XX   grv  1    2    3    bksl XX   XX   XX   XX   XX   XX
+  XX   XX   XX                 .                  XX   XX   XX
+)
+
+;; Layer l3: Vial layer 3 (nav/edit).
+;; Note: cut/copy/paste/undo are not mapped to shortcuts here; left as XX.
+(deflayer l3
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   rght up   down left caps XX
+  XX   XX   XX   XX   XX   XX   XX   end  pgup pgdn home ins
+  XX   XX   XX                 ret                del  bspc esc
+)
+
+;; Layer l4: Vial layer 4 (mouse). Best-effort mapping to Kanata mouse actions.
+(deflayer l4
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   lmet lalt lsft lctl XX   mrgt XX   XX   mlft XX   XX
+  XX   XX   XX   XX   XX   XX   XX   @MWR @MWU @MWD @MWL XX XX
+  XX   XX   XX                 mlft              mmid mrgt XX
+)
+
+;; Layer l5: Vial layer 5 (function/nav/media-ish).
+(deflayer l5
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   f12  f7   f8   f9   prnt XX   XX   XX   XX   XX   XX   XX   XX
+  XX   f11  f4   f5   f6   slck XX   lmet lalt lsft lctl pgdn
+  XX   f10  f1   f2   f3   pause XX   XX   XX   XX   XX   end  XX
+  XX   XX   XX                 tab               XX   spc  home
+)
+
+;; Layer l6: Vial layer 6 (media).
+(deflayer l6
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   lmet lalt lsft lctl XX   XX   volu vold XX   XX   XX
+  XX   XX   XX                 XX                 XX   XX   XX
+  XX   XX   XX                 XX                mute XX   XX
+  XX   XX   XX   XX   XX   XX
 )
