@@ -44,7 +44,8 @@
 #
 #custom-shader = shaders/bettercrt.glsl
 theme = catppuccin-mocha.conf
-font-family = ComicShannsMono
+font-family = DroidSansM Nerd Font 
+#font-family = ComicShannsMono
 #font-family = GohuFont 11 Nerd Font
 gtk-titlebar = false
 link-url = true
