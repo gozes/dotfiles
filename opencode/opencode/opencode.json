@@ -7,9 +7,10 @@
 		"$HOME/Code/Work/*/AGENTS.md"
 	],
 	"lsp": {
-		"zk": {
+		"notes-lsp": {
 			"command": [
-				"zk lsp"
+				"zk", 
+				"lsp",
 			],
 			"extensions": [
 				".md",
