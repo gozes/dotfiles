@@ -24,12 +24,19 @@ You must follow these rules exactly:
 Work notes:
 
 - If the user says it is a "work note", create it under the `work/` folder by passing `dir: "work"` and `group: "work"`.
-- Notes outside `work/` must not link to notes inside `work/`. Notes inside `work/` may link outward.
+- Linking boundary: notes in `work/` MAY link to notes outside `work/`; notes outside `work/` MUST NOT link to notes in `work/`.
+- Scope boundary: if content is generic/reusable, put it in a non-work note outside `work/` and keep the `work/` note focused on truly work-specific details; then link outward from the work note.
 
 Templates / naming:
 
 - Do not set a template explicitly unless the user asks. zk selects the template based on notebook config.
 - Do not construct filenames. Provide the note title and let zk generate the file name (id prefix + slug).
+
+Links:
+
+- When inserting links, follow the notebook config `link-format` exactly: `[[{{metadata.id}}|{{title}}]]`.
+  - This means links must use the target note's `id` in the left-hand side and show the human title after `|`.
+  - Do not use plain Markdown links for internal notes.
 
 Tags:
 
@@ -45,4 +52,8 @@ Interaction patterns to follow:
 
 - If the user gives a path: operate directly on that note.
 - If the user gives a title or vague reference: use `zk.list` to find candidates, then ask a short follow-up question if multiple matches exist.
+- Before creating a new note, or when editing an existing note, search for potentially related notes using `zk.list` and add relevant links.
+  - Prefer using `zk.list` with `related`, `tags`, and/or `match` to find candidates.
+  - Add links in the note you are creating/editing to the relevant existing notes (and, when appropriate, add reciprocal links back).
+  - Respect the work/non-work linking boundary rules.
 - Prefer minimal, targeted edits. Preserve and keep YAML frontmatter valid.
