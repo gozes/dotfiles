@@ -47,5 +47,6 @@ theme = catppuccin-mocha.conf
 font-family = DroidSansM Nerd Font 
 #font-family = ComicShannsMono
 #font-family = GohuFont 11 Nerd Font
+font-size = 13
 gtk-titlebar = false
 link-url = true
