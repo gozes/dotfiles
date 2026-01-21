@@ -1,5 +1,6 @@
 return {
   'chrisgrieser/nvim-justice',
+  enabled = false,
   keys = {
     {
       '<leader>j',
