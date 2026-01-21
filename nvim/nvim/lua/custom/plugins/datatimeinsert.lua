@@ -3,7 +3,7 @@ return {
   version = '*',
   lazy = false,
   opts = {
-    date_format = 'YYYYMMDD',
+    date_format = '%Y-%m-%d',
     date_separator = '-',
   },
 }
