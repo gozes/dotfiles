@@ -5,7 +5,7 @@ push-new-bookmarks = true
 [ui]
 diff-formatter = ":git"
 pager = "delta"
-default-command = ["log"]
+default-command = ["log", "-r", "::"]
 editor = "nvim"
 bookmark-list-sort-keys = ["committer-date"]
 diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
@@ -19,6 +19,7 @@ edit = true
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 'immutable_heads()' = "builtin_immutable_heads() | (trunk().. & ~mine())"
+'my()' = "((bookmarks() & remote_bookmarks()) & mine())::"
 
 [aliases]
 tug = ["util", "exec", "--", "sh", "-c", """
@@ -48,6 +49,7 @@ dm = ["desc", "-m"]
 ginit = ["git", "init", "--colocate"]
 rbm = ["rebase","-s","@-", "-d", "main"]
 rbd = ["rebase", "-s","@-","-d", "develop"]
+l = ["log"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
