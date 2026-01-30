@@ -9,7 +9,7 @@
 							"reasoningEffort": "high"
 						},
 						"max":{
-							"reasoningEffort": "max"
+							"reasoningEffort": "xhigh"
 						},
 					},
 				},
