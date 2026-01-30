@@ -1,5 +1,6 @@
 {
 	"$schema": "https://opencode.ai/config.json",
+	  "model":"github-copilot/gpt-5-mini",
 	 "provider":{
 		"github-copilot":{
 			"models":{
@@ -18,11 +19,6 @@
 
 	},
 	"theme": "catppuccin",
-	"instructions": [
-		"$ZK_NOTEBOOK_DIR/AGENTS.md",
-		"$HOME/Code/Work/jira/AGENTS.md",
-		"$HOME/Code/Work/*/AGENTS.md"
-	],
 	"lsp": {
 		"notes-lsp": {
 			"command": [
