@@ -50,6 +50,7 @@ ginit = ["git", "init", "--colocate"]
 rbm = ["rebase","-s","@-", "-d", "main"]
 rbd = ["rebase", "-s","@-","-d", "develop"]
 l = ["log"]
+clone = ["git", "clone", "--colocate"]
 
 [user]
 email = "juan.sanchez.montalvo@youview.com"
