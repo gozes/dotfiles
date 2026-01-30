@@ -1,5 +1,22 @@
 {
 	"$schema": "https://opencode.ai/config.json",
+	 "provider":{
+		"github-copilot":{
+			"models":{
+				"gpt-5-mini":{
+					"variants":{
+						"high":{
+							"reasoningEffort": "high"
+						},
+						"max":{
+							"reasoningEffort": "max"
+						},
+					},
+				},
+			},
+		},
+
+	},
 	"theme": "catppuccin",
 	"instructions": [
 		"$ZK_NOTEBOOK_DIR/AGENTS.md",
