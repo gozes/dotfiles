@@ -1,5 +1,3 @@
-[git]
-push-new-bookmarks = true
 
 [ui]
 diff-formatter = ":git"
