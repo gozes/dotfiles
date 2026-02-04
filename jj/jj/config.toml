@@ -1,5 +1,4 @@
 [git]
-auto-local-bookmark = true
 push-new-bookmarks = true
 
 [ui]
@@ -61,4 +60,4 @@ command = ["sqlfluff", "fix", "--dialect=redshift", "$path"]
 patterns = ["glob:'**/*.sql'"]
 
 [remotes.origin]
-auto-track-bookmarks = "glob:*"
+auto-track-bookmarks = "*"
