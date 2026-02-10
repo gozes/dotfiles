@@ -26,6 +26,7 @@ cue = "latest"
 lua = "latest"
 lazygit = "latest"
 grex = "latest"
+vale = "latest"
 
 [settings]
 python.uv_venv_auto = true
