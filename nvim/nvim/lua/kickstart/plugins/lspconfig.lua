@@ -215,6 +215,14 @@ return {
         -- pyright = {},
         -- ty = {},
         pyrefly = {},
+        vale_ls = {
+          settings = {
+            ['vale-ls'] = {
+              filetypes = { 'asciidoc', 'markdown', 'text', 'tex', 'rst', 'html', 'xml', 'python', 'go', 'gitcommit' },
+              root_markers = { '.vale.ini', '.git', '.jj' },
+            },
+          },
+        },
         ruff = {},
         harper_ls = {
           settings = {
@@ -414,6 +422,7 @@ return {
         'ruff',
         'sqlfmt',
         'sqlfluff',
+        'vale',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       vim.api.nvim_command 'MasonToolsInstall'
