@@ -1,9 +1,7 @@
 [user]
-	name = gozes
+	name = Juan A. Sanchez
 	email = 632922+gozes@users.noreply.github.com
 
-[includeIf "gitdir:~/Code/Work/"]
-	path = ~/Code/Work/.gitconfig
 
 [init]
 	defaultBranch = main
@@ -15,7 +13,6 @@
 	verbose = true
 [core]
     pager = delta
-	commentString = "#;"
 
 [interactive]
     diffFilter = delta --color-only
