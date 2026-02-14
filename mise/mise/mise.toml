@@ -27,6 +27,7 @@ lua = "latest"
 lazygit = "latest"
 grex = "latest"
 vale = "latest"
+odin = "latest"
 
 [settings]
 python.uv_venv_auto = true
