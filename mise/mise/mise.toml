@@ -28,6 +28,8 @@ lazygit = "latest"
 grex = "latest"
 vale = "latest"
 odin = "latest"
+hledger = "latest"
+hledger-flow = "latest"
 
 [settings]
 python.uv_venv_auto = true
