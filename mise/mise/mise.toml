@@ -30,6 +30,7 @@ vale = "latest"
 odin = "latest"
 hledger = "latest"
 hledger-flow = "latest"
+1password-cli = "latest"
 
 [settings]
 python.uv_venv_auto = true
