@@ -34,3 +34,5 @@
 
 [include]
 	path = ~/dotfiles/delta/catppuccin.gitconfig
+[credential]
+	helper = store
