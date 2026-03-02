@@ -50,7 +50,7 @@ l = ["log"]
 clone = ["git", "clone", "--colocate"]
 
 [user]
-email = "juan.sanchez.montalvo@youview.com"
+email = "632922+gozes@users.noreply.github.com"
 name = "Juan A. Sanchez"
 
 [fix.tools.sqlfluff]
