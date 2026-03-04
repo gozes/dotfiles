@@ -54,10 +54,20 @@ email = "632922+gozes@users.noreply.github.com"
 name = "Juan A. Sanchez"
 
 [remotes.upstream]
-auto-track-bookmarks = "master"
+auto-track-bookmarks = "main"
 
 [remotes.origin]
 auto-track-created-bookmarks = "*"
 
 [git]
 abandon-unreachable-commits = false
+
+[[--scope]]
+--when.hostnames = ["OwOPad"]
+[--scope.fsmonitor]
+backend = "watchman"
+[--scope.fsmonitor.watchman]
+register-snapshot-trigger = true
+[--scope.remotes.upstream]
+auto-track-bookmarks = "master"
+
