@@ -30,7 +30,6 @@ vale = "latest"
 odin = "latest"
 hledger = "latest"
 hledger-flow = "latest"
-1password-cli = "latest"
 gh = "latest"
 
 [settings]

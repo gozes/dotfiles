@@ -17,7 +17,8 @@
 			},
 		},
 
-  },
+	},
+	"theme": "catppuccin",
 	"lsp": {
 		"notes-lsp": {
 			"command": [
