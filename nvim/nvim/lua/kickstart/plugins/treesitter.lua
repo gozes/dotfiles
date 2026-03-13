@@ -76,7 +76,7 @@ return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   lazy = false,
   build = ':TSUpdate',
-  branch = 'main',
+  branch = '*',
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
   config = function()
     local parsers = {
@@ -102,6 +102,7 @@ return { -- Highlight, edit, and navigate code
       'http',
       'regex',
       'graphql',
+      'python',
     }
     require('nvim-treesitter').install(parsers)
     vim.api.nvim_create_autocmd('FileType', {
