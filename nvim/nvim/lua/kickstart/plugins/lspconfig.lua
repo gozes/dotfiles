@@ -425,6 +425,7 @@ return {
         'ruff',
         'sqlfmt',
         'sqlfluff',
+        'tree-sitter-cli',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       vim.api.nvim_command 'MasonToolsInstall'

@@ -1,11 +1,85 @@
+-- return { -- Highlight, edit, and navigate code
+--   'nvim-treesitter/nvim-treesitter',
+--   branch = 'main',
+--   event = 'VeryLazy',
+--   dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
+--   build = ':TSUpdate',
+--   opts = {
+--     ensure_installed = {
+--       'bash',
+--       'c',
+--       'html',
+--       'lua',
+--       'luadoc',
+--       'markdown',
+--       'markdown_inline',
+--       'vim',
+--       'vimdoc',
+--       'go',
+--       'fish',
+--       'yaml',
+--       'json',
+--       'gomod',
+--       'gosum',
+--       'templ',
+--       'gotmpl',
+--       'gowork',
+--       'gitcommit',
+--       'http',
+--       'regex',
+--     },
+--     -- Autoinstall languages that are not installed
+--     auto_install = true,
+--     textobjects = {
+--       select = {
+--         enable = false,
+--         lookahead = true,
+--         keymaps = {
+--           -- You can use the capture groups defined in textobjects.scm
+--           ['af'] = '@function.outer',
+--           ['if'] = '@function.inner',
+--           ['ac'] = '@class.outer',
+--           -- You can optionally set descriptions to the mappings (used in the desc parameter of
+--           -- nvim_buf_set_keymap) which plugins like which-key display
+--           ['ic'] = { query = '@class.inner', desc = 'Select inner part of a class region' },
+--           -- You can also use captures from other query groups like `locals.scm`
+--           ['as'] = { query = '@scope', query_group = 'locals', desc = 'Select language scope' },
+--         },
+--       },
+--     },
+--     highlight = {
+--       enable = true,
+--       -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
+--       --  If you are experiencing weird indenting issues, add the language to
+--       --  the list of additional_vim_regex_highlighting and disabled languages for indent.
+--       additional_vim_regex_highlighting = { 'ruby' },
+--     },
+--     indent = { enable = true, disable = { 'ruby' } },
+--   },
+--   config = function(_, opts)
+--     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+--
+--     -- Prefer git instead of curl in order to improve connectivity in some environments
+--     require('nvim-treesitter.install').prefer_git = true
+--     ---@diagnostic disable-next-line: missing-fields
+--     require('nvim-treesitter.config').setup(opts)
+--
+--     -- There are additional nvim-treesitter modules that you can use to interact
+--     -- with nvim-treesitter. You should go explore a few and see what interests you:
+--     --
+--     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
+--     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
+--     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+--   end,
+-- }
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
-  branch = 'main',
-  event = 'VeryLazy',
-  dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
+  lazy = false,
   build = ':TSUpdate',
-  opts = {
-    ensure_installed = {
+  branch = 'main',
+  -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
+  config = function()
+    local parsers = {
       'bash',
       'c',
       'html',
@@ -27,48 +101,33 @@ return { -- Highlight, edit, and navigate code
       'gitcommit',
       'http',
       'regex',
-    },
-    -- Autoinstall languages that are not installed
-    auto_install = true,
-    textobjects = {
-      select = {
-        enable = false,
-        lookahead = true,
-        keymaps = {
-          -- You can use the capture groups defined in textobjects.scm
-          ['af'] = '@function.outer',
-          ['if'] = '@function.inner',
-          ['ac'] = '@class.outer',
-          -- You can optionally set descriptions to the mappings (used in the desc parameter of
-          -- nvim_buf_set_keymap) which plugins like which-key display
-          ['ic'] = { query = '@class.inner', desc = 'Select inner part of a class region' },
-          -- You can also use captures from other query groups like `locals.scm`
-          ['as'] = { query = '@scope', query_group = 'locals', desc = 'Select language scope' },
-        },
-      },
-    },
-    highlight = {
-      enable = true,
-      -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-      --  If you are experiencing weird indenting issues, add the language to
-      --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-      additional_vim_regex_highlighting = { 'ruby' },
-    },
-    indent = { enable = true, disable = { 'ruby' } },
-  },
-  config = function(_, opts)
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+      'graphql',
+    }
+    require('nvim-treesitter').install(parsers)
+    vim.api.nvim_create_autocmd('FileType', {
+      callback = function(args)
+        local buf, filetype = args.buf, args.match
 
-    -- Prefer git instead of curl in order to improve connectivity in some environments
-    require('nvim-treesitter.install').prefer_git = true
-    ---@diagnostic disable-next-line: missing-fields
-    require('nvim-treesitter.config').setup(opts)
+        local language = vim.treesitter.language.get_lang(filetype)
+        if not language then
+          return
+        end
 
-    -- There are additional nvim-treesitter modules that you can use to interact
-    -- with nvim-treesitter. You should go explore a few and see what interests you:
-    --
-    --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-    --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-    --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+        -- check if parser exists and load it
+        if not vim.treesitter.language.add(language) then
+          return
+        end
+        -- enables syntax highlighting and other treesitter features
+        vim.treesitter.start(buf, language)
+
+        -- enables treesitter based folds
+        -- for more info on folds see `:help folds`
+        -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        -- vim.wo.foldmethod = 'expr'
+
+        -- enables treesitter based indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
+    })
   end,
 }
