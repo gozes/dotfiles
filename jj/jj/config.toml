@@ -48,6 +48,7 @@ rbm = ["rebase","-s","@-", "-d", "main"]
 rbd = ["rebase", "-s","@-","-d", "develop"]
 l = ["log"]
 clone = ["git", "clone", "--colocate"]
+mine = ["bookmark", "list", "-r", "mine()"]
 
 [user]
 email = "632922+gozes@users.noreply.github.com"
@@ -59,8 +60,6 @@ auto-track-bookmarks = "main"
 [remotes.origin]
 auto-track-created-bookmarks = "*"
 
-[git]
-abandon-unreachable-commits = false
 
 [[--scope]]
 --when.hostnames = ["OwOPad"]
