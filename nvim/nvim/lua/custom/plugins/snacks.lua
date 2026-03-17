@@ -21,13 +21,17 @@ return {
       sources = {
         explorer = {
           layout = {
-            layout = { position = 'right' },
+            layout = { position = 'left' },
           },
         },
         git_diff = {
           layout = 'ivy_split',
         },
       },
+    },
+    explorer = {
+      replace_netrw = true, -- Replace netrw with the snacks explorer
+      trash = true, -- Use the system trash when deleting files
     },
     quickfile = { enabled = true },
     scope = { enabled = true },
@@ -48,6 +52,20 @@ return {
         Snacks.picker.smart()
       end,
       desc = 'Smart Find Files',
+    },
+    {
+      '<leader>se',
+      function()
+        Snacks.explorer.reveal()
+      end,
+      desc = 'Reveal explorer',
+    },
+    {
+      '<leader>sE',
+      function()
+        Snacks.explorer.open()
+      end,
+      desc = 'Open explorer',
     },
     {
       '<leader><leader>',
