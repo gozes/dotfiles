@@ -223,8 +223,6 @@ vim.keymap.set('n', '<leader>to', '<cmd>tabonly<cr>', { desc = 'Close other tab 
 -- Make U opposite to u.
 vim.keymap.set('n', 'U', '<C-r>', { desc = 'Redo' })
 
-vim.keymap.set('n', '<leader>yf', ':let @*=@%<CR>', { desc = 'Copy buffer file path' })
-
 local zellij = require 'cmd.zellij'
 vim.keymap.set('n', ';zl', function()
   zellij.right()
