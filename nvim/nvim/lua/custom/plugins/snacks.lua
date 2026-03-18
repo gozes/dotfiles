@@ -54,14 +54,14 @@ return {
       desc = 'Smart Find Files',
     },
     {
-      '<leader>se',
+      '<leader>sE',
       function()
         Snacks.explorer.reveal()
       end,
       desc = 'Reveal explorer',
     },
     {
-      '<leader>sE',
+      '<leader>se',
       function()
         Snacks.explorer.open()
       end,
