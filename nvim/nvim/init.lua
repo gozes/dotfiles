@@ -164,6 +164,9 @@ vim.opt.spell = true
 
 vim.opt.conceallevel = 1
 
+vim.opt.winfixheight = true
+vim.opt.winfixwidth = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
