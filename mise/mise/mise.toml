@@ -31,6 +31,7 @@ odin = "latest"
 hledger = "latest"
 hledger-flow = "latest"
 gh = "latest"
+jless = "latest"
 
 [settings]
 python.uv_venv_auto = true
