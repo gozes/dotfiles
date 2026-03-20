@@ -17,6 +17,9 @@ edit = true
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 'immutable_heads()' = "builtin_immutable_heads() | (trunk().. & ~mine())"
 'my()' = "((bookmarks() & remote_bookmarks()) & mine())::"
+'user(x)' = 'author(x) | committer(x)'
+'me()' = 'user("632922+gozes@users.noreply.github.com")'
+'me_today()' = '(me() & (author_date(before:"today") | author_date(after:"yesterday")))'
 
 [aliases]
 tug = ["util", "exec", "--", "sh", "-c", """
@@ -49,6 +52,7 @@ rbd = ["rebase", "-s","@-","-d", "develop"]
 l = ["log"]
 clone = ["git", "clone", "--colocate"]
 mine = ["bookmark", "list", "-r", "mine()"]
+lost-commits = ["log", "-r", "me_today()"]
 
 [user]
 email = "632922+gozes@users.noreply.github.com"
