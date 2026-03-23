@@ -32,6 +32,7 @@ hledger = "latest"
 hledger-flow = "latest"
 gh = "latest"
 jless = "latest"
+television = "latest"
 
 [settings]
 python.uv_venv_auto = true
