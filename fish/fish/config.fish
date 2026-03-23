@@ -18,6 +18,11 @@ if status is-interactive; and command -q mise
     mise activate fish | source
 end
 
+if status is-interactive; and command -q tv
+    tv init fish | source
+end
+
+
 alias vim=nvim
 alias v=nvim
 alias g=lazygit
