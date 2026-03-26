@@ -339,3 +339,6 @@ function envsource
         end
     end < "$envfile"
 end
+
+# uv
+fish_add_path "$HOME/.local/bin"
