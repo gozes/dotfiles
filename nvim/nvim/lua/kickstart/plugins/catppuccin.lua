@@ -117,12 +117,16 @@ return { -- You can easily change to a different colorscheme.
             ['@keyword.conditional'] = { fg = mocha.pink, style = { 'bold' } },
             ['@keyword.return'] = { fg = mocha.pink, style = { 'bold' } },
             ['@keyword.repeat'] = { fg = mocha.pink, style = { 'bold' } },
+            ['@keyword.repeat.python'] = { fg = mocha.text },
             ['@keyword.exception'] = { fg = mocha.pink },
 
             -- Neutral Keywords (Imports, etc)
+            ['@attribute.python'] = { fg = mocha.subtext1 },
             ['@keyword'] = { fg = mocha.subtext1 },
+            ['@keyword.type.python'] = { fg = mocha.subtext1 },
             ['@keyword.function'] = { fg = mocha.subtext1 },
             ['@keyword.import'] = { fg = mocha.subtext1 },
+            ['@keyword.operator'] = { fg = mocha.text },
 
             -- 6. MUTED DIAGNOSTICS (Subtle Greys)
             ['DiagnosticError'] = { fg = mocha.subtext0 },
