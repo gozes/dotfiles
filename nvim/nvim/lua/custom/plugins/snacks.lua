@@ -326,7 +326,7 @@ return {
       desc = 'Goto Declaration',
     },
     {
-      'gr',
+      'grr',
       function()
         Snacks.picker.lsp_references()
       end,
@@ -334,21 +334,21 @@ return {
       desc = 'References',
     },
     {
-      'gI',
+      'gri',
       function()
         Snacks.picker.lsp_implementations()
       end,
       desc = 'Goto Implementation',
     },
     {
-      'gy',
+      'grt',
       function()
         Snacks.picker.lsp_type_definitions()
       end,
       desc = 'Goto T[y]pe Definition',
     },
     {
-      '<leader>gl',
+      '<leader>grs',
       function()
         Snacks.picker.lsp_symbols()
       end,
@@ -362,11 +362,25 @@ return {
       desc = 'LSP Config',
     },
     {
-      '<leader>gL',
+      '<leader>grS',
       function()
         Snacks.picker.lsp_workspace_symbols()
       end,
       desc = 'LSP Workspace Symbols',
+    },
+    {
+      'gic',
+      function()
+        Snacks.picker.lsp_incoming_calls()
+      end,
+      desc = 'LSP Incoming Calls',
+    },
+    {
+      'goc',
+      function()
+        Snacks.picker.lsp_outgoing_calls()
+      end,
+      desc = 'LSP Outgoing Calls',
     },
     -- Other
     {
