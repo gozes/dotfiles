@@ -348,7 +348,7 @@ return {
       desc = 'Goto T[y]pe Definition',
     },
     {
-      '<leader>grs',
+      'grs',
       function()
         Snacks.picker.lsp_symbols()
       end,
@@ -362,7 +362,7 @@ return {
       desc = 'LSP Config',
     },
     {
-      '<leader>grS',
+      'grS',
       function()
         Snacks.picker.lsp_workspace_symbols()
       end,
