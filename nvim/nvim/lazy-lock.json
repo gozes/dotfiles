@@ -23,6 +23,7 @@
   "guihua.lua": { "branch": "master", "commit": "fdca486468a5d94676477917872767b5e67a2b4c" },
   "gx.nvim": { "branch": "main", "commit": "ba9c408fc0130fc4548760c3933a81b58fc50de8" },
   "harpoon": { "branch": "harpoon2", "commit": "87b1a3506211538f460786c23f98ec63ad9af4e5" },
+  "haunt.nvim": { "branch": "main", "commit": "666d83868bac8b38f1dc765d9da6eca4d92c826f" },
   "hml.nvim": { "branch": "main", "commit": "54b4d0a4d800f79310443f9a26d54023daeb9e7c" },
   "hunk.nvim": { "branch": "master", "commit": "b053714d39148f02c78132c74cb0672a18c2d657" },
   "image.nvim": { "branch": "master", "commit": "7f61c1940a8b072ca47a28928d2375dc1e11f464" },
