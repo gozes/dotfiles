@@ -1,0 +1,26 @@
+[metadata]
+name = "inv"
+description = "run python invoke tasks"
+requirements = ["inv"]
+
+[source]
+command = "inv -l"
+display = "{strip_ansi|split: :0}"
+
+[preview]
+command = "{strip_ansi|split: :1}"
+
+[keybindings]
+ctrl-r = "actions:run"
+ctrl-s = "actions:ST"
+
+[actions.run]
+description = "run invoke task"
+command = "inv {}"
+mode = "execute"
+
+[actions.ST]
+description = "run invoke task with ST client"
+command = "inv {} --client=SevernTrent"
+mode = "execute"
+
