@@ -5,7 +5,6 @@ pager = "delta"
 default-command = ["log", "-r", "::"]
 editor = "nvim"
 bookmark-list-sort-keys = ["committer-date"]
-diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
 conflict-marker-style = "git"
 
 [ui.movement]
