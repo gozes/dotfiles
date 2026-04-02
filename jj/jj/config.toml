@@ -2,7 +2,7 @@
 [ui]
 diff-formatter = ":git"
 pager = "delta"
-default-command = ["log", "-r", "::"]
+default-command = ["log"]
 editor = "nvim"
 bookmark-list-sort-keys = ["committer-date"]
 conflict-marker-style = "git"
