@@ -64,11 +64,11 @@ auto-track-bookmarks = "main"
 auto-track-created-bookmarks = "*"
 
 [fix.tools.ruff-format]
-command = ["ruff", "format"]
+command = ["ruff", "format", , "--stdin-filename=$path"]
 patterns = ["glob:'**/*.py'"]
 
 [fix.tools.ruff-check]
-command = ["ruff", "check", "--fix"]
+command = ["ruff", "check", "--fix", "--stdin-filename=$path"]
 patterns = ["glob:'**/*.py'"]
 
 
