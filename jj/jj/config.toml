@@ -63,6 +63,14 @@ auto-track-bookmarks = "main"
 [remotes.origin]
 auto-track-created-bookmarks = "*"
 
+[fix.tools.ruff-format]
+command = ["ruff", "format"]
+patterns = ["glob:'**/*.py'"]
+
+[fix.tools.ruff-check]
+command = ["ruff", "check", "--fix"]
+patterns = ["glob:'**/*.py'"]
+
 
 [[--scope]]
 --when.hostnames = ["OwOPad"]
