@@ -71,6 +71,11 @@ patterns = ["glob:'**/*.py'"]
 command = ["ruff", "check", "--fix", "--stdin-filename=$path"]
 patterns = ["glob:'**/*.py'"]
 
+[fix.tools.mypy]
+command = ["inv", "run-python-type-checker", "-t"]
+patterns = ["glob:'**/*.py'"]
+
+
 
 [[--scope]]
 --when.hostnames = ["OwOPad"]
