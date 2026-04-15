@@ -71,6 +71,9 @@ patterns = ["glob:'**/*.py'"]
 command = ["ruff", "check", "--fix", "--stdin-filename=$path"]
 patterns = ["glob:'**/*.py'"]
 
+[fix.tools.inv-fixit]
+command = ["inv", "run-python-fixit-linter-on-paths", "-a", "-p=$path"]
+patterns = ["glob:'**/*.py'"]
 
 
 [[--scope]]
