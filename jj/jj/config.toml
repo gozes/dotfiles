@@ -19,6 +19,7 @@ edit = true
 'user(x)' = 'author(x) | committer(x)'
 'me()' = 'user("632922+gozes@users.noreply.github.com")'
 'me_today()' = '(me() & (author_date(before:"today") | author_date(after:"yesterday")))'
+"current_branch()" = "fork_point(bookmarks()) | (fork_point(bookmarks())+ & ancestors(@))::"
 
 [aliases]
 tug = ["util", "exec", "--", "sh", "-c", """
