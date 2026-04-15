@@ -1,4 +1,3 @@
-
 [ui]
 diff-formatter = ":git"
 pager = "delta"
