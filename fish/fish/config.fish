@@ -342,3 +342,21 @@ end
 
 # uv
 fish_add_path "$HOME/.local/bin"
+
+if [ "$INSIDE_EMACS" = 'vterm' ]
+    # Required function for vterm to communicate with Emacs
+    function vterm_printf;
+        printf "\e]%s\e\\" "$argv"
+    end
+
+    # Directory Tracking: Tells Emacs where you are after every prompt
+    # This keeps 'C-x C-f' synced with your current shell folder
+    function vterm_prompt_end --on-event fish_prompt
+        vterm_printf '51;A'(whoami)'@'(hostname)':'(pwd)
+    end
+
+    # Sync the 'clear' command with vterm's scrollback
+    function clear
+        vterm_printf "51;P;clear-scrollback"
+    end
+end
