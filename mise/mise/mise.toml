@@ -40,6 +40,7 @@ idiomatic_version_file_enable_tools = ["node", "python"]
 experimental = true
 env_cache = true
 env_shell_expand = true
+disable_tools = ["rabbitmq"]
 
 
 
