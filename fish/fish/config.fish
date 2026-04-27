@@ -8,6 +8,7 @@ set -gx fish_user_paths $fish_user_paths $HOME/.dbox/bin
 set -gx fish_user_paths $fish_user_paths $HOME/.local/gozes/bin
 set -gx fish_user_paths $fish_user_paths $HOME/swift/usr/bin
 set -gx fish_user_paths $fish_user_paths $HOME/odin/arise/bin
+set -gx fish_user_paths $fish_user_paths $HOME/bin
 set -Ux EDITOR nvim
 set -Ux BUNDLE_SIMULATE_VERSION 4 
 set -Ux GTK_THEME Adwaita:dark
