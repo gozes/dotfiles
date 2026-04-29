@@ -79,7 +79,7 @@ template = "main.md"
 # MARKDOWN SETTINGS
 [format.markdown]
 hashtags = true
-link-format = "[[{{metadata.id}}|{{title}}]]"
+link-format = "[[{{metadata.id}}|{{metadata.title}}]]"
 
 
 
