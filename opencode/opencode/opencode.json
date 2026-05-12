@@ -1,23 +1,22 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	  "model":"github-copilot/gpt-5-mini",
-	 "provider":{
-		"github-copilot":{
-			"models":{
-				"gpt-5-mini":{
-					"variants":{
-						"high":{
+	"model": "github-copilot/gpt-5-mini",
+	"provider": {
+		"github-copilot": {
+			"models": {
+				"gpt-5-mini": {
+					"variants": {
+						"high": {
 							"reasoningEffort": "high"
 						},
-						"max":{
+						"max": {
 							"reasoningEffort": "xhigh"
 						},
 					},
 				},
 			},
 		},
-
-  },
+	},
 	"lsp": {
 		"notes-lsp": {
 			"command": [
@@ -45,6 +44,26 @@
 				"https://mcp.atlassian.com/v1/sse"
 			],
 			"enabled": false
+		},
+		"notion": {
+			"type": "remote",
+			"url": "https://mcp.notion.com/mcp",
+			"enabled": true,
+		},
+		"coding-conventions": {
+			"type": "remote",
+			"url": "https://coding-conventions-mcp.ktl.net/mcp",
+			"enabled": true,
+		},
+		"asana": {
+			"type": "remote",
+			"url": "https://mcp.asana.com/v2/mcp",
+			"enabled": true,
+			"oauth": {
+				"clientId": "{env:ASANA_MCP_CLIENT_ID}",
+				"clientSecret": "{env:ASANA_MCP_CLIENT_SECRET}",
+				"scope": "tools:read tools:execute"
+			}
 		},
 		"sequential-thinking": {
 			"type": "local",
