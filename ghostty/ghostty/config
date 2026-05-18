@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 #
-custom-shader = ~/dotfiles/ghostty/ghostty/shaders/crt.glsl
+#custom-shader = ~/dotfiles/ghostty/ghostty/shaders/crt.glsl
 theme = catppuccin-mocha.conf
 #font-family = DroidSansM Nerd Font 
 font-family = ComicShannsMono
