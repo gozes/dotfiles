@@ -45,7 +45,8 @@
 #custom-shader = ~/dotfiles/ghostty/ghostty/shaders/crt.glsl
 theme = catppuccin-mocha.conf
 #font-family = DroidSansM Nerd Font 
-font-family = Neue Haas Grotesk Display Pro
+#font-family = NeueHaasDisplay-Black
+font-family = RobotoMono Nerd Font
 #font-family = ComicShannsMono
 #font-family = GohuFont 11 Nerd Font
 font-size = 14
