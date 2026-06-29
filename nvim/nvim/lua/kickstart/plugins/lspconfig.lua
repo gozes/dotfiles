@@ -29,6 +29,7 @@ return {
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
+      'L3MON4D3/LuaSnip',
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -60,6 +61,8 @@ return {
       --    That is to say, every time a new file is opened that is associated with
       --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
       --    function will be executed to configure the current buffer
+      require('luasnip').setup {}
+
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
@@ -213,8 +216,8 @@ return {
         -- jdtls = {},
         zk = {},
         -- pyright = {},
-        -- ty = {},
-        pyrefly = {},
+        ty = {},
+        -- pyrefly = {},
         vale_ls = {
           filetypes = { 'asciidoc', 'markdown', 'text', 'tex', 'rst', 'html', 'xml', 'python', 'go', 'gitcommit' },
           root_markers = { '.vale.ini', '.git', '.jj' },
