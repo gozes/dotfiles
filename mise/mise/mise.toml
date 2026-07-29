@@ -33,6 +33,7 @@ hledger-flow = "latest"
 gh = "latest"
 jless = "latest"
 television = "latest"
+"github:DanielCardonaRojas/codemark" = "latest"
 
 [settings]
 python.uv_venv_auto = true
