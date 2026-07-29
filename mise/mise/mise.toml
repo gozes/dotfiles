@@ -34,6 +34,7 @@ gh = "latest"
 jless = "latest"
 television = "latest"
 "github:DanielCardonaRojas/codemark" = "latest"
+herdr = "latest"
 
 [settings]
 python.uv_venv_auto = true
