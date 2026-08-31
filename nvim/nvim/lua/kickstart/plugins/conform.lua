@@ -49,6 +49,7 @@ return {
           -- To organize the imports.
           'ruff_organize_imports',
         },
+        gleam = { 'gleam' },
 
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },

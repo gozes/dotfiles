@@ -27,6 +27,7 @@
 --       'gitcommit',
 --       'http',
 --       'regex',
+--
 --     },
 --     -- Autoinstall languages that are not installed
 --     auto_install = true,
@@ -103,6 +104,7 @@ return { -- Highlight, edit, and navigate code
       'regex',
       'graphql',
       'python',
+      'gleam',
     }
     require('nvim-treesitter').install(parsers)
     vim.api.nvim_create_autocmd('FileType', {
