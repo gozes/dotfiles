@@ -63,7 +63,6 @@ return {
   opts = {
     adapters = {
       require 'neotest-python',
-      require 'neotest-gleam-unitest',
     },
   },
 }
