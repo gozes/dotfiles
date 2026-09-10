@@ -218,7 +218,8 @@ return {
         -- jdtls = {},
         zk = {},
         -- pyright = {},
-        ty = {},
+        -- ty = {},
+        zuban = {},
         -- pyrefly = {},
         vale_ls = {
           filetypes = { 'asciidoc', 'markdown', 'text', 'tex', 'rst', 'html', 'xml', 'python', 'go', 'gitcommit' },
