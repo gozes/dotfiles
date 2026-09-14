@@ -38,6 +38,7 @@ television = "latest"
 "github:DanielCardonaRojas/codemark" = "latest"
 herdr = "latest"
 "github:agavra/tuicr" = "latest"
+bun = "latest"
 
 [settings]
 python.uv_venv_auto = true
