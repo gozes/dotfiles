@@ -112,6 +112,38 @@
 				"MCP_USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 			},
 			"enabled": false
+		},
+		"slack": {
+			"type": "remote",
+			"url": "https://hub.ai.ktl.net/mcp/slack",
+			"enabled": false
+		},
+		"chrome-devtools": {
+			"type": "local",
+			"command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+			"enabled": true
+		},
+		"adhdhelper": {
+			"type": "remote",
+			"url": "https://adhdhelper.co.uk/mcp",
+			"enabled": true
+		},
+		"searxng": {
+			"type": "local",
+			"command": ["npx", "-y", "mcp-searxng"],
+			"environment": {
+				"SEARXNG_URL": "https://xng.shadowmonarch.uk",
+				"SEARXNG_FANOUT": "false"
+			},
+			"enabled": true
+		},
+		"playwright": {
+			"type": "local",
+			"command": ["npx", "-y", "@playwright/mcp@latest", "--extension"],
+			"environment": {
+				"PLAYWRIGHT_MCP_EXTENSION_TOKEN": "GMqjU-htfnQRi7-H4oAzOD4dOtWcJ3I28msUmN0ECdQ"
+			},
+			"enabled": true
 		}
 	}
 }
