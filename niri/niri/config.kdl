@@ -1,0 +1,213 @@
+// niri config — Noctalia shell, Ghostty terminal, en-US Dvorak + home row mods.
+// Docs: https://github.com/niri-wm/niri/wiki  /  https://docs.noctalia.dev/noctalia/compositor-settings/niri/
+//
+// HOME ROW MODS — keymap design rule
+// ----------------------------------
+// Home row mods are produced *outside* niri (keyd / kanata / QMK / ZMK); niri
+// has no tap-hold, it just sees the Super/Alt/Ctrl/Shift those tools emit.
+// With a Miryoku-style Dvorak GACS layout your home row keys ARE the modifiers:
+//     left  a=Super  o=Alt  e=Ctrl  u=Shift
+//     right s=Super  n=Alt  t=Ctrl  h=Shift
+// So NONE of a o e u i / d h t n s are safe as the *tapped* key in a Mod bind —
+// tapping a key that's also a hold-modifier is exactly what home row mods make
+// ambiguous. Every bind below taps an arrow, a number, or a non-home-row letter
+// (q r f g c l v w p ; , . [ ]) with the Super you get from holding a/s.
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "dvorak"
+            // Home row mods come from keyd/kanata/QMK, not xkb. If you ever drop
+            // them and want Caps as Ctrl instead: options "ctrl:nocaps"
+        }
+        repeat-delay 300
+        repeat-rate 50
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        dwt            // disable-while-typing
+    }
+
+    warp-mouse-to-focus
+}
+
+// niri auto-detects outputs. Pin one if needed:
+// output "eDP-1" { scale 1.5 }
+
+layout {
+    gaps 12
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 2
+        active-color "#7aa2f7"
+        inactive-color "#3b4261"
+    }
+}
+
+prefer-no-csd
+
+// ---- Startup --------------------------------------------------------------
+spawn-at-startup "noctalia"
+// Internal laptop panel off when an external display is connected, on when not.
+// Works with one display or laptop+external. See laptop-panel.sh.
+spawn-at-startup "bash" "-c" "~/.config/niri/laptop-panel.sh"
+// polkit agent for privilege prompts (adjust path to your distro):
+// spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+environment {
+    DISPLAY ":0"       // for XWayland apps
+    QT_QPA_PLATFORM "wayland"
+    MOZ_ENABLE_WAYLAND "1"
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot-%Y%m%d-%H%M%S.png"
+
+// Noctalia needs this for notification actions + window activation.
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+// ---- Keybinds -------------------------------------------------------------
+// Tapped keys avoid the home row on purpose (see header). Super = hold a or s.
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    // Apps & shell
+    Mod+Return   { spawn "ghostty"; }
+    Mod+Space    { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+C        { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+C  { spawn-sh "noctalia msg settings-toggle"; }
+    Alt+Tab      { spawn-sh "noctalia msg window-switcher hold"; }
+    Mod+Q        { close-window; }
+
+    // Focus — arrow keys (left/right = columns, up/down = windows in a column)
+    Mod+Left     { focus-column-left; }
+    Mod+Right    { focus-column-right; }
+    Mod+Up       { focus-window-up; }
+    Mod+Down     { focus-window-down; }
+
+    // Move the focused window/column — arrows + Shift
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up    { move-window-up; }
+    Mod+Shift+Down  { move-window-down; }
+
+    // First / last column
+    Mod+Ctrl+Left   { focus-column-first; }
+    Mod+Ctrl+Right  { focus-column-last; }
+
+    // Workspaces (vertical stack)
+    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Page_Down      { focus-workspace-down; }
+    Mod+Shift+Page_Up   { move-column-to-workspace-up; }
+    Mod+Shift+Page_Down { move-column-to-workspace-down; }
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+
+    // Monitors — < and > keys (not on the home row under Dvorak)
+    Mod+Comma        { focus-monitor-left; }
+    Mod+Period       { focus-monitor-right; }
+    Mod+Shift+Comma  { move-column-to-monitor-left; }
+    Mod+Shift+Period { move-column-to-monitor-right; }
+
+    // Direct workspace index (number row, never home-row mods)
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+
+    // Column / window sizing
+    Mod+R           { switch-preset-column-width; }
+    Mod+Shift+R     { reset-window-height; }
+    Mod+F           { maximize-column; }
+    Mod+Shift+F     { fullscreen-window; }
+    Mod+G           { center-column; }
+    Mod+Minus       { set-column-width "-10%"; }
+    Mod+Equal       { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    // Consume / expel a window into the current column
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+
+    Mod+V { toggle-window-floating; }
+    Mod+W { toggle-column-tabbed-display; }
+
+    // Screenshots via Noctalia
+    Print       { spawn-sh "noctalia msg screenshot-region"; }
+    Shift+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
+    Mod+Print   { spawn-sh "noctalia msg screenshot-annotate"; }
+
+    // Audio & brightness — Noctalia OSD (hardware keys, usable while locked)
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute      allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
+
+    // Media transport
+    XF86AudioPlay { spawn-sh "noctalia msg media play-pause"; }
+    XF86AudioNext { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev { spawn-sh "noctalia msg media previous"; }
+
+    // Session
+    Mod+L       { spawn-sh "noctalia msg session lock"; }
+    Mod+Shift+Q { quit; }
+}
+
+// ---- Window rules ---------------------------------------------------------
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+}
+
+// Float Noctalia's own settings window.
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
+}
+
+// ---- Layer rules (niri 26.04+) -------------------------------------------
+// Blurred wallpaper copy inside niri's overview backdrop.
+// Requires Noctalia's [niri/backdrop] section enabled.
+layer-rule {
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+
+// Blur behind Noctalia surfaces; xray off so it samples windows, not wallpaper.
+layer-rule {
+    match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+    background-effect {
+        xray false
+    }
+}
+
+layer-rule {
+    match namespace="noctalia-window-switcher"
+    background-effect {
+        blur true
+        xray false
+    }
+}

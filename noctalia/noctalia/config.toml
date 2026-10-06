@@ -1,0 +1,14 @@
+# Noctalia config — deploys to ~/.config/noctalia/config.toml (mirrors niri/niri/ layout).
+# Only overrides the colour scheme; every other setting stays on Noctalia's
+# built-in defaults. Edit the rest in Settings or add more sections here.
+#
+# Built-in palettes: Catppuccin, Dracula, Gruvbox, Nord, Tokyo-Night, Noctalia.
+# Equivalent to: noctalia msg color-scheme-set builtin Catppuccin
+#
+# Note: Settings-GUI changes write to ~/.local/state/noctalia/settings.toml,
+# which loads last and overrides this file. Delete it to fall back to here.
+
+[theme]
+source = "builtin"      # builtin | wallpaper | community | custom
+builtin = "Catppuccin"
+mode = "dark"           # dark | light
