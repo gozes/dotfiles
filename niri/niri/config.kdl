@@ -12,6 +12,14 @@
 // tapping a key that's also a hold-modifier is exactly what home row mods make
 // ambiguous. Every bind below taps an arrow, a number, or a non-home-row letter
 // (q r f g c l v w p ; , . [ ]) with the Super you get from holding a/s.
+//
+// EXCEPTION — vim hjkl navigation (matches my nvim muscle memory)
+// ----------------------------------------------------------------
+// Focus/move/resize use h j k l to mirror nvim's <C-hjkl> splits. Of those,
+// only `h` is a home-row-mod key (Shift when held); j k l are off the home
+// row. Super comes from the LEFT hand (hold a) while the right hand taps
+// h/j/k/l — same shape as tapping <C-h> in nvim, which already works daily.
+// A quick tap of h resolves to the letter, not Shift.
 
 input {
     keyboard {
@@ -91,19 +99,28 @@ binds {
     Alt+Tab      { spawn-sh "noctalia msg window-switcher hold"; }
     Mod+Q        { close-window; }
 
-    // Focus — arrow keys (left/right = columns, up/down = windows in a column)
-    Mod+Left     { focus-column-left; }
-    Mod+Right    { focus-column-right; }
-    Mod+Up       { focus-window-up; }
-    Mod+Down     { focus-window-down; }
+    // Focus — hjkl (left/right = columns, up/down = windows in a column) ↔ nvim <C-hjkl>
+    Mod+H { focus-column-left; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+    Mod+L { focus-column-right; }
+    // Arrows kept live as a fallback.
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up    { focus-window-up; }
+    Mod+Down  { focus-window-down; }
 
-    // Move the focused window/column — arrows + Shift
+    // Move the focused window/column — Shift+hjkl ↔ nvim <M-x>hjkl swaps
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+J { move-window-down; }
+    Mod+Shift+K { move-window-up; }
+    Mod+Shift+L { move-column-right; }
     Mod+Shift+Left  { move-column-left; }
     Mod+Shift+Right { move-column-right; }
     Mod+Shift+Up    { move-window-up; }
     Mod+Shift+Down  { move-window-down; }
 
-    // First / last column
+    // First / last column (no vim analog — stays on arrows)
     Mod+Ctrl+Left   { focus-column-first; }
     Mod+Ctrl+Right  { focus-column-last; }
 
@@ -143,6 +160,11 @@ binds {
     Mod+Equal       { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
+    // Resize with hjkl ↔ nvim <M-S>hjkl (h/l width, j/k height)
+    Mod+Ctrl+H { set-column-width  "-10%"; }
+    Mod+Ctrl+L { set-column-width  "+10%"; }
+    Mod+Ctrl+J { set-window-height "+10%"; }
+    Mod+Ctrl+K { set-window-height "-10%"; }
 
     // Consume / expel a window into the current column
     Mod+BracketLeft  { consume-or-expel-window-left; }
@@ -169,8 +191,8 @@ binds {
     XF86AudioNext { spawn-sh "noctalia msg media next"; }
     XF86AudioPrev { spawn-sh "noctalia msg media previous"; }
 
-    // Session
-    Mod+L       { spawn-sh "noctalia msg session lock"; }
+    // Session  (lock moved off Mod+L — that's focus-column-right now)
+    Mod+Escape  { spawn-sh "noctalia msg session lock"; }
     Mod+Shift+Q { quit; }
 }
 
