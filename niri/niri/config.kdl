@@ -25,7 +25,6 @@ input {
     keyboard {
         xkb {
             layout "us"
-            variant "dvorak"
             // Home row mods come from keyd/kanata/QMK, not xkb. If you ever drop
             // them and want Caps as Ctrl instead: options "ctrl:nocaps"
         }
