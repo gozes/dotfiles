@@ -126,8 +126,8 @@ binds {
     // Workspaces (vertical stack)
     Mod+Page_Up        { focus-workspace-up; }
     Mod+Page_Down      { focus-workspace-down; }
-    Mod+Shift+Page_Up   { move-column-to-workspace-up; }
-    Mod+Shift+Page_Down { move-column-to-workspace-down; }
+    Mod+Shift+U   { move-column-to-workspace-up; }
+    Mod+Shift+D { move-column-to-workspace-down; }
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
 
