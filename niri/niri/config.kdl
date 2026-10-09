@@ -103,11 +103,11 @@ binds {
     Mod+J { focus-window-down; }
     Mod+K { focus-window-up; }
     Mod+L { focus-column-right; }
-    // Arrows kept live as a fallback.
-    Mod+Left  { focus-column-left; }
-    Mod+Right { focus-column-right; }
-    Mod+Up    { focus-window-up; }
-    Mod+Down  { focus-window-down; }
+    // Workspace navigation — Mod+Alt+j/k (vertical stack)
+    Mod+Alt+J { focus-workspace-down; }
+    Mod+Alt+K { focus-workspace-up; }
+    Mod+Left  { focus-workspace-up; }
+    Mod+Right { focus-workspace-down; }
 
     // Move the focused window/column — Shift+hjkl ↔ nvim <M-x>hjkl swaps
     Mod+Shift+H { move-column-left; }
@@ -160,8 +160,8 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
     // Resize with hjkl ↔ nvim <M-S>hjkl (h/l width, j/k height)
-    Mod+Ctrl+H { set-column-width  "-10%"; }
-    Mod+Ctrl+L { set-column-width  "+10%"; }
+    Mod+Ctrl+H { focus-monitor-left; }
+    Mod+Ctrl+L { focus-monitor-right; }
     Mod+Ctrl+J { set-window-height "+10%"; }
     Mod+Ctrl+K { set-window-height "-10%"; }
 

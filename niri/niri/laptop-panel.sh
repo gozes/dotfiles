@@ -18,8 +18,10 @@ while :; do
         if [[ $o =~ ^(eDP|LVDS|DSI) ]]; then internal+=("$o"); else external+=("$o"); fi
     done
 
-    # Only one output total, or no internal panel: nothing to manage.
-    if ((${#internal[@]} == 0)); then last=""; sleep 3; continue; fi
+    # No internal panel (e.g. a desktop): nothing to ever manage, so exit
+    # instead of polling forever. A hotplugged eDP/LVDS/DSI panel is not a
+    # thing, so this set can't become non-empty later.
+    if ((${#internal[@]} == 0)); then exit 0; fi
 
     desired=$(( ${#external[@]} > 0 ? 0 : 1 ))   # 0 = off, 1 = on
     if [[ $desired != "$last" ]]; then
