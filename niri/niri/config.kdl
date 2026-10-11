@@ -158,23 +158,23 @@ binds {
     // Window and column movement.
     Mod+I hotkey-overlay-title="Focus previously focused window" { focus-window-previous; }
 
-    Mod+Left  hotkey-overlay-title="Focus column left" { focus-column-left; }
-    Mod+Down  hotkey-overlay-title="Focus column down" { focus-window-down; }
-    Mod+Up    hotkey-overlay-title="Focus column up" { focus-window-up; }
-    Mod+Right hotkey-overlay-title="Focus column right" { focus-column-right; }
     Mod+H     hotkey-overlay-title="Focus column left" { focus-column-left; }
     Mod+J     hotkey-overlay-title="Focus column down" { focus-window-down; }
     Mod+K     hotkey-overlay-title="Focus column up" { focus-window-up; }
     Mod+L     hotkey-overlay-title="Focus column down" { focus-column-right; }
+    Mod+Left  hotkey-overlay-title="Focus column left" { focus-column-left; }
+    Mod+Down  hotkey-overlay-title="Focus column down" { focus-window-down; }
+    Mod+Up    hotkey-overlay-title="Focus column up" { focus-window-up; }
+    Mod+Right hotkey-overlay-title="Focus column right" { focus-column-right; }
 
-    Mod+Ctrl+Left  hotkey-overlay-title="Move column left" { move-column-left; }
-    Mod+Ctrl+Down  hotkey-overlay-title="Move column down" { move-window-down; }
-    Mod+Ctrl+Up    hotkey-overlay-title="Move column up" { move-window-up; }
-    Mod+Ctrl+Right hotkey-overlay-title="Move column right" { move-column-right; }
     Mod+Alt+H     hotkey-overlay-title="Move column left" { move-column-left; }
     Mod+Alt+J     hotkey-overlay-title="Move column down" { move-window-down; }
     Mod+Alt+K     hotkey-overlay-title="Move column up" { move-window-up; }
     Mod+Alt+L     hotkey-overlay-title="Move column down" { move-column-right; }
+    Mod+Ctrl+Left  hotkey-overlay-title="Move column left" { move-column-left; }
+    Mod+Ctrl+Down  hotkey-overlay-title="Move column down" { move-window-down; }
+    Mod+Ctrl+Up    hotkey-overlay-title="Move column up" { move-window-up; }
+    Mod+Ctrl+Right hotkey-overlay-title="Move column right" { move-column-right; }
 
     Mod+G              hotkey-overlay-title="Focus first column" { focus-column-first; }
     Mod+SemiColon      hotkey-overlay-title="Focus last column" { focus-column-last; }
@@ -195,14 +195,14 @@ binds {
     Mod+Alt+WheelScrollLeft  hotkey-overlay-title="Move column left" { move-column-left; }
 
     // Multiple monitor window and column movement.
-    Mod+Alt+Shift+Left  hotkey-overlay-title="Move column to left monitor" { move-column-to-monitor-left; }
-    Mod+Alt+Shift+Down  hotkey-overlay-title="Move column to lower monitor" { move-column-to-monitor-down; }
-    Mod+Alt+Shift+Up    hotkey-overlay-title="Move column to upper monitor" { move-column-to-monitor-up; }
-    Mod+Alt+Shift+Right hotkey-overlay-title="Move column to right monitor" { move-column-to-monitor-right; }
     Mod+Alt+Shift+H     hotkey-overlay-title="Move column to left monitor" { move-column-to-monitor-left; }
     Mod+Alt+Shift+J     hotkey-overlay-title="Move column to lower monitor" { move-column-to-monitor-down; }
     Mod+Alt+Shift+K     hotkey-overlay-title="Move column to upper monitor" { move-column-to-monitor-up; }
     Mod+Alt+Shift+L     hotkey-overlay-title="Move column to right monitor" { move-column-to-monitor-right; }
+    Mod+Alt+Shift+Left  hotkey-overlay-title="Move column to left monitor" { move-column-to-monitor-left; }
+    Mod+Alt+Shift+Down  hotkey-overlay-title="Move column to lower monitor" { move-column-to-monitor-down; }
+    Mod+Alt+Shift+Up    hotkey-overlay-title="Move column to upper monitor" { move-column-to-monitor-up; }
+    Mod+Alt+Shift+Right hotkey-overlay-title="Move column to right monitor" { move-column-to-monitor-right; }
 
     Mod+MouseBack               hotkey-overlay-title="Focus left monitor" { focus-monitor-left; }
     Mod+MouseForward            hotkey-overlay-title="Focus right monitor" { focus-monitor-right; }
