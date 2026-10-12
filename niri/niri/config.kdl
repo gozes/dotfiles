@@ -102,7 +102,7 @@ binds {
     Mod+Ctrl+L { spawn-sh "noctalia msg session lock"; }
 
     // Screenshots via Noctalia
-    Print       { spawn-sh "noctalia msg screenshot-region"; }
+    Mod+Ctrl+P       { spawn-sh "noctalia msg screenshot-region"; }
     Shift+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
     Mod+Print   { spawn-sh "noctalia msg screenshot-annotate"; }
 

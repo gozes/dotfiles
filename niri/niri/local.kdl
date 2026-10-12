@@ -1,0 +1,8 @@
+workspace "Meet" {
+    open-on-output "Dell Inc. DELL S3221QS 45SVTB3"
+}
+window-rule {
+    match title=r#".*Meet —.*"#
+    match app-id=r#"^app\.zen_browser\.zen$"#
+    open-on-workspace "Meet"
+}
