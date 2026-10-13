@@ -227,27 +227,6 @@ function httpw
     posting --collection $HOME/Code/Work/posting
 end
 
-function omarchy-remove-paid-software
-    sudo yay -Rns 1password-beta 1password-cli spotify typora zoom
-end
-
-function omarchy-install-dev-tools
-    cd ~/dotfiles
-    stow mise
-    mise install
-    cd -
-end
-
-function omarchy-install-os-pacakages
-    sudo pacman -S zk ghostty flatpak stow git-delta bat
-end
-
-
-function omarchy-package-setup
-    omarchy-remove-paid-software
-    omarchy-install-os-pacakages
-    omarchy-install-dev-tools
-end
 
 if test -d $HOME/.asdf
   source $HOME/.asdf/asdf.fish
@@ -297,7 +276,7 @@ end
 
 if command -q bat
     set -Ux BAT_THEME "Catppuccin Mocha"
-    set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
+    #set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
 end
 
 if test -e $HOME/Code/Work/work.fish
@@ -324,6 +303,14 @@ if status is-interactive; and command -q uv
     # fish_add_path "$HOME/.local/share/../bin"
 end
 
+if status is-interactive; and command -q niri 
+    niri completions fish | source
+end
+
+if status is-interactive; and command -q noctalia
+    noctalia completions fish | source
+end
+
 
 function envsource
     echo "Setting environment variables from $argv"
@@ -344,20 +331,20 @@ end
 # uv
 fish_add_path "$HOME/.local/bin"
 
-if [ "$INSIDE_EMACS" = 'vterm' ]
-    # Required function for vterm to communicate with Emacs
-    function vterm_printf;
-        printf "\e]%s\e\\" "$argv"
-    end
-
-    # Directory Tracking: Tells Emacs where you are after every prompt
-    # This keeps 'C-x C-f' synced with your current shell folder
-    function vterm_prompt_end --on-event fish_prompt
-        vterm_printf '51;A'(whoami)'@'(hostname)':'(pwd)
-    end
-
-    # Sync the 'clear' command with vterm's scrollback
-    function clear
-        vterm_printf "51;P;clear-scrollback"
-    end
-end
+# if [ "$INSIDE_EMACS" = 'vterm' ]
+#     # Required function for vterm to communicate with Emacs
+#     function vterm_printf;
+#         printf "\e]%s\e\\" "$argv"
+#     end
+#
+#     # Directory Tracking: Tells Emacs where you are after every prompt
+#     # This keeps 'C-x C-f' synced with your current shell folder
+#     function vterm_prompt_end --on-event fish_prompt
+#         vterm_printf '51;A'(whoami)'@'(hostname)':'(pwd)
+#     end
+#
+#     # Sync the 'clear' command with vterm's scrollback
+#     function clear
+#         vterm_printf "51;P;clear-scrollback"
+#     end
+# end
