@@ -183,6 +183,8 @@ binds {
     Mod+End            hotkey-overlay-title="Focus last column" { focus-column-last; }
     Mod+Ctrl+Home      hotkey-overlay-title="Move column to first" { move-column-to-first; }
     Mod+Ctrl+End       hotkey-overlay-title="Move column to last" { move-column-to-last; }
+    Mod+S       hotkey-overlay-title="Swap window right" { swap-window-right; }
+    Mod+Alt+S       hotkey-overlay-title="Swap window left" { swap-window-left; }
 
     Mod+WheelScrollDown       hotkey-overlay-title="Focus column right" { focus-column-right; }
     Mod+WheelScrollUp         hotkey-overlay-title="Focus column left" { focus-column-left; }
