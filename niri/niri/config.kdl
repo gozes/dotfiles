@@ -161,19 +161,19 @@ binds {
     Mod+J     hotkey-overlay-title="Focus column down" { focus-window-down; }
     Mod+K     hotkey-overlay-title="Focus column up" { focus-window-up; }
     Mod+L     hotkey-overlay-title="Focus column down" { focus-column-right; }
-    Mod+Left  hotkey-overlay-title="Focus column left" { focus-column-left; }
-    Mod+Down  hotkey-overlay-title="Focus column down" { focus-window-down; }
-    Mod+Up    hotkey-overlay-title="Focus column up" { focus-window-up; }
-    Mod+Right hotkey-overlay-title="Focus column right" { focus-column-right; }
+    Mod+Left  hotkey-overlay-title="Focus column left (arrows)" { focus-column-left; }
+    Mod+Down  hotkey-overlay-title="Focus column down (arrows)" { focus-window-down; }
+    Mod+Up    hotkey-overlay-title="Focus column up (arrows)" { focus-window-up; }
+    Mod+Right hotkey-overlay-title="Focus column right (arrows)" { focus-column-right; }
 
     Mod+Alt+H     hotkey-overlay-title="Move column left" { move-column-left; }
     Mod+Alt+J     hotkey-overlay-title="Move column down" { move-window-down; }
     Mod+Alt+K     hotkey-overlay-title="Move column up" { move-window-up; }
     Mod+Alt+L     hotkey-overlay-title="Move column down" { move-column-right; }
-    Mod+Ctrl+Left  hotkey-overlay-title="Move column left" { move-column-left; }
-    Mod+Ctrl+Down  hotkey-overlay-title="Move column down" { move-window-down; }
-    Mod+Ctrl+Up    hotkey-overlay-title="Move column up" { move-window-up; }
-    Mod+Ctrl+Right hotkey-overlay-title="Move column right" { move-column-right; }
+    Mod+Ctrl+Left  hotkey-overlay-title="Move column left (arrows)" { move-column-left; }
+    Mod+Ctrl+Down  hotkey-overlay-title="Move column down (arrows)" { move-window-down; }
+    Mod+Ctrl+Up    hotkey-overlay-title="Move column up (arrows)" { move-window-up; }
+    Mod+Ctrl+Right hotkey-overlay-title="Move column right (arrows)" { move-column-right; }
 
     Mod+G              hotkey-overlay-title="Focus first column" { focus-column-first; }
     Mod+SemiColon      hotkey-overlay-title="Focus last column" { focus-column-last; }
