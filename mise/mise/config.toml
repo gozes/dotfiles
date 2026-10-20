@@ -39,6 +39,10 @@ television = "latest"
 herdr = "latest"
 "github:agavra/tuicr" = "latest"
 bun = "latest"
+kind = "latest"
+kubectl = "latest"
+aws = "latest"
+opentofu = "latest"
 
 [settings]
 python.uv_venv_auto = true
