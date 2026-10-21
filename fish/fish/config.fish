@@ -276,7 +276,8 @@ end
 
 if command -q bat
     set -Ux BAT_THEME "Catppuccin Mocha"
-    #set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
+    set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
+    set -Ux MANROFFOPT -c
 end
 
 if test -e $HOME/Code/Work/work.fish
