@@ -312,6 +312,9 @@ if status is-interactive; and command -q noctalia
     noctalia completions fish | source
 end
 
+if status is-interactive; and command -q tuios
+    tuios completions fish | source
+end
 
 function envsource
     echo "Setting environment variables from $argv"
