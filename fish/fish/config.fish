@@ -313,7 +313,7 @@ if status is-interactive; and command -q noctalia
 end
 
 if status is-interactive; and command -q tuios
-    tuios completions fish | source
+    tuios completion fish | source
 end
 
 function envsource
