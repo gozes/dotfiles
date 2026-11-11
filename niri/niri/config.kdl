@@ -102,6 +102,7 @@ binds {
 
     // Screenshots via Noctalia
     Mod+Ctrl+P   hotkey-overlay-title="Noctalia scrennshot region" { spawn-sh "noctalia msg screenshot-region"; }
+    Mod+Ctrl+N   hotkey-overlay-title="Noctalia clear notification" { spawn-sh "noctalia msg notification-clear-active"; }
     Shift+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
     Mod+Shift+P  hotkey-overlay-title="Noctalia scrennshot annotetion" { spawn-sh "noctalia msg screenshot-annotate"; }
 
